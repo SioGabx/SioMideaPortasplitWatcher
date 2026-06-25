@@ -11,8 +11,8 @@ namespace SioMideaPortasplitWatcher
 
         // Simule ton cache et tes coordonnées de départ (Nancy)
         private static readonly Dictionary<string, RouteCacheItem> _routeCache = new();
-        private static readonly double NancyLat = 48.692054;
-        private static readonly double NancyLon = 6.184417;
+        private static readonly double StartLat = 48.692054;
+        private static readonly double StartLong = 6.184417;
 
         public class RouteCacheItem
         {
@@ -45,13 +45,36 @@ namespace SioMideaPortasplitWatcher
                     return (TimeSpan.FromMinutes(0), 0);
                 }
 
-                // 3. Calcul de l'itinéraire classique avec OSRM
-                string lonNancy = NancyLon.ToString(System.Globalization.CultureInfo.InvariantCulture);
-                string latNancy = NancyLat.ToString(System.Globalization.CultureInfo.InvariantCulture);
-                string lonDest = destLon.ToString(System.Globalization.CultureInfo.InvariantCulture);
-                string latDest = destLat.ToString(System.Globalization.CultureInfo.InvariantCulture);
+                await DisplayTravelTimeWithCacheAsync(storeName, destLat, destLon);
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] Impossible de calculer l'itinéraire depuis Nancy : {ex.Message}");
+                Console.ResetColor();
+            }
+            return (TimeSpan.FromMinutes(0), 0);
+        }
 
-                string osrmUrl = $"https://router.project-osrm.org/route/v1/driving/{lonNancy},{latNancy};{lonDest},{latDest}?overview=false";
+
+        public static async Task<(TimeSpan Duration, double DistanceKm)> DisplayTravelTimeWithCacheAsync(string StoreName, double DestLat, double DestLong)
+        {
+
+            // 1. Vérification du cache de route
+            if (_routeCache.TryGetValue(StoreName, out var cachedRoute))
+            {
+                PrintRouteInfo(StoreName, cachedRoute.Duration, cachedRoute.DistanceKm, isFromCache: true);
+                return (cachedRoute.Duration, cachedRoute.DistanceKm);
+            }
+
+            try
+            {
+                string lonStart = StartLong.ToString(System.Globalization.CultureInfo.InvariantCulture);
+                string latStart = StartLat.ToString(System.Globalization.CultureInfo.InvariantCulture);
+                string lonDest = DestLong.ToString(System.Globalization.CultureInfo.InvariantCulture);
+                string latDest = DestLat.ToString(System.Globalization.CultureInfo.InvariantCulture);
+
+                string osrmUrl = $"https://router.project-osrm.org/route/v1/driving/{lonStart},{latStart};{lonDest},{latDest}?overview=false";
 
                 using (var request = new HttpRequestMessage(HttpMethod.Get, osrmUrl))
                 {
@@ -74,8 +97,8 @@ namespace SioMideaPortasplitWatcher
                                 TimeSpan duration = TimeSpan.FromSeconds(durationSeconds);
                                 double distanceKm = distanceMeters / 1000.0;
 
-                                _routeCache[storeName] = new RouteCacheItem { Duration = duration, DistanceKm = distanceKm };
-                                PrintRouteInfo(storeName, duration, distanceKm, isFromCache: false);
+                                _routeCache[StoreName] = new RouteCacheItem { Duration = duration, DistanceKm = distanceKm };
+                                PrintRouteInfo(StoreName, duration, distanceKm, isFromCache: false);
                                 return (duration, distanceKm);
                             }
                         }
@@ -90,6 +113,7 @@ namespace SioMideaPortasplitWatcher
             }
             return (TimeSpan.FromMinutes(0), 0);
         }
+
 
         // --- NOUVELLE MÉTHODE : GÉOCODAGE (Appel à Nominatim OpenStreetMap) ---
         private static async Task<(double lat, double lon)> GeocodeAddressAsync(string address, string acceptlanguage = "en")

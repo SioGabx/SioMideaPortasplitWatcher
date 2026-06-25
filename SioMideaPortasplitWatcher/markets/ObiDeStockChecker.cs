@@ -19,8 +19,17 @@ namespace SioMideaPortasplitWatcher.markets
             [JsonPropertyName("name")]
             public string Name { get; set; } = string.Empty;
 
-            [JsonPropertyName("address")]
-            public string Address { get; set; } = string.Empty;
+            [JsonPropertyName("street")]
+            public string Street { get; set; } = string.Empty;
+
+            [JsonPropertyName("postal_code")]
+            public string PostalCode { get; set; } = string.Empty;
+
+            [JsonPropertyName("city")]
+            public string City { get; set; } = string.Empty;
+
+            [JsonPropertyName("state")]
+            public string State { get; set; } = string.Empty;
 
             [JsonPropertyName("maps_url")]
             public string MapsUrl { get; set; } = string.Empty;
@@ -34,11 +43,9 @@ namespace SioMideaPortasplitWatcher.markets
             [JsonPropertyName("url")]
             public string Url { get; set; } = string.Empty;
 
-            [JsonPropertyName("distance")]
-            public double Distance { get; set; }
-
-            // Cette propriété sera alimentée dynamiquement par l'API de stock
+            // Alimentée dynamiquement par l'API de stock
             [JsonPropertyName("availableQuantity")]
+
             public int AvailableQuantity { get; set; }
         }
 

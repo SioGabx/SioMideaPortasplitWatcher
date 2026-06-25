@@ -8,11 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="res\bauhausinfo_germany_stores.json" />
     <None Remove="res\obide_stores.json" />
+    <None Remove="res\toomde_stores.json" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="res\bauhausinfo_germany_stores.json" />
     <EmbeddedResource Include="res\obide_stores.json" />
+    <EmbeddedResource Include="res\toomde_stores.json" />
   </ItemGroup>
 
   <ItemGroup>

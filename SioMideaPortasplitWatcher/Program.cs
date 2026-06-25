@@ -17,7 +17,7 @@ namespace SioMideaPortasplitWatcher
             await WatchLoopAsync();
         }
 
-        private static void PrintNewStockDetected(string StoreName,string ProductName, ConsoleColor ProductNameColor, int Stock, string Url)
+        private static void PrintNewStockDetected(string StoreName, string ProductName, ConsoleColor ProductNameColor, object Stock, string Url)
         {
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.Write($"[{DateTime.Now:HH:mm:ss}] [STOCK] ");
@@ -35,9 +35,9 @@ namespace SioMideaPortasplitWatcher
             Console.WriteLine($"[RUPTURE DE STOCK] Article {ProductName} à {StoreName}.");
             Console.ResetColor();
         }
-        private static void ShowBallon(string StoreName, string ProductName, TimeSpan Duration, double DistanceKm, int NewQuantity, string Url)
+        private static void ShowBallon(string StoreName, string ProductName, TimeSpan Duration, double DistanceKm, object Stock, string Url)
         {
-            var t = new BalloonNotifier("🚨 Midea disponible !", $"{ProductName}\n{StoreName}\n{Math.Floor(Duration.TotalHours)}h {Duration.Minutes}min pour {DistanceKm:F0} km \nStock: {NewQuantity}", Url, StoreName);
+            var t = new BalloonNotifier("🚨 Midea disponible !", $"{ProductName}\n{StoreName}\n{Math.Floor(Duration.TotalHours)}h {Duration.Minutes}min pour {DistanceKm:F0} km \nStock: {Stock}", Url, StoreName);
             t.Show();
         }
 
@@ -52,13 +52,13 @@ namespace SioMideaPortasplitWatcher
             Console.ResetColor();
 
             // Instance spécifique pour s'abonner aux événements
-            var obiCheckerMP = new ObiDeStockChecker("Midea Portasplit 12000 BTU","8620890"); //https://www.obi.de/p/8620890/midea-mobile-split-klimaanlage-portasplit
-            
+            var obiCheckerMP = new ObiDeStockChecker("Midea Portasplit 12000 BTU", "8620890"); //https://www.obi.de/p/8620890/midea-mobile-split-klimaanlage-portasplit
+
             obiCheckerMP.NewStockDetected += async (sender, e) =>
             {
                 var url = $"https://www.obi.de/api/disc/store/change?storeNumber={e.Store.StoreId}&redirectUrl={Uri.EscapeDataString($"https://www.obi.de/p/{obiCheckerMP.ProductId}")}";
                 PrintNewStockDetected(e.Store.Name, obiCheckerMP.ProductName, ConsoleColor.Red, e.NewQuantity, url);
-                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.Address + ", Deutschland", e.Store.Name, "de");
+                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync($"{e.Store.City} {e.Store.PostalCode}, Deutschland", e.Store.Name, "de");
                 ShowBallon(e.Store.Name, obiCheckerMP.ProductName, Duration, DistanceKm, e.NewQuantity, url);
             };
 
@@ -72,7 +72,7 @@ namespace SioMideaPortasplitWatcher
             {
                 var url = $"https://www.obi.de/api/disc/store/change?storeNumber={e.Store.StoreId}&redirectUrl={Uri.EscapeDataString($"https://www.obi.de/p/{obiCheckerMPC.ProductId}")}";
                 PrintNewStockDetected(e.Store.Name, obiCheckerMPC.ProductName, ConsoleColor.Blue, e.NewQuantity, url);
-                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.Address + ", Deutschland", e.Store.Name, "de");
+                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync($"{e.Store.City} {e.Store.PostalCode}, Deutschland", e.Store.Name, "de");
                 ShowBallon(e.Store.Name, obiCheckerMPC.ProductName, Duration, DistanceKm, e.NewQuantity, url);
             };
 
@@ -81,10 +81,84 @@ namespace SioMideaPortasplitWatcher
                 PrintStockOutDetected(obiCheckerMPC.ProductName, e.Store.Name);
             };
 
+            var BauhausInfoMP = new BauhausInfoStockChecker("Midea Portasplit 12000 BTU", "31934233");
+
+            BauhausInfoMP.NewStockDetected += async (sender, e) =>
+            {
+                string url = $"https://www.bauhaus.info/p/31934233";
+                PrintNewStockDetected(e.Store.Name, BauhausInfoMP.ProductName, ConsoleColor.Red, e.NewQuantity, url);
+                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.Name, e.Store.Latitude, e.Store.Longitude);
+                ShowBallon(e.Store.Name, obiCheckerMP.ProductName, Duration, DistanceKm, e.NewQuantity, url);
+            };
+
+            BauhausInfoMP.StockOutDetected += (sender, e) =>
+            {
+                PrintStockOutDetected(BauhausInfoMP.ProductName, e.Store.Name);
+            };
+
+            var BauhausInfoMPC = new BauhausInfoStockChecker("Midea Portasplit Cool 8000 BTU", "33946696");
+            BauhausInfoMPC.NewStockDetected += async (sender, e) =>
+            {
+                string url = $"https://www.bauhaus.info/p/33946696";
+                PrintNewStockDetected(e.Store.Name, BauhausInfoMPC.ProductName, ConsoleColor.Blue, e.NewQuantity, url);
+                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.Name, e.Store.Latitude, e.Store.Longitude);
+                ShowBallon(e.Store.Name, obiCheckerMP.ProductName, Duration, DistanceKm, e.NewQuantity, url);
+            };
+
+            BauhausInfoMPC.StockOutDetected += (sender, e) =>
+            {
+                PrintStockOutDetected(BauhausInfoMPC.ProductName, e.Store.Name);
+            };
+            //10272593
+            //10515238
+            var ToomDeCheckerMP = new ToomDeStockChecker("Midea Portasplit 12000 BTU", "10272593");
+
+            ToomDeCheckerMP.NewStockDetected += async (sender, e) =>
+            {
+                var url = $"https://toom.de/p/mobiles-klimageraet-portasplit-12000-btuh/9350668";
+                PrintNewStockDetected(e.Store.Name, ToomDeCheckerMP.ProductName, ConsoleColor.Blue, e.Status, url);
+                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.Name, e.Store.Address.Latitude, e.Store.Address.Longitude);
+                ShowBallon(e.Store.Name, ToomDeCheckerMP.ProductName, Duration, DistanceKm, e.Status, url);
+            };
+
+            ToomDeCheckerMP.StockOutDetected += (sender, e) =>
+            {
+                PrintStockOutDetected(ToomDeCheckerMP.ProductName, e.Store.Name);
+            };
+
+
+            var ToomDeCheckerMPC = new ToomDeStockChecker("Midea Portasplit Cool 8000 BTU", "10515238");
+            ToomDeCheckerMPC.NewStockDetected += async (sender, e) =>
+            {
+                var url = $"https://toom.de/p/split-klimaanlage-portasplit-cool-8000btuh/10515238";
+                PrintNewStockDetected(e.Store.Name, ToomDeCheckerMPC.ProductName, ConsoleColor.Blue, e.Status, url);
+                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.Name, e.Store.Address.Latitude, e.Store.Address.Longitude);
+                ShowBallon(e.Store.Name, ToomDeCheckerMPC.ProductName, Duration, DistanceKm, e.Status, url);
+            };
+
+            ToomDeCheckerMPC.StockOutDetected += (sender, e) =>
+            {
+                PrintStockOutDetected(ToomDeCheckerMPC.ProductName, e.Store.Name);
+            };
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             List<IStockChecker> stockCheckers = new List<IStockChecker>
             {
-                obiCheckerMP, obiCheckerMPC
+                obiCheckerMP, obiCheckerMPC,
+                BauhausInfoMP, BauhausInfoMPC,
+                ToomDeCheckerMP, ToomDeCheckerMPC
             };
 
             while (true)
@@ -94,9 +168,10 @@ namespace SioMideaPortasplitWatcher
                     Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] Analyse (Actualisation)...");
                     Console.ResetColor();
-
+                    //Console.Write("Checking :");
                     foreach (var stockChecker in stockCheckers)
                     {
+                        //Console.Write(" " +stockChecker + " /");
                         await stockChecker.CheckStockAsync();
                     }
                 }
