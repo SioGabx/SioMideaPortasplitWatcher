@@ -84,9 +84,9 @@ namespace SioMideaPortasplitWatcher.markets
 
         public async Task CheckStockAsync()
         {
-            if (_page == null)
+            if (_page?.IsClosed != false)
             {
-                throw new InvalidOperationException("Page has not been created. Call CreatePage() first.");
+                await CreatePage();
             }
 
             // OBI limite à 10 magasins par requête API. On découpe notre liste par paquets de 10.

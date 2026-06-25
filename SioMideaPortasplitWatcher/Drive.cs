@@ -20,7 +20,7 @@ namespace SioMideaPortasplitWatcher
             public double DistanceKm { get; set; }
         }
 
-        public static async Task<(TimeSpan Duration, double DistanceKm)> DisplayTravelTimeWithCacheAsync(string destinationAddress, string storeName)
+        public static async Task<(TimeSpan Duration, double DistanceKm)> DisplayTravelTimeWithCacheAsync(string destinationAddress, string storeName, string acceptlanguage = "en")
         {
             if (string.IsNullOrWhiteSpace(destinationAddress))
             {
@@ -92,13 +92,13 @@ namespace SioMideaPortasplitWatcher
         }
 
         // --- NOUVELLE MÉTHODE : GÉOCODAGE (Appel à Nominatim OpenStreetMap) ---
-        private static async Task<(double lat, double lon)> GeocodeAddressAsync(string address)
+        private static async Task<(double lat, double lon)> GeocodeAddressAsync(string address, string acceptlanguage = "en")
         {
             try
             {
                 // Échapper l'adresse pour l'URL
                 string encodedAddress = Uri.EscapeDataString(address);
-                string url = $"https://nominatim.openstreetmap.org/search?q={encodedAddress}&format=json&limit=1";
+                string url = $"https://nominatim.openstreetmap.org/search?q={encodedAddress}&format=json&limit=1&accept-language={acceptlanguage}";
 
                 using (var request = new HttpRequestMessage(HttpMethod.Get, url))
                 {
