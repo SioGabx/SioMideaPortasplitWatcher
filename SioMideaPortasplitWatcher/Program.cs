@@ -141,19 +141,6 @@ namespace SioMideaPortasplitWatcher
                 PrintStockOutDetected(ToomDeCheckerMPC.ProductName, e.Store.Name);
             };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
             List<IStockChecker> stockCheckers = new List<IStockChecker>
             {
                 obiCheckerMP, obiCheckerMPC,
@@ -168,12 +155,42 @@ namespace SioMideaPortasplitWatcher
                     Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] Analyse (Actualisation)...");
                     Console.ResetColor();
-                    //Console.Write("Checking :");
-                    foreach (var stockChecker in stockCheckers)
+
+
+                    var tasks = stockCheckers.Select(async checker =>
                     {
-                        //Console.Write(" " +stockChecker + " /");
-                        await stockChecker.CheckStockAsync();
+                        try
+                        {
+                            await checker.CheckStockAsync(); // idéalement CheckStockAsync(token)
+                        }
+                        catch (OperationCanceledException)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine($"[TIMEOUT] {checker}");
+                            Console.ResetColor();
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine($"[ERROR {checker}] {ex.Message}");
+                            Console.ResetColor();
+                        }
+                    });
+
+                    var cycleTask = Task.WhenAll(tasks);
+
+                    if (await Task.WhenAny(cycleTask, Task.Delay(TimeSpan.FromMinutes(5))) != cycleTask)
+                    {
+                        Console.WriteLine("[TIMEOUT GLOBAL] cycle annulé, restart boucle");
                     }
+
+
+
+                    //foreach (var stockChecker in stockCheckers)
+                    //{
+                    //    //Console.Write(" " +stockChecker + " /");
+                    //    await stockChecker.CheckStockAsync();
+                    //}
                 }
                 catch (Exception ex)
                 {
@@ -182,9 +199,12 @@ namespace SioMideaPortasplitWatcher
                     Console.ResetColor();
                 }
 
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] Fin de l'analyse...");
+                Console.ResetColor();
                 // IMPORTANT : Attendre (ex: 2 minutes) pour éviter de spammer l'API d'OBI 
                 // et se faire bannir l'IP (Rate limit)
-                await Task.Delay(TimeSpan.FromSeconds(10));
+                await Task.Delay(TimeSpan.FromSeconds(20));
             }
         }
     }

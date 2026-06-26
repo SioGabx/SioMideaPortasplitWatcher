@@ -122,7 +122,7 @@ namespace SioMideaPortasplitWatcher.markets
                 ProcessStockJson(jsonResponse);
 
                 // Optionnel : Un léger délai pour ne pas enchaîner les requêtes trop brutalement sur la même instance Playwright
-                await Task.Delay(500);
+                await Task.Delay(750);
             }
         }
 
