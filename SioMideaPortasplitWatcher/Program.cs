@@ -116,7 +116,7 @@ namespace SioMideaPortasplitWatcher
             ToomDeCheckerMP.NewStockDetected += async (sender, e) =>
             {
                 var url = $"https://toom.de/p/mobiles-klimageraet-portasplit-12000-btuh/9350668";
-                PrintNewStockDetected(e.Store.Name, ToomDeCheckerMP.ProductName, ConsoleColor.Blue, e.Status, url);
+                PrintNewStockDetected(e.Store.Name, ToomDeCheckerMP.ProductName, ConsoleColor.Red, e.Status, url);
                 var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.Name, e.Store.Address.Latitude, e.Store.Address.Longitude);
                 ShowBallon(e.Store.Name, ToomDeCheckerMP.ProductName, Duration, DistanceKm, e.Status, url);
             };

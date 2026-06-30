@@ -1,8 +1,9 @@
 ﻿using Microsoft.Playwright;
+using System.Diagnostics;
+using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using System.Reflection;
-using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace SioMideaPortasplitWatcher.markets
 {
@@ -36,7 +37,7 @@ namespace SioMideaPortasplitWatcher.markets
 
         private IPage? _page;
 
-        private readonly string _url; 
+        private readonly string _url;
         private readonly Dictionary<int, int> _previousStockState = new();
         public readonly string ProductName;
 
@@ -81,9 +82,15 @@ namespace SioMideaPortasplitWatcher.markets
         private int ParseQuantity(string text)
         {
             // "31 en stock" -> 31
-            var match = System.Text.RegularExpressions.Regex.Match(text, @"\d+");
-            if (match.Success && int.TryParse(match.Value, out int qty))
-                return qty;
+            var match = Regex.Match(text, @"(\d+)\s+en stock");
+
+            int currentQty = 0;
+
+            if (match.Success)
+            {
+                currentQty = int.Parse(match.Groups[1].Value);
+                return currentQty;
+            }
 
             if (text.Contains("Bientôt disponible", StringComparison.OrdinalIgnoreCase))
                 return 0;
@@ -91,6 +98,7 @@ namespace SioMideaPortasplitWatcher.markets
             if (text.Contains("Actuellement indisponible", StringComparison.OrdinalIgnoreCase))
                 return 0;
 
+           
             return 0;
         }
 
@@ -98,7 +106,7 @@ namespace SioMideaPortasplitWatcher.markets
         {
             var cards = await _page!.QuerySelectorAllAsync("article.m-store-search-card");
 
-            
+
             foreach (var card in cards)
             {
                 try
@@ -109,7 +117,7 @@ namespace SioMideaPortasplitWatcher.markets
                     if (!int.TryParse(idAttr, out int storeId))
                         continue;
 
-                    
+
                     var name = await card.QuerySelectorAsync(".m-store-info-header--title");
                     var city = await card.GetAttributeAsync("data-store-city") ?? "";
 

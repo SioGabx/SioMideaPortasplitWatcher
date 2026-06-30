@@ -103,21 +103,13 @@ namespace SioMideaPortasplitWatcher.markets
                 var chunk = _cachedStores.Skip(i).Take(chunkSize).ToList();
                 string url = GetUrl(ProductId, chunk);
 
-                IResponse? response;
+                string? jsonResponse = await WaitForJsonAfter502Async(url);
 
-                // On navigue vers l'URL du groupe actuel (le Reload n'est plus adapté ici 
-                // car l'URL change à chaque itération de la boucle)
-                response = await GotoWithRetry502Async(url);
-
-                if (response == null || !response.Ok)
+                if (string.IsNullOrEmpty(jsonResponse))
                 {
-                    Console.WriteLine($"[Erreur] Impossible de joindre l'API OBI pour le groupe {i / chunkSize + 1} ({response?.Status}).");
-                    Console.WriteLine($"{url} ({response?.StatusText}).");
-                    continue; // On passe au groupe suivant même si celui-ci a échoué
+                    Console.WriteLine($"[Erreur] Impossible de récupérer le JSON pour {url}");
+                    continue;
                 }
-
-                // Récupération du JSON brut pour ce groupe de 10 magasins
-                string jsonResponse = await response.TextAsync();
 
                 // Traitement et comparaison des stocks pour ce groupe
                 ProcessStockJson(jsonResponse);
@@ -191,35 +183,48 @@ namespace SioMideaPortasplitWatcher.markets
             }
         }
 
-        private async Task<IResponse?> GotoWithRetry502Async(string url)
+        private async Task<string?> WaitForJsonAfter502Async(string url)
         {
-            const int maxAttempts = 10;
+            var response = await _page!.GotoAsync(url, Browser.GotoOptions);
 
-            for (int i = 0; i < maxAttempts; i++)
+            if (response == null)
+                return null;
+
+            if (response.Ok)
+                return await response.TextAsync();
+
+            if (response.Status != 502)
             {
+                Console.WriteLine($"[HTTP {response.Status}] {url}");
+                return null;
+            }
+
+            Console.WriteLine($"[502] Reçu pour {url}, attente de 30 secondes...");
+
+            for (int attempt = 0; attempt < 10; attempt++)
+            {
+                await Task.Delay(TimeSpan.FromSeconds(10));
+
                 try
                 {
-                    var response = await _page!.Context.APIRequest.GetAsync(url);
+                    string content = await _page.ContentAsync();
 
-                    if (response.Ok)
+                    // Vérification simple que le contenu ressemble à du JSON
+                    content = content.Trim();
+
+                    if ((content.StartsWith("{") && content.EndsWith("}")) ||
+                        (content.StartsWith("[") && content.EndsWith("]")))
                     {
-                        Console.WriteLine($"[OK] {url} prêt (tentative {i + 1})");
-
-                        // Navigation UNE SEULE FOIS quand c'est bon
-                        return await _page.GotoAsync(url, Browser.GotoOptions);
+                        Console.WriteLine("[OK] JSON récupéré après attente.");
+                        return content;
                     }
 
-                    if (response.Status == 502)
-                        Console.WriteLine($"[502] Tentative {i + 1}/{maxAttempts}");
-                    else
-                        Console.WriteLine($"[HTTP {response.Status}] Tentative {i + 1}/{maxAttempts}");
+                    Console.WriteLine($"[Tentative {attempt + 1}] Toujours pas de JSON.");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"[Exception] Tentative {i + 1}: {ex.Message}");
+                    Console.WriteLine($"[Erreur lecture contenu] {ex.Message}");
                 }
-
-                await Task.Delay(2000);
             }
 
             return null;
