@@ -107,11 +107,12 @@ namespace SioMideaPortasplitWatcher.markets
 
                 // On navigue vers l'URL du groupe actuel (le Reload n'est plus adapté ici 
                 // car l'URL change à chaque itération de la boucle)
-                response = await _page.GotoAsync(url, Browser.GotoOptions);
+                response = await GotoWithRetry502Async(url);
 
                 if (response == null || !response.Ok)
                 {
                     Console.WriteLine($"[Erreur] Impossible de joindre l'API OBI pour le groupe {i / chunkSize + 1} ({response?.Status}).");
+                    Console.WriteLine($"{url} ({response?.StatusText}).");
                     continue; // On passe au groupe suivant même si celui-ci a échoué
                 }
 
@@ -122,7 +123,7 @@ namespace SioMideaPortasplitWatcher.markets
                 ProcessStockJson(jsonResponse);
 
                 // Optionnel : Un léger délai pour ne pas enchaîner les requêtes trop brutalement sur la même instance Playwright
-                await Task.Delay(750);
+                await Task.Delay(850);
             }
         }
 
@@ -190,6 +191,39 @@ namespace SioMideaPortasplitWatcher.markets
             }
         }
 
+        private async Task<IResponse?> GotoWithRetry502Async(string url)
+        {
+            const int maxSeconds = 10;
+
+            for (int i = 0; i < maxSeconds; i++)
+            {
+                try
+                {
+                    var response = await _page!.GotoAsync(url, Browser.GotoOptions);
+
+                    if (response != null && response.Ok)
+                        return response;
+
+                    // Cas 502 ou autre erreur serveur
+                    if (response != null && response.Status == 502)
+                    {
+                        Console.WriteLine($"[502] Tentative {i + 1}/10 pour {url}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"[HTTP {response?.Status}] Tentative {i + 1}/10 pour {url}");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[Exception] Tentative {i + 1}/10 : {ex.Message}");
+                }
+
+                await Task.Delay(1000); // 1 seconde
+            }
+
+            return null;
+        }
 
         private List<ObiStore> LoadStoresFromResources()
         {

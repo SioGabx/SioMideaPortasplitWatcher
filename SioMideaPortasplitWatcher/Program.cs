@@ -125,7 +125,7 @@ namespace SioMideaPortasplitWatcher
             {
                 PrintStockOutDetected(ToomDeCheckerMP.ProductName, e.Store.Name);
             };
-
+         
 
             var ToomDeCheckerMPC = new ToomDeStockChecker("Midea Portasplit Cool 8000 BTU", "10515238");
             ToomDeCheckerMPC.NewStockDetected += async (sender, e) =>
@@ -139,15 +139,55 @@ namespace SioMideaPortasplitWatcher
             ToomDeCheckerMPC.StockOutDetected += (sender, e) =>
             {
                 PrintStockOutDetected(ToomDeCheckerMPC.ProductName, e.Store.Name);
-            };
+            };   
+            
+            var LeroyMerlinCheckerMP = new LeroyMerlinStockChecker("Midea Portasplit 12000 BTU", 48.693100359086536, 6.173689718165843, "93857579");
 
-            List<IStockChecker> stockCheckers = new List<IStockChecker>
+            LeroyMerlinCheckerMP.NewStockDetected += async (sender, e) =>
             {
-                obiCheckerMP, obiCheckerMPC,
-                BauhausInfoMP, BauhausInfoMPC,
-                ToomDeCheckerMP, ToomDeCheckerMPC
+                var url = $"https://www.leroymerlin.fr/produits/climatiseur-split-mobile-reversible-portasplit-midea-par-optimea-93857579.html";
+                PrintNewStockDetected(e.Store.Name, LeroyMerlinCheckerMP.ProductName, ConsoleColor.Red, e.Status, url);
+                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.City,e.Store.Name);
+                ShowBallon(e.Store.Name, LeroyMerlinCheckerMP.ProductName, Duration, DistanceKm, e.Status, url);
             };
 
+            LeroyMerlinCheckerMP.StockOutDetected += (sender, e) =>
+            {
+                PrintStockOutDetected(LeroyMerlinCheckerMP.ProductName, e.Store.Name);
+            };
+
+            var CastoramaCheckerMP = new CastoramaStockChecker("Midea Portasplit 12000 BTU", 48.693100359086536, 6.173689718165843, "8431312260509");
+
+            CastoramaCheckerMP.NewStockDetected += async (sender, e) =>
+            {
+                var url = $"https://www.castorama.fr/climatiseur-portasplit-midea-reversible-3500w/8431312260509_CAFR.prd";
+                PrintNewStockDetected(e.Store.Name, CastoramaCheckerMP.ProductName, ConsoleColor.Red, e.NewQuantity, url);
+                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.City,e.Store.Name);
+                ShowBallon(e.Store.Name, CastoramaCheckerMP.ProductName, Duration, DistanceKm, e.NewQuantity, url);
+            };
+
+            CastoramaCheckerMP.StockOutDetected += (sender, e) =>
+            {
+                PrintStockOutDetected(CastoramaCheckerMP.ProductName, e.Store.Name);
+            };
+
+
+            List<IStockChecker> stockCheckersMP =
+            [
+                obiCheckerMP,
+                BauhausInfoMP,
+                ToomDeCheckerMP,
+                LeroyMerlinCheckerMP,
+                CastoramaCheckerMP
+            ];
+
+            List<IStockChecker> stockCheckersMPC =
+            [
+                 obiCheckerMPC,
+                BauhausInfoMPC,
+                ToomDeCheckerMPC
+            ];
+          
             while (true)
             {
                 try
@@ -156,41 +196,8 @@ namespace SioMideaPortasplitWatcher
                     Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] Analyse (Actualisation)...");
                     Console.ResetColor();
 
-
-                    var tasks = stockCheckers.Select(async checker =>
-                    {
-                        try
-                        {
-                            await checker.CheckStockAsync(); // idéalement CheckStockAsync(token)
-                        }
-                        catch (OperationCanceledException)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.WriteLine($"[TIMEOUT] {checker}");
-                            Console.ResetColor();
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.ForegroundColor = ConsoleColor.DarkRed;
-                            Console.WriteLine($"[ERROR {checker}] {ex.Message}");
-                            Console.ResetColor();
-                        }
-                    });
-
-                    var cycleTask = Task.WhenAll(tasks);
-
-                    if (await Task.WhenAny(cycleTask, Task.Delay(TimeSpan.FromMinutes(5))) != cycleTask)
-                    {
-                        Console.WriteLine("[TIMEOUT GLOBAL] cycle annulé, restart boucle");
-                    }
-
-
-
-                    //foreach (var stockChecker in stockCheckers)
-                    //{
-                    //    //Console.Write(" " +stockChecker + " /");
-                    //    await stockChecker.CheckStockAsync();
-                    //}
+                    await MarketCheckerTask(stockCheckersMP);
+                   // await MarketCheckerTask(stockCheckersMPC);
                 }
                 catch (Exception ex)
                 {
@@ -205,6 +212,37 @@ namespace SioMideaPortasplitWatcher
                 // IMPORTANT : Attendre (ex: 2 minutes) pour éviter de spammer l'API d'OBI 
                 // et se faire bannir l'IP (Rate limit)
                 await Task.Delay(TimeSpan.FromSeconds(20));
+            }
+        }
+
+
+        private static async Task MarketCheckerTask(List<IStockChecker> stockCheckers)
+        {
+            var tasks = stockCheckers.Select(async checker =>
+            {
+                try
+                {
+                    await checker.CheckStockAsync(); // idéalement CheckStockAsync(token)
+                }
+                catch (OperationCanceledException)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine($"[TIMEOUT] {checker}");
+                    Console.ResetColor();
+                }
+                catch (Exception ex)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine($"[ERROR {checker}] {ex.Message}");
+                    Console.ResetColor();
+                }
+            });
+
+            var cycleTask = Task.WhenAll(tasks);
+
+            if (await Task.WhenAny(cycleTask, Task.Delay(TimeSpan.FromMinutes(5))) != cycleTask)
+            {
+                Console.WriteLine("[TIMEOUT GLOBAL] cycle annulé, restart boucle");
             }
         }
     }
