@@ -12,11 +12,235 @@ namespace SioMideaPortasplitWatcher.markets
 {
     public class CastoramaStockChecker : IStockChecker
     {
+        /*
+        {
+            "type": "store",
+            "id": "1431",
+            "attributes": {
+                "store": {
+                    "brand": "CAFR",
+                    "clickAndCollect": {
+                        "sameDay": true,
+                        "nextDay": true,
+                        "mktpAvailable": false,
+                        "trainingReadyStore": false
+                    },
+                    "collectionMessage": "Les commandes spéciales clients ne sont ni reprises, ni échangées",
+                    "contactPoint": {
+                        "email": "",
+                        "faxNumber": "03 83 53 24 05",
+                        "telephone": "03 83 51 03 86",
+                        "additionalContacts": [],
+                        "departmentContacts": []
+                    },
+                    "distance": "27.95 KM",
+                    "externalId": "1431",
+                    "facilities": ["La carte cadeau Castorama", "La carte Castorama", "La conception 3D cuisine et rangement", "La découpe du bois et du verre", "La livraison à domicile", "La location de véhicule", "L'installation", "Le financement", "Le service après-vente", "Location de matériel", "Forfaits d’entretien des outils
+de jardin motorisés", "Service après-vente (hors dimanche)"],
+                    "geoCoordinates": {
+                        "country": "FR",
+                        "countryCode": "FR",
+                        "postalCode": "54504",
+                        "coordinates": {
+                            "latitude": 48.65580498232446,
+                            "longitude": 6.181587342605553
+                        },
+                        "address": {
+                            "lines": ["Espace vandoeuvre sud", "Rue Bernard Palissy BP124", "", "VANDOEUVRE LES NANCY", ""]
+                        },
+                        "latitude": "48.65580498232446",
+                        "longitude": "6.181587342605553"
+                    },
+                    "geoSearchResults": {
+                        "distance": 27.95,
+                        "unitOfMeasure": "KM"
+                    },
+                    "emergencyMessageTitle": "",
+                    "emergencyMessageText": "",
+                    "storeOpeningHoursTitle": "Horaires du magasin",
+                    "locale": "fr_FR",
+                    "name": "Castorama Vandoeuvre",
+                    "openingHoursSpecifications": [{
+                            "closes": "20:00:00 Europe/Paris",
+                            "dayOfWeek": "Monday",
+                            "opens": "08:00:00 Europe/Paris"
+                        }, {
+                            "closes": "20:00:00 Europe/Paris",
+                            "dayOfWeek": "Tuesday",
+                            "opens": "08:00:00 Europe/Paris"
+                        }, {
+                            "closes": "20:00:00 Europe/Paris",
+                            "dayOfWeek": "Wednesday",
+                            "opens": "08:00:00 Europe/Paris"
+                        }, {
+                            "closes": "20:00:00 Europe/Paris",
+                            "dayOfWeek": "Thursday",
+                            "opens": "08:00:00 Europe/Paris"
+                        }, {
+                            "closes": "20:00:00 Europe/Paris",
+                            "dayOfWeek": "Friday",
+                            "opens": "08:00:00 Europe/Paris"
+                        }, {
+                            "closes": "20:00:00 Europe/Paris",
+                            "dayOfWeek": "Saturday",
+                            "opens": "08:00:00 Europe/Paris"
+                        }, {
+                            "closes": "13:00:00 Europe/Paris",
+                            "dayOfWeek": "Sunday",
+                            "opens": "09:00:00 Europe/Paris"
+                        }
+                    ],
+                    "additionalOpeningHoursSpecifications": [{
+                            "identifier": "TRADE_YARD",
+                            "openingHoursSpecifications": [{
+                                    "closes": "20:00:00 Europe/Paris",
+                                    "dayOfWeek": "Monday",
+                                    "opens": "08:00:00 Europe/Paris"
+                                }, {
+                                    "closes": "20:00:00 Europe/Paris",
+                                    "dayOfWeek": "Tuesday",
+                                    "opens": "08:00:00 Europe/Paris"
+                                }, {
+                                    "closes": "20:00:00 Europe/Paris",
+                                    "dayOfWeek": "Wednesday",
+                                    "opens": "08:00:00 Europe/Paris"
+                                }, {
+                                    "closes": "20:00:00 Europe/Paris",
+                                    "dayOfWeek": "Thursday",
+                                    "opens": "08:00:00 Europe/Paris"
+                                }, {
+                                    "closes": "20:00:00 Europe/Paris",
+                                    "dayOfWeek": "Friday",
+                                    "opens": "08:00:00 Europe/Paris"
+                                }, {
+                                    "closes": "20:00:00 Europe/Paris",
+                                    "dayOfWeek": "Saturday",
+                                    "opens": "08:00:00 Europe/Paris"
+                                }, {
+                                    "closes": "13:00:00 Europe/Paris",
+                                    "dayOfWeek": "Sunday",
+                                    "opens": "09:00:00 Europe/Paris"
+                                }
+                            ]
+                        }
+                    ],
+                    "additionalOpeningHoursTitle": "Horaires de la cour des matériaux",
+                    "publicHolidaysTitle": "Horaires exceptionnels",
+                    "paymentMethod": "NONPED",
+                    "publicHolidays": [{
+                            "closes": "19:00:00 Europe/Paris",
+                            "date": "2026-07-14",
+                            "opens": "09:00:00 Europe/Paris"
+                        }
+                    ],
+                    "salesOrganization": "CA-FR",
+                    "seoId": "CAFR_VAN1431",
+                    "storeType": "Installation-Centre",
+                    "storeMerchandising": [{
+                            "url": "/store/en-ce-moment-dans-votre-magasin-castorama"
+                        }, {
+                            "url": "/store/seo-vandoeuvre"
+                        }, {
+                            "url": "/store"
+                        }
+                    ]
+                },
+                "openingTimes": {
+                    "openToday": true,
+                    "openingTimeToday": "08:00",
+                    "closingTimeToday": "20:00",
+                    "storeClosesInMs": "28200000",
+                    "openTomorrow": true,
+                    "openingTimeTomorrow": "08:00",
+                    "closingTimeTomorrow": "20:00",
+                    "upcomingDays": [{
+                            "date": "2026-06-30",
+                            "openingTimes": {
+                                "openingTime": "08:00:00 Europe/Paris",
+                                "closingTime": "20:00:00 Europe/Paris"
+                            }
+                        }, {
+                            "date": "2026-07-01",
+                            "openingTimes": {
+                                "openingTime": "08:00:00 Europe/Paris",
+                                "closingTime": "20:00:00 Europe/Paris"
+                            }
+                        }, {
+                            "date": "2026-07-02",
+                            "openingTimes": {
+                                "openingTime": "08:00:00 Europe/Paris",
+                                "closingTime": "20:00:00 Europe/Paris"
+                            }
+                        }, {
+                            "date": "2026-07-03",
+                            "openingTimes": {
+                                "openingTime": "08:00:00 Europe/Paris",
+                                "closingTime": "20:00:00 Europe/Paris"
+                            }
+                        }, {
+                            "date": "2026-07-04",
+                            "openingTimes": {
+                                "openingTime": "08:00:00 Europe/Paris",
+                                "closingTime": "20:00:00 Europe/Paris"
+                            }
+                        }, {
+                            "date": "2026-07-05",
+                            "openingTimes": {
+                                "openingTime": "09:00:00 Europe/Paris",
+                                "closingTime": "13:00:00 Europe/Paris"
+                            }
+                        }, {
+                            "date": "2026-07-06",
+                            "openingTimes": {
+                                "openingTime": "08:00:00 Europe/Paris",
+                                "closingTime": "20:00:00 Europe/Paris"
+                            }
+                        }
+                    ]
+                },
+                "clickAndCollect": {
+                    "products": [{
+                            "availability": "NotAvailable",
+                            "ean": "8431312260509",
+                            "name": "Climatiseur portasplit Midea réversible 3500W",
+                            "clickAndCollectType": "NextDay",
+                            "shippingMethodClickAndCollectFulfilmentCentre": {
+                                "availability": "NotAvailable"
+                            }
+                        }
+                    ],
+                    "summary": {
+                        "primaryMessage": "Currently out of stock",
+                        "primaryMessageLanguageKey": "fulfil_out_of_stock",
+                        "secondaryMessage": "for Click & Collect",
+                        "secondaryMessageLanguageKey": "fulfil_for_cc",
+                        "showOpeningTimesFor": "Today",
+                        "availability": "AllNotAvailable",
+                        "fulfilmentCenterAvailability": "AllNotAvailable",
+                        "clickAndCollectType": "NextDay",
+                        "aggregateAvailability": "AllNotAvailable"
+                    }
+                },
+                "stock": {
+                    "products": [{
+                            "ean": "8431312260509",
+                            "productType": "Stockable",
+                            "description": "Item out of stock",
+                            "stockLevel": "OutOfStock",
+                            "quantity": 0
+                        }
+                    ]
+                },
+                "seoPath": "/store/castorama-vandoeuvre/CAFR_VAN1431"
+            }
+        }
+        */
         public class Store
         {
             public string StoreId { get; set; } = string.Empty;
             public string Name { get; set; } = string.Empty;
-            public string City { get; set; } = string.Empty;
+            public double Latitude { get; set; } = 0.0;
+            public double Longitude { get; set; } = 0.0;
 
             public int AvailableQuantity { get; set; }
         }
@@ -117,7 +341,9 @@ namespace SioMideaPortasplitWatcher.markets
                                      ?? storeItem.GetProperty("id").GetString();
 
                     string name = attr.GetProperty("name").GetString() ?? "Unknown";
-
+                    var geoCoordinates = attr.GetProperty("geoCoordinates");
+                    var latitude = geoCoordinates.GetProperty("coordinates").GetProperty("latitude").GetDouble();
+                    var longitude = geoCoordinates.GetProperty("coordinates").GetProperty("longitude").GetDouble();
                     int qty = ExtractAvailability(storeItem);
 
                     bool hasPrev = _previousStockState.TryGetValue(storeId, out int prev);
@@ -126,7 +352,9 @@ namespace SioMideaPortasplitWatcher.markets
                     {
                         StoreId = storeId,
                         Name = name,
-                        AvailableQuantity = qty
+                        AvailableQuantity = qty,
+                        Latitude = latitude,
+                        Longitude = longitude
                     };
 
                     if (hasPrev)

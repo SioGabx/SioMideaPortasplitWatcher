@@ -146,9 +146,9 @@ namespace SioMideaPortasplitWatcher
             LeroyMerlinCheckerMP.NewStockDetected += async (sender, e) =>
             {
                 var url = $"https://www.leroymerlin.fr/produits/climatiseur-split-mobile-reversible-portasplit-midea-par-optimea-93857579.html";
-                PrintNewStockDetected(e.Store.Name, LeroyMerlinCheckerMP.ProductName, ConsoleColor.Red, e.Status, url);
+                PrintNewStockDetected(e.Store.Name, LeroyMerlinCheckerMP.ProductName, ConsoleColor.Red, e.Quantity, url);
                 var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.City,e.Store.Name);
-                ShowBallon(e.Store.Name, LeroyMerlinCheckerMP.ProductName, Duration, DistanceKm, e.Status, url);
+                ShowBallon(e.Store.Name, LeroyMerlinCheckerMP.ProductName, Duration, DistanceKm, e.Quantity, url);
             };
 
             LeroyMerlinCheckerMP.StockOutDetected += (sender, e) =>
@@ -162,7 +162,7 @@ namespace SioMideaPortasplitWatcher
             {
                 var url = $"https://www.castorama.fr/climatiseur-portasplit-midea-reversible-3500w/8431312260509_CAFR.prd";
                 PrintNewStockDetected(e.Store.Name, CastoramaCheckerMP.ProductName, ConsoleColor.Red, e.NewQuantity, url);
-                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.City,e.Store.Name);
+                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.Name, e.Store.Latitude, e.Store.Longitude);
                 ShowBallon(e.Store.Name, CastoramaCheckerMP.ProductName, Duration, DistanceKm, e.NewQuantity, url);
             };
 

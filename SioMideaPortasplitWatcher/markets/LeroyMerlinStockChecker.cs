@@ -2,6 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Reflection;
+using System.Diagnostics;
 
 namespace SioMideaPortasplitWatcher.markets
 {
@@ -15,17 +16,18 @@ namespace SioMideaPortasplitWatcher.markets
             public string Distance { get; set; } = "";
             public bool Available { get; set; }
             public string Status { get; set; } = "";
+            public int AvailableQuantity { get; internal set; }
         }
 
         public class StockEventArgs : EventArgs
         {
             public LeroyMerlinStore Store { get; }
-            public string Status { get; }
+            public int Quantity { get; }
 
-            public StockEventArgs(LeroyMerlinStore store, string status)
+            public StockEventArgs(LeroyMerlinStore store, int quantity)
             {
                 Store = store;
-                Status = status;
+                Quantity = quantity;
             }
         }
 
@@ -34,8 +36,8 @@ namespace SioMideaPortasplitWatcher.markets
 
         private IPage? _page;
 
-        private readonly string _url;
-        private readonly Dictionary<int, bool> _previousState = new();
+        private readonly string _url; 
+        private readonly Dictionary<int, int> _previousStockState = new();
         public readonly string ProductName;
 
         public LeroyMerlinStockChecker(string productName, double latitude, double longitude, string productRef)
@@ -76,19 +78,38 @@ namespace SioMideaPortasplitWatcher.markets
 
             await ParseStoresAsync();
         }
+        private int ParseQuantity(string text)
+        {
+            // "31 en stock" -> 31
+            var match = System.Text.RegularExpressions.Regex.Match(text, @"\d+");
+            if (match.Success && int.TryParse(match.Value, out int qty))
+                return qty;
+
+            if (text.Contains("Bientôt disponible", StringComparison.OrdinalIgnoreCase))
+                return 0;
+
+            if (text.Contains("Actuellement indisponible", StringComparison.OrdinalIgnoreCase))
+                return 0;
+
+            return 0;
+        }
 
         private async Task ParseStoresAsync()
         {
             var cards = await _page!.QuerySelectorAllAsync("article.m-store-search-card");
 
+            
             foreach (var card in cards)
             {
                 try
                 {
-                    var idAttr = await card.GetAttributeAsync("data-store-id");
+                    var button = await card.QuerySelectorAsync("button[data-store-id]");
+                    var idAttr = await button?.GetAttributeAsync("data-store-id");
+
                     if (!int.TryParse(idAttr, out int storeId))
                         continue;
 
+                    
                     var name = await card.QuerySelectorAsync(".m-store-info-header--title");
                     var city = await card.GetAttributeAsync("data-store-city") ?? "";
 
@@ -98,9 +119,7 @@ namespace SioMideaPortasplitWatcher.markets
                     var distanceText = distance != null ? await distance.InnerTextAsync() : "";
 
                     var statusText = await card.InnerTextAsync();
-
-                    bool available =
-                        !statusText.Contains("Actuellement indisponible");
+                    int currentQty = ParseQuantity(statusText);
 
                     var store = new LeroyMerlinStore
                     {
@@ -108,27 +127,40 @@ namespace SioMideaPortasplitWatcher.markets
                         Name = nameText.Trim(),
                         City = city,
                         Distance = distanceText.Trim(),
-                        Available = available,
-                        Status = available ? "available" : "unavailable"
+                        AvailableQuantity = currentQty,
+                        Status = currentQty > 0 ? "available" : "unavailable"
                     };
 
-                    bool hasPrevious = _previousState.TryGetValue(storeId, out bool previous);
+                    bool hasPrevious = _previousStockState.TryGetValue(storeId, out int previousQty);
+
+                    // Mettre à jour l'objet complet
+                    // fullStoreInfo.AvailableQuantity = currentQty;
 
                     if (hasPrevious)
                     {
-                        if (!previous && available)
-                            NewStockDetected?.Invoke(this, new StockEventArgs(store, store.Status));
-
-                        if (previous && !available)
-                            StockOutDetected?.Invoke(this, new StockEventArgs(store, store.Status));
+                        if (previousQty == 0 && currentQty > 0)
+                        {
+                            NewStockDetected?.Invoke(this, new StockEventArgs(store, currentQty));
+                        }
+                        else if (previousQty > 0 && currentQty == 0)
+                        {
+                            StockOutDetected?.Invoke(this, new StockEventArgs(store, currentQty));
+                        }
+                        else if (previousQty != currentQty)
+                        {
+                            Console.WriteLine($"[Info] Changement de quantité pour {store.Name} : {previousQty} -> {currentQty}");
+                        }
                     }
                     else
                     {
-                        if (available)
-                            NewStockDetected?.Invoke(this, new StockEventArgs(store, store.Status));
+                        if (currentQty > 0)
+                        {
+                            NewStockDetected?.Invoke(this, new StockEventArgs(store, currentQty));
+                        }
                     }
 
-                    _previousState[storeId] = available;
+                    // sauvegarde état
+                    _previousStockState[storeId] = currentQty;
                 }
                 catch
                 {

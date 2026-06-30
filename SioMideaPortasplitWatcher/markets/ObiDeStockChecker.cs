@@ -193,33 +193,33 @@ namespace SioMideaPortasplitWatcher.markets
 
         private async Task<IResponse?> GotoWithRetry502Async(string url)
         {
-            const int maxSeconds = 10;
+            const int maxAttempts = 10;
 
-            for (int i = 0; i < maxSeconds; i++)
+            for (int i = 0; i < maxAttempts; i++)
             {
                 try
                 {
-                    var response = await _page!.GotoAsync(url, Browser.GotoOptions);
+                    var response = await _page!.Context.APIRequest.GetAsync(url);
 
-                    if (response != null && response.Ok)
-                        return response;
-
-                    // Cas 502 ou autre erreur serveur
-                    if (response != null && response.Status == 502)
+                    if (response.Ok)
                     {
-                        Console.WriteLine($"[502] Tentative {i + 1}/10 pour {url}");
+                        Console.WriteLine($"[OK] {url} prêt (tentative {i + 1})");
+
+                        // Navigation UNE SEULE FOIS quand c'est bon
+                        return await _page.GotoAsync(url, Browser.GotoOptions);
                     }
+
+                    if (response.Status == 502)
+                        Console.WriteLine($"[502] Tentative {i + 1}/{maxAttempts}");
                     else
-                    {
-                        Console.WriteLine($"[HTTP {response?.Status}] Tentative {i + 1}/10 pour {url}");
-                    }
+                        Console.WriteLine($"[HTTP {response.Status}] Tentative {i + 1}/{maxAttempts}");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"[Exception] Tentative {i + 1}/10 : {ex.Message}");
+                    Console.WriteLine($"[Exception] Tentative {i + 1}: {ex.Message}");
                 }
 
-                await Task.Delay(1000); // 1 seconde
+                await Task.Delay(2000);
             }
 
             return null;
