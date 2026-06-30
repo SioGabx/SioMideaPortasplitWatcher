@@ -193,7 +193,7 @@ namespace SioMideaPortasplitWatcher.markets
             if (response.Ok)
                 return await response.TextAsync();
 
-            if (response.Status != 502)
+            if (response.Status != 502 && response.Status != 503)
             {
                 Console.WriteLine($"[HTTP {response.Status}] {url}");
                 return null;
