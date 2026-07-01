@@ -199,11 +199,11 @@ namespace SioMideaPortasplitWatcher.markets
                 return null;
             }
 
-            Console.WriteLine($"[502] Reçu pour {url}, attente de 30 secondes...");
+            Console.WriteLine($"[502] Reçu pour {url}, attente de 5 secondes...");
 
-            for (int attempt = 0; attempt < 10; attempt++)
+            for (int attempt = 0; attempt < 60; attempt++)
             {
-                await Task.Delay(TimeSpan.FromSeconds(10));
+                await Task.Delay(TimeSpan.FromSeconds(5));
 
                 try
                 {

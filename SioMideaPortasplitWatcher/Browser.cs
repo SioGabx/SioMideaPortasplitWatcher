@@ -13,16 +13,17 @@ namespace SioMideaPortasplitWatcher
         public static async Task Initialize()
         {
             string binPath = AppDomain.CurrentDomain.BaseDirectory; 
-            string profilePath = System.IO.Path.Combine(binPath, @"Chrome User Data\Default");
+            string profilePath = System.IO.Path.Combine(binPath, @"Browser User Data\Default");
 
             Playwright = await Microsoft.Playwright.Playwright.CreateAsync();
             BrowserContext = await Playwright.Chromium.LaunchPersistentContextAsync(
                 profilePath,
                new BrowserTypeLaunchPersistentContextOptions
                {
+                   //ExecutablePath = @"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
                    Headless = false,
                    //BypassCSP = true,
-                   Channel = "chrome",
+                   Channel = "msedge", //chrome
                    Args = new[] {
                         "--disable-blink-features=AutomationControlled", // Masque navigator.webdriver
                         "--no-sandbox",

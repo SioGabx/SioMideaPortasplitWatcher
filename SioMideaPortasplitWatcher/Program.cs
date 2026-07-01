@@ -1,6 +1,7 @@
 ﻿using SioMideaPortasplitWatcher.markets;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -125,7 +126,7 @@ namespace SioMideaPortasplitWatcher
             {
                 PrintStockOutDetected(ToomDeCheckerMP.ProductName, e.Store.Name);
             };
-         
+
 
             var ToomDeCheckerMPC = new ToomDeStockChecker("Midea Portasplit Cool 8000 BTU", "10515238");
             ToomDeCheckerMPC.NewStockDetected += async (sender, e) =>
@@ -139,15 +140,15 @@ namespace SioMideaPortasplitWatcher
             ToomDeCheckerMPC.StockOutDetected += (sender, e) =>
             {
                 PrintStockOutDetected(ToomDeCheckerMPC.ProductName, e.Store.Name);
-            };   
-            
+            };
+
             var LeroyMerlinCheckerMP = new LeroyMerlinStockChecker("Midea Portasplit 12000 BTU", 48.693100359086536, 6.173689718165843, "93857579");
 
             LeroyMerlinCheckerMP.NewStockDetected += async (sender, e) =>
             {
                 var url = $"https://www.leroymerlin.fr/produits/climatiseur-split-mobile-reversible-portasplit-midea-par-optimea-93857579.html";
                 PrintNewStockDetected(e.Store.Name, LeroyMerlinCheckerMP.ProductName, ConsoleColor.Red, e.Quantity, url);
-                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.City,e.Store.Name);
+                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.City, e.Store.Name);
                 ShowBallon(e.Store.Name, LeroyMerlinCheckerMP.ProductName, Duration, DistanceKm, e.Quantity, url);
             };
 
@@ -187,17 +188,17 @@ namespace SioMideaPortasplitWatcher
                 BauhausInfoMPC,
                 ToomDeCheckerMPC
             ];
-          
+
             while (true)
             {
+                var stopwatch = Stopwatch.StartNew();
                 try
                 {
                     Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] Analyse (Actualisation)...");
                     Console.ResetColor();
-
                     await MarketCheckerTask(stockCheckersMP);
-                   // await MarketCheckerTask(stockCheckersMPC);
+                    // await MarketCheckerTask(stockCheckersMPC);
                 }
                 catch (Exception ex)
                 {
@@ -207,7 +208,8 @@ namespace SioMideaPortasplitWatcher
                 }
 
                 Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] Fin de l'analyse...");
+                stopwatch.Stop();
+                Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] Fin de l'analyse... - Durée : {stopwatch.Elapsed:mm\\:ss}");
                 Console.ResetColor();
                 // IMPORTANT : Attendre (ex: 2 minutes) pour éviter de spammer l'API d'OBI 
                 // et se faire bannir l'IP (Rate limit)

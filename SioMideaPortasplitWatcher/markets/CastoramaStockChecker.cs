@@ -319,7 +319,7 @@ de jardin motorisés", "Service après-vente (hors dimanche)"],
         {
             return "https://api.kingfisher.com/v1/mobile/stores/CAFR" +
                    $"?nearLatLong={Math.Round(Latitude, 4)},{Math.Round(Longitude, 4)}" +
-                   "&page[size]=10" +
+                   "&page[size]=500" +
                    "&include=clickAndCollect,stock" +
                    $"&filter[ean]={ean}";
         }
