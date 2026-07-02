@@ -43,6 +43,12 @@ namespace SioMideaPortasplitWatcher.markets
             [JsonPropertyName("url")]
             public string Url { get; set; } = string.Empty;
 
+            [JsonPropertyName("latitude")]
+            public double Latitude { get; set; } = 0;
+
+            [JsonPropertyName("longitude")]
+            public double Longitude { get; set; } = 0;
+
             // Alimentée dynamiquement par l'API de stock
             [JsonPropertyName("availableQuantity")]
 
@@ -75,17 +81,19 @@ namespace SioMideaPortasplitWatcher.markets
         // Permet de suivre le dernier état du stock connu par magasin (Key: storeId, Value: quantité)
         private readonly Dictionary<string, int> _previousStockState = new();
 
-        public ObiDeStockChecker(string productName, string productId)
+        public ObiDeStockChecker(string productName, string productId, double latitude, double longitude, double radiusKm = 200)
         {
             ProductName = productName;
             ProductId = productId;
-            _cachedStores = LoadStoresFromResources();
+            var AllStores = LoadStoresFromResources();
+            _cachedStores = FilterStoresByDistance(AllStores, latitude, longitude, radiusKm);
+            Console.WriteLine($"Nombre de magasins obi.de retenus : {_cachedStores.Count}/{AllStores.Count}");
         }
 
         // Correction de l'interface : Task<IPage> au lieu de async void
         public async Task<IPage> CreatePage()
         {
-            _page = await Browser.CreatePage(); 
+            _page = await Browser.CreatePage();
             return _page;
         }
 
@@ -115,7 +123,7 @@ namespace SioMideaPortasplitWatcher.markets
                 ProcessStockJson(jsonResponse);
 
                 // Optionnel : Un léger délai pour ne pas enchaîner les requêtes trop brutalement sur la même instance Playwright
-                await Task.Delay(850);
+                await Task.Delay(1000);
             }
         }
 
@@ -193,33 +201,57 @@ namespace SioMideaPortasplitWatcher.markets
             if (response.Ok)
                 return await response.TextAsync();
 
-            if (response.Status != 502 && response.Status != 503)
+            if (response.Status != 502 && response.Status != 504 && response.Status != 503 && response.Status != 429 && response.Status != 400)
             {
                 Console.WriteLine($"[HTTP {response.Status}] {url}");
                 return null;
             }
 
-            Console.WriteLine($"[502] Reçu pour {url}, attente de 5 secondes...");
+            Console.WriteLine($"[{response.Status}] Reçu pour {url}, attente de 5 secondes...");
 
-            for (int attempt = 0; attempt < 60; attempt++)
+            for (int attempt = 0; attempt < 10; attempt++)
             {
-                await Task.Delay(TimeSpan.FromSeconds(5));
+                await Task.Delay(TimeSpan.FromSeconds(6));
 
                 try
                 {
-                    string content = await _page.ContentAsync();
-
+                    //content == <html><head><meta name="color-scheme" content="light dark"><meta charset="utf-8"></head><body><pre>[{"storeId":"527","availableQuantity":0},{"storeId":"570","availableQuantity":0},{"storeId":"363","availableQuantity":0},{"storeId":"509","availableQuantity":0},{"storeId":"546","availableQuantity":0},{"storeId":"373","availableQuantity":0},{"storeId":"171","availableQuantity":0},{"storeId":"555","availableQuantity":0},{"storeId":"027","availableQuantity":0},{"storeId":"163","availableQuantity":0}]</pre><div class="json-formatter-container"></div></body></html>
                     // Vérification simple que le contenu ressemble à du JSON
-                    content = content.Trim();
-
-                    if ((content.StartsWith("{") && content.EndsWith("}")) ||
-                        (content.StartsWith("[") && content.EndsWith("]")))
+                    if (!_page.Context.IsClosed)
                     {
-                        Console.WriteLine("[OK] JSON récupéré après attente.");
-                        return content;
-                    }
+                        var pre = await _page.QuerySelectorAsync("pre");
 
-                    Console.WriteLine($"[Tentative {attempt + 1}] Toujours pas de JSON.");
+                        if (pre != null)
+                        {
+                            string content = await pre.InnerTextAsync();
+                            content = content.Trim();
+
+                            if (((content.StartsWith("{") && content.EndsWith("}")) ||
+                                (content.StartsWith("[") && content.EndsWith("]"))) && !(content.Contains("Error") && content.Contains("statusCode")))
+                            {
+                                Console.WriteLine("[OK] JSON récupéré après attente.");
+                                return content;
+                            }
+                            if (content == "{\"statusCode\":400,\"message\":\"Error fetching article\"}")
+                            {
+                                Console.WriteLine("[Tentative] Actualisation.");
+                                await _page.ReloadAsync(Browser.ReloadOptions);
+                                continue;
+                            }
+                            if (content == "{\"message\":\"Too Many Requests\"}")
+                            {
+                                await Task.Delay(TimeSpan.FromSeconds(6));
+                                await _page.ReloadAsync(Browser.ReloadOptions);
+                                continue;
+                            }
+                        }
+
+                        Console.WriteLine($"[Tentative {attempt + 1}] Toujours pas de JSON.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Context.IsClosed");
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -228,6 +260,20 @@ namespace SioMideaPortasplitWatcher.markets
             }
 
             return null;
+        }
+
+        private static List<ObiStore> FilterStoresByDistance(
+    List<ObiStore> stores,
+    double latitude,
+    double longitude,
+    double maxDistanceKm)
+        {
+            return stores
+                .Where(s =>
+                    s.Latitude != 0 &&
+                    s.Longitude != 0 &&
+                    DistanceKm(latitude, longitude, s.Latitude, s.Longitude) <= maxDistanceKm)
+                .ToList();
         }
 
         private List<ObiStore> LoadStoresFromResources()
@@ -268,5 +314,29 @@ namespace SioMideaPortasplitWatcher.markets
                 return new List<ObiStore>();
             }
         }
+
+        private static double DistanceKm(double lat1, double lon1, double lat2, double lon2)
+        {
+            const double R = 6371.0;
+
+            double dLat = DegreesToRadians(lat2 - lat1);
+            double dLon = DegreesToRadians(lon2 - lon1);
+
+            double a =
+                Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
+                Math.Cos(DegreesToRadians(lat1)) *
+                Math.Cos(DegreesToRadians(lat2)) *
+                Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
+
+            double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+
+            return R * c;
+        }
+
+        private static double DegreesToRadians(double degrees)
+        {
+            return degrees * Math.PI / 180.0;
+        }
+
     }
 }

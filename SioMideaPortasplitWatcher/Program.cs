@@ -53,7 +53,7 @@ namespace SioMideaPortasplitWatcher
             Console.ResetColor();
 
             // Instance spécifique pour s'abonner aux événements
-            var obiCheckerMP = new ObiDeStockChecker("Midea Portasplit 12000 BTU", "8620890"); //https://www.obi.de/p/8620890/midea-mobile-split-klimaanlage-portasplit
+            var obiCheckerMP = new ObiDeStockChecker("Midea Portasplit 12000 BTU", "8620890", 48.693100359086536, 6.173689718165843, 200); //https://www.obi.de/p/8620890/midea-mobile-split-klimaanlage-portasplit
 
             obiCheckerMP.NewStockDetected += async (sender, e) =>
             {
@@ -68,7 +68,7 @@ namespace SioMideaPortasplitWatcher
                 PrintStockOutDetected(obiCheckerMP.ProductName, e.Store.Name);
             };
 
-            var obiCheckerMPC = new ObiDeStockChecker("Midea Portasplit Cool 8000 BTU", "2191158911022"); //https://www.obi.de/p/2191158911022/midea-split-klimaanlage-portasplit-cool-mobil-weissgrau
+            var obiCheckerMPC = new ObiDeStockChecker("Midea Portasplit Cool 8000 BTU", "2191158911022", 48.693100359086536, 6.173689718165843, 200); //https://www.obi.de/p/2191158911022/midea-split-klimaanlage-portasplit-cool-mobil-weissgrau
             obiCheckerMPC.NewStockDetected += async (sender, e) =>
             {
                 var url = $"https://www.obi.de/api/disc/store/change?storeNumber={e.Store.StoreId}&redirectUrl={Uri.EscapeDataString($"https://www.obi.de/p/{obiCheckerMPC.ProductId}")}";

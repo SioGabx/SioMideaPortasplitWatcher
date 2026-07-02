@@ -9,7 +9,9 @@
     "email": "ammern@obi.de",
     "phone": "03601 85580",
     "url": "https://www.obi.de/markt/ammern",
-    "storeId": "217"
+    "storeId": "217",
+    "latitude": 51.2342626,
+    "longitude": 10.4529352
   },
   {
     "name": "OBI Markt Eisenach",
@@ -21,7 +23,9 @@
     "email": "eisenach@obi.de",
     "phone": "03691 88820",
     "url": "https://www.obi.de/markt/eisenach",
-    "storeId": "333"
+    "storeId": "333",
+    "latitude": 50.9747134,
+    "longitude": 10.3193565
   },
   {
     "name": "OBI Markt Schwabhausen",
@@ -33,7 +37,9 @@
     "email": "schwabhausen@obi.de",
     "phone": "036256 86010",
     "url": "https://www.obi.de/markt/schwabhausen",
-    "storeId": "477"
+    "storeId": "477",
+    "latitude": 50.8891223,
+    "longitude": 10.7293137
   },
   {
     "name": "OBI Market Sondershausen",
@@ -45,7 +51,9 @@
     "email": "sondershausen@obi.de",
     "phone": "03632 66890",
     "url": "https://www.obi.de/markt/sondershausen",
-    "storeId": "342"
+    "storeId": "342",
+    "latitude": 51.3666041,
+    "longitude": 10.8668419
   },
   {
     "name": "OBI Market Erfurt North",
@@ -57,7 +65,9 @@
     "email": "erfurt-nord@obi.de",
     "phone": "0361 779210",
     "url": "https://www.obi.de/markt/erfurt-nord",
-    "storeId": "564"
+    "storeId": "564",
+    "latitude": 50.9777974,
+    "longitude": 11.0287364
   },
   {
     "name": "OBI Market Erfurt South",
@@ -69,7 +79,9 @@
     "email": "erfurt-sued@obi.de",
     "phone": "0361 74210",
     "url": "https://www.obi.de/markt/erfurt-sued",
-    "storeId": "563"
+    "storeId": "563",
+    "latitude": 50.9777974,
+    "longitude": 11.0287364
   },
   {
     "name": "OBI Market Sömmerda",
@@ -81,7 +93,9 @@
     "email": "soemmerda@obi.de",
     "phone": "03634 68180",
     "url": "https://www.obi.de/markt/soemmerda",
-    "storeId": "201"
+    "storeId": "201",
+    "latitude": 51.1618124,
+    "longitude": 11.1174554
   },
   {
     "name": "OBI Market Göttingen",
@@ -93,7 +107,9 @@
     "email": "goettingen@obi.de",
     "phone": "0551 999160",
     "url": "https://www.obi.de/markt/goettingen",
-    "storeId": "151"
+    "storeId": "151",
+    "latitude": 51.5328328,
+    "longitude": 9.9351811
   },
   {
     "name": "OBI Markt Bad Hersfeld",
@@ -105,7 +121,9 @@
     "email": "bad-hersfeld@obi.de",
     "phone": "06621 77098",
     "url": "https://www.obi.de/markt/bad-hersfeld",
-    "storeId": "157"
+    "storeId": "157",
+    "latitude": 50.8604177,
+    "longitude": 9.6767709
   },
   {
     "name": "OBI Market Osterode-Harz",
@@ -117,7 +135,9 @@
     "email": "osterode@obi.de",
     "phone": "05522 50995",
     "url": "https://www.obi.de/markt/osterode-harz",
-    "storeId": "129"
+    "storeId": "129",
+    "latitude": 51.72784,
+    "longitude": 10.2508204
   },
   {
     "name": "OBI Market Northeim",
@@ -129,7 +149,9 @@
     "email": "northeim@obi.de",
     "phone": "05551 60950",
     "url": "https://www.obi.de/markt/northeim",
-    "storeId": "175"
+    "storeId": "175",
+    "latitude": 51.7648548,
+    "longitude": 9.858883
   },
   {
     "name": "OBI Markt Kassel",
@@ -141,7 +163,9 @@
     "email": "kassel@obi.de",
     "phone": "0561 8203750",
     "url": "https://www.obi.de/markt/kassel",
-    "storeId": "591"
+    "storeId": "591",
+    "latitude": 51.3157833,
+    "longitude": 9.4978479
   },
   {
     "name": "OBI Markt Weimar-Süßenborn",
@@ -153,7 +177,9 @@
     "email": "weimar-suessenborn@obi.de",
     "phone": "03643 24520",
     "url": "https://www.obi.de/markt/weimar-suessenborn",
-    "storeId": "562"
+    "storeId": "562",
+    "latitude": 50.9793301,
+    "longitude": 11.3297921
   },
   {
     "name": "OBI Markt Sangerhausen",
@@ -165,7 +191,9 @@
     "email": "sangerhausen@obi.de",
     "phone": "03464 24250",
     "url": "https://www.obi.de/markt/sangerhausen",
-    "storeId": "335"
+    "storeId": "335",
+    "latitude": 51.4729797,
+    "longitude": 11.2981851
   },
   {
     "name": "OBI Markt Schleusingen",
@@ -177,7 +205,9 @@
     "email": "schleusingen@obi.de",
     "phone": "036841 2030",
     "url": "https://www.obi.de/markt/schleusingen",
-    "storeId": "249"
+    "storeId": "249",
+    "latitude": 50.5416758,
+    "longitude": 10.7669624
   },
   {
     "name": "OBI Market Quedlinburg-Gernrode",
@@ -189,7 +219,9 @@
     "email": "markt079@obi.de",
     "phone": "039485 9370",
     "url": "https://www.obi.de/markt/quedlinburg-gernrode",
-    "storeId": "079"
+    "storeId": "079",
+    "latitude": 51.7855428,
+    "longitude": 11.1519933
   },
   {
     "name": "OBI Markt Rudolstadt",
@@ -201,7 +233,9 @@
     "email": "rudolstadt@obi.de",
     "phone": "03672 43390",
     "url": "https://www.obi.de/markt/rudolstadt",
-    "storeId": "194"
+    "storeId": "194",
+    "latitude": 50.7206063,
+    "longitude": 11.3401985
   },
   {
     "name": "OBI Markt Seesen",
@@ -213,7 +247,9 @@
     "email": "markt144@obi.de",
     "phone": "05381 93610",
     "url": "https://www.obi.de/markt/seesen",
-    "storeId": "144"
+    "storeId": "144",
+    "latitude": 51.8905566,
+    "longitude": 10.1703902
   },
   {
     "name": "OBI Markt Bad Harzburg",
@@ -225,7 +261,9 @@
     "email": "bad-harzburg@obi.de",
     "phone": "05322 90640",
     "url": "https://www.obi.de/markt/bad-harzburg",
-    "storeId": "442"
+    "storeId": "442",
+    "latitude": 51.8797233,
+    "longitude": 10.5875334
   },
   {
     "name": "OBI Market Jena-Löbstedt",
@@ -237,7 +275,9 @@
     "email": "jena@obi.de",
     "phone": "03641 45750",
     "url": "https://www.obi.de/markt/jena-loebstedt",
-    "storeId": "246"
+    "storeId": "246",
+    "latitude": 50.9281717,
+    "longitude": 11.5879359
   },
   {
     "name": "OBI Market Fulda",
@@ -249,7 +289,9 @@
     "email": "fulda_kaiserwiesen@obi.de",
     "phone": "0661 480000",
     "url": "https://www.obi.de/markt/fulda",
-    "storeId": "401"
+    "storeId": "401",
+    "latitude": 50.5514658,
+    "longitude": 9.6762161
   },
   {
     "name": "OBI Markt Naumburg-Saale",
@@ -261,7 +303,9 @@
     "email": "naumburg-saale@obi.de",
     "phone": "03445 24000",
     "url": "https://www.obi.de/markt/naumburg-saale",
-    "storeId": "124"
+    "storeId": "124",
+    "latitude": 51.1525648,
+    "longitude": 11.8099186
   },
   {
     "name": "OBI Markt Bad Neustadt",
@@ -273,7 +317,9 @@
     "email": "bad-neustadt@obi.de",
     "phone": "09771 615400",
     "url": "https://www.obi.de/markt/bad-neustadt",
-    "storeId": "187"
+    "storeId": "187",
+    "latitude": 50.322637,
+    "longitude": 10.2164873
   },
   {
     "name": "OBI Market Warburg",
@@ -285,7 +331,9 @@
     "email": "warburg@obi.de",
     "phone": "05641 76220",
     "url": "https://www.obi.de/markt/warburg",
-    "storeId": "015"
+    "storeId": "015",
+    "latitude": 51.4886533,
+    "longitude": 9.1488385
   },
   {
     "name": "OBI Market Höxter",
@@ -297,7 +345,9 @@
     "email": "hoexter@obi.de",
     "phone": "05271 97070",
     "url": "https://www.obi.de/markt/hoexter",
-    "storeId": "437"
+    "storeId": "437",
+    "latitude": 51.7938902,
+    "longitude": 9.348855
   },
   {
     "name": "OBI Market Holzminden",
@@ -309,7 +359,9 @@
     "email": "markt090@obi.de",
     "phone": "05531 9807910",
     "url": "https://www.obi.de/markt/holzminden",
-    "storeId": "090"
+    "storeId": "090",
+    "latitude": 51.8989989,
+    "longitude": 9.5741099
   },
   {
     "name": "OBI Market Alfeld",
@@ -321,7 +373,9 @@
     "email": "markt024@obi.de",
     "phone": "05181 85300",
     "url": "https://www.obi.de/markt/alfeld",
-    "storeId": "024"
+    "storeId": "024",
+    "latitude": 51.9869477,
+    "longitude": 9.8253376
   },
   {
     "name": "OBI Market Eisenberg",
@@ -333,7 +387,9 @@
     "email": "eisenberg@obi.de",
     "phone": "036691 4430",
     "url": "https://www.obi.de/markt/eisenberg",
-    "storeId": "580"
+    "storeId": "580",
+    "latitude": 50.9691346,
+    "longitude": 11.8961116
   },
   {
     "name": "OBI Market Coburg",
@@ -345,7 +401,9 @@
     "email": "coburg@obi.de",
     "phone": "09561 705400",
     "url": "https://www.obi.de/markt/coburg",
-    "storeId": "536"
+    "storeId": "536",
+    "latitude": 50.2582226,
+    "longitude": 10.964561
   },
   {
     "name": "OBI Markt Korbach",
@@ -357,7 +415,9 @@
     "email": "korbach@obi.de",
     "phone": "05631 501900",
     "url": "https://www.obi.de/markt/korbach",
-    "storeId": "197"
+    "storeId": "197",
+    "latitude": 51.2559045,
+    "longitude": 8.8426963
   },
   {
     "name": "OBI Market Merseburg",
@@ -369,7 +429,9 @@
     "email": "merseburg@obi.de",
     "phone": "03461 248990",
     "url": "https://www.obi.de/markt/merseburg",
-    "storeId": "060"
+    "storeId": "060",
+    "latitude": 51.3564413,
+    "longitude": 11.996148
   },
   {
     "name": "OBI Markt Hildesheim-Ochtersum",
@@ -381,7 +443,9 @@
     "email": "markt014@obi.de",
     "phone": "05121 697080",
     "url": "https://www.obi.de/markt/hildesheim-im-mittelfeld",
-    "storeId": "014"
+    "storeId": "014",
+    "latitude": 52.1527188,
+    "longitude": 9.9518083
   },
   {
     "name": "OBI Market Hall",
@@ -393,7 +457,9 @@
     "email": "halle@obi.de",
     "phone": "0345 566680",
     "url": "https://www.obi.de/markt/halle",
-    "storeId": "322"
+    "storeId": "322",
+    "latitude": 51.4824354,
+    "longitude": 11.9712985
   },
   {
     "name": "OBI Markt Hildesheim Senkingstraße",
@@ -405,7 +471,9 @@
     "email": "hildesheim@obi.de",
     "phone": "05121 997590",
     "url": "https://www.obi.de/markt/hildesheim",
-    "storeId": "012"
+    "storeId": "012",
+    "latitude": 52.1527188,
+    "longitude": 9.9518083
   },
   {
     "name": "OBI Market Lichtenfels",
@@ -417,7 +485,9 @@
     "email": "lichenfels@obi.de",
     "phone": "09571 897850",
     "url": "https://www.obi.de/markt/lichtenfels",
-    "storeId": "405"
+    "storeId": "405",
+    "latitude": 50.1315263,
+    "longitude": 11.0839299
   },
   {
     "name": "OBI Market Marburg",
@@ -429,7 +499,9 @@
     "email": "marburg-wehrda@obi.de",
     "phone": "06421 88280",
     "url": "https://www.obi.de/markt/marburg",
-    "storeId": "395"
+    "storeId": "395",
+    "latitude": 50.8090106,
+    "longitude": 8.7704695
   },
   {
     "name": "OBI Markt Helmstedt",
@@ -441,7 +513,9 @@
     "email": "helmstedt@obi.de",
     "phone": "05351 55720",
     "url": "https://www.obi.de/markt/helmstedt",
-    "storeId": "116"
+    "storeId": "116",
+    "latitude": 52.2277037,
+    "longitude": 11.0104702
   },
   {
     "name": "OBI Market Hassfurt",
@@ -453,7 +527,9 @@
     "email": "hassfurt@obi.de",
     "phone": "09521 619170",
     "url": "https://www.obi.de/markt/hassfurt",
-    "storeId": "535"
+    "storeId": "535",
+    "latitude": 50.042783,
+    "longitude": 10.5086158
   },
   {
     "name": "OBI Markt Sarstedt",
@@ -465,7 +541,9 @@
     "email": "markt119@obi.de",
     "phone": "05066 70230",
     "url": "https://www.obi.de/markt/sarstedt",
-    "storeId": "119"
+    "storeId": "119",
+    "latitude": 52.2340379,
+    "longitude": 9.8534254
   },
   {
     "name": "OBI Market Leipzig-Burghausen",
@@ -477,7 +555,9 @@
     "email": "leipzig-burghausen@obi.de",
     "phone": "0341 9403280",
     "url": "https://www.obi.de/markt/leipzig-burghausen",
-    "storeId": "493"
+    "storeId": "493",
+    "latitude": 51.3406321,
+    "longitude": 12.3747329
   },
   {
     "name": "OBI Market Naila",
@@ -489,7 +569,9 @@
     "email": "naila@obi.de",
     "phone": "09282 98330",
     "url": "https://www.obi.de/markt/naila",
-    "storeId": "368"
+    "storeId": "368",
+    "latitude": 50.3283229,
+    "longitude": 11.6969688
   },
   {
     "name": "OBI Market Peine",
@@ -501,7 +583,9 @@
     "email": "markt108@obi.de",
     "phone": "05171 76550",
     "url": "https://www.obi.de/markt/peine",
-    "storeId": "108"
+    "storeId": "108",
+    "latitude": 52.3118982,
+    "longitude": 10.2521408
   },
   {
     "name": "OBI Market Magdeburg",
@@ -513,7 +597,9 @@
     "email": "magdeburg@obi.de",
     "phone": "0391 7279570",
     "url": "https://www.obi.de/markt/magdeburg",
-    "storeId": "007"
+    "storeId": "007",
+    "latitude": 52.1314783,
+    "longitude": 11.6400789
   },
   {
     "name": "OBI Market Laatzen",
@@ -525,7 +611,9 @@
     "email": "laatzen@obi.de",
     "phone": "05102 9185",
     "url": "https://www.obi.de/markt/laatzen",
-    "storeId": "327"
+    "storeId": "327",
+    "latitude": 52.3078258,
+    "longitude": 9.8146181
   },
   {
     "name": "OBI Market Brilon",
@@ -537,7 +625,9 @@
     "email": "brilon@obi.de",
     "phone": "02961 96180",
     "url": "https://www.obi.de/markt/brilon",
-    "storeId": "408"
+    "storeId": "408",
+    "latitude": 51.3955721,
+    "longitude": 8.5677743
   },
   {
     "name": "OBI Markt Leipzig-Zentrum",
@@ -549,7 +639,9 @@
     "email": "leipzig@obi.de",
     "phone": "0341 2306400",
     "url": "https://www.obi.de/markt/leipzig-zentrum",
-    "storeId": "574"
+    "storeId": "574",
+    "latitude": 51.3406321,
+    "longitude": 12.3747329
   },
   {
     "name": "OBI Market Bitterfeld",
@@ -561,7 +653,9 @@
     "email": "bitterfeld@obi.de",
     "phone": "03493 60740",
     "url": "https://www.obi.de/markt/bitterfeld",
-    "storeId": "435"
+    "storeId": "435",
+    "latitude": 51.6239124,
+    "longitude": 12.3301466
   },
   {
     "name": "OBI Market Taught",
@@ -573,7 +667,9 @@
     "email": "taught@obi.de",
     "phone": "05132 823710",
     "url": "https://www.obi.de/markt/lehrte",
-    "storeId": "488"
+    "storeId": "488",
+    "latitude": 52.3749334,
+    "longitude": 9.9748557
   },
   {
     "name": "OBI Markt Leipzig-Probstheida",
@@ -585,7 +681,9 @@
     "email": "leipzig-probstheida@obi.de",
     "phone": "0341 860480",
     "url": "https://www.obi.de/markt/leipzig-probstheida",
-    "storeId": "038"
+    "storeId": "038",
+    "latitude": 51.3406321,
+    "longitude": 12.3747329
   },
   {
     "name": "OBI Markt Gladenbach",
@@ -597,7 +695,9 @@
     "email": "gladenbach@obi.de",
     "phone": "06462 91410",
     "url": "https://www.obi.de/markt/gladenbach",
-    "storeId": "506"
+    "storeId": "506",
+    "latitude": 50.78141,
+    "longitude": 8.57886
   },
   {
     "name": "OBI Markt Gießen-Süd",
@@ -609,7 +709,9 @@
     "email": "giessen-sued@obi.de",
     "phone": "0641 975070",
     "url": "https://www.obi.de/markt/giessen-sued",
-    "storeId": "559"
+    "storeId": "559",
+    "latitude": 50.5862066,
+    "longitude": 8.6742306
   },
   {
     "name": "OBI Markt Hessisch Oldendorf",
@@ -621,7 +723,9 @@
     "email": "hess-oldendorf@obi.de",
     "phone": "05152 94470",
     "url": "https://www.obi.de/markt/hessisch-oldendorf",
-    "storeId": "402"
+    "storeId": "402",
+    "latitude": 52.1698382,
+    "longitude": 9.2506531
   },
   {
     "name": "OBI Market Detmold",
@@ -633,7 +737,9 @@
     "email": "detmold@obi.de",
     "phone": "05231 308040",
     "url": "https://www.obi.de/markt/detmold",
-    "storeId": "185"
+    "storeId": "185",
+    "latitude": 51.936284,
+    "longitude": 8.8791526
   },
   {
     "name": "OBI Market Court",
@@ -645,7 +751,9 @@
     "email": "hof@obi.de",
     "phone": "09281 78900",
     "url": "https://www.obi.de/markt/hof",
-    "storeId": "196"
+    "storeId": "196",
+    "latitude": 50.3187507,
+    "longitude": 11.9162992
   },
   {
     "name": "OBI Markt Altenburg",
@@ -657,7 +765,9 @@
     "email": "altenburg@obi.de",
     "phone": "03447 51380",
     "url": "https://www.obi.de/markt/altenburg",
-    "storeId": "507"
+    "storeId": "507",
+    "latitude": 50.9852411,
+    "longitude": 12.4340988
   },
   {
     "name": "OBI Market Biedenkopf-Wallau",
@@ -669,7 +779,9 @@
     "email": "biedenkopf@obi.de",
     "phone": "06461 98570",
     "url": "https://www.obi.de/markt/biedenkopf-wallau",
-    "storeId": "454"
+    "storeId": "454",
+    "latitude": 50.91958,
+    "longitude": 8.53771
   },
   {
     "name": "OBI Market Hannover-Linden",
@@ -681,7 +793,9 @@
     "email": "hannover-linden@obi.de",
     "phone": "0511 353570",
     "url": "https://www.obi.de/markt/hannover-linden",
-    "storeId": "447"
+    "storeId": "447",
+    "latitude": 52.3744779,
+    "longitude": 9.7385532
   },
   {
     "name": "OBI Market Gießen-West",
@@ -693,7 +807,9 @@
     "email": "giessen-west@obi.de",
     "phone": "0641 962320",
     "url": "https://www.obi.de/markt/giessen-west",
-    "storeId": "558"
+    "storeId": "558",
+    "latitude": 50.5862066,
+    "longitude": 8.6742306
   },
   {
     "name": "OBI Market Borna",
@@ -705,7 +821,9 @@
     "email": "borna@obi.de",
     "phone": "03433 27010",
     "url": "https://www.obi.de/markt/borna",
-    "storeId": "326"
+    "storeId": "326",
+    "latitude": 51.1222171,
+    "longitude": 12.506246
   },
   {
     "name": "OBI Markt Ronnenberg-Empelde",
@@ -717,7 +835,9 @@
     "email": "markt073@obi.de",
     "phone": "0511 4383380",
     "url": "https://www.obi.de/markt/ronnenberg-empelde",
-    "storeId": "073"
+    "storeId": "073",
+    "latitude": 52.33964,
+    "longitude": 9.673215
   },
   {
     "name": "OBI Market Bamberg",
@@ -729,7 +849,9 @@
     "email": "servicecenter445@obi.de",
     "phone": "0951 966250",
     "url": "https://www.obi.de/markt/bamberg",
-    "storeId": "445"
+    "storeId": "445",
+    "latitude": 49.8916044,
+    "longitude": 10.8868478
   },
   {
     "name": "OBI Markt Reichenbach",
@@ -741,7 +863,9 @@
     "email": "reichenbach@obi.de",
     "phone": "03765 55440",
     "url": "https://www.obi.de/markt/reichenbach",
-    "storeId": "522"
+    "storeId": "522",
+    "latitude": 50.6200492,
+    "longitude": 12.2992696
   },
   {
     "name": "OBI Market Meerane",
@@ -753,7 +877,9 @@
     "email": "meerane@obi.de",
     "phone": "03764 18620",
     "url": "https://www.obi.de/markt/meerane",
-    "storeId": "525"
+    "storeId": "525",
+    "latitude": 50.8427835,
+    "longitude": 12.4581578
   },
   {
     "name": "OBI Markt Barsinghausen",
@@ -765,7 +891,9 @@
     "email": "barsinghausen@obi.de",
     "phone": "05105 77680",
     "url": "https://www.obi.de/markt/barsinghausen",
-    "storeId": "438"
+    "storeId": "438",
+    "latitude": 52.30223,
+    "longitude": 9.4623741
   },
   {
     "name": "OBI Market Lohr",
@@ -777,7 +905,9 @@
     "email": "lohr@obi.de",
     "phone": "09352 87830",
     "url": "https://www.obi.de/markt/lohr",
-    "storeId": "582"
+    "storeId": "582",
+    "latitude": 50.0400937,
+    "longitude": 9.5178302
   },
   {
     "name": "OBI Markt Altwarmbüchen",
@@ -789,7 +919,9 @@
     "email": "altwarmbuechen@obi.de",
     "phone": "0511 6960380",
     "url": "https://www.obi.de/markt/altwarmbuechen",
-    "storeId": "133"
+    "storeId": "133",
+    "latitude": 52.43264262025128,
+    "longitude": 9.84661460907255
   },
   {
     "name": "OBI Market Delbrück",
@@ -801,7 +933,9 @@
     "email": "delbrueck@obi.de",
     "phone": "05250 9852200",
     "url": "https://www.obi.de/markt/delbrueck",
-    "storeId": "529"
+    "storeId": "529",
+    "latitude": 51.7649178,
+    "longitude": 8.5594953
   },
   {
     "name": "OBI Market Gifhorn",
@@ -813,7 +947,9 @@
     "email": "markt188@obi.de",
     "phone": "05371 97660",
     "url": "https://www.obi.de/markt/gifhorn",
-    "storeId": "188"
+    "storeId": "188",
+    "latitude": 52.5781407,
+    "longitude": 10.6612811
   },
   {
     "name": "OBI Market Garbsen",
@@ -825,7 +961,9 @@
     "email": "garbsen@obi.de",
     "phone": "05137 70310",
     "url": "https://www.obi.de/markt/garbsen",
-    "storeId": "076"
+    "storeId": "076",
+    "latitude": 52.4276606,
+    "longitude": 9.6005102
   },
   {
     "name": "OBI Market Zwickau",
@@ -837,7 +975,9 @@
     "email": "zwickau@obi.de",
     "phone": "0375 27025000",
     "url": "https://www.obi.de/markt/zwickau",
-    "storeId": "566"
+    "storeId": "566",
+    "latitude": 50.7185043,
+    "longitude": 12.4939267
   },
   {
     "name": "OBI Market Wetzlar",
@@ -849,7 +989,9 @@
     "email": "wetzlar@obi.de",
     "phone": "06441 98440",
     "url": "https://www.obi.de/markt/wetzlar",
-    "storeId": "560"
+    "storeId": "560",
+    "latitude": 50.570561,
+    "longitude": 8.531245
   },
   {
     "name": "OBI Markt Bückeburg",
@@ -861,7 +1003,9 @@
     "email": "bueckeburg@obi.de",
     "phone": "05722 95980",
     "url": "https://www.obi.de/markt/bueckeburg",
-    "storeId": "215"
+    "storeId": "215",
+    "latitude": 52.2611037,
+    "longitude": 9.0488959
   },
   {
     "name": "OBI Markt Würzburg-Lengfeld",
@@ -873,7 +1017,9 @@
     "email": "wuerzburg-lengfeld@obi.de",
     "phone": "0931 279690",
     "url": "https://www.obi.de/markt/wuerzburg-lengfeld",
-    "storeId": "581"
+    "storeId": "581",
+    "latitude": 49.7780356,
+    "longitude": 9.9434769
   },
   {
     "name": "OBI Markt Würzburg-Hafen",
@@ -885,7 +1031,9 @@
     "email": "wuerzburg@obi.de",
     "phone": "0931 900710",
     "url": "https://www.obi.de/markt/wuerzburg-hafen",
-    "storeId": "578"
+    "storeId": "578",
+    "latitude": 49.7780356,
+    "longitude": 9.9434769
   },
   {
     "name": "OBI Market Wunstorf",
@@ -897,7 +1045,9 @@
     "email": "markt039@obi.de",
     "phone": "05031 95590",
     "url": "https://www.obi.de/markt/wunstorf",
-    "storeId": "039"
+    "storeId": "039",
+    "latitude": 52.4257979,
+    "longitude": 9.4294425
   },
   {
     "name": "OBI Market Sankt Egidien",
@@ -909,7 +1059,9 @@
     "email": "sangetegidien@obi.de",
     "phone": "037204 6750",
     "url": "https://www.obi.de/markt/sankt-egidien",
-    "storeId": "353"
+    "storeId": "353",
+    "latitude": 50.788074,
+    "longitude": 12.611687
   },
   {
     "name": "OBI Market Grimma",
@@ -921,7 +1073,9 @@
     "email": "grimma@obi.de",
     "phone": "03437 925300",
     "url": "https://www.obi.de/markt/grimma",
-    "storeId": "369"
+    "storeId": "369",
+    "latitude": 51.2366433,
+    "longitude": 12.7288965
   },
   {
     "name": "OBI Market Herford",
@@ -933,7 +1087,9 @@
     "email": "markt005@obi.de",
     "phone": "05221 589730",
     "url": "https://www.obi.de/markt/herford",
-    "storeId": "005"
+    "storeId": "005",
+    "latitude": 52.1152245,
+    "longitude": 8.6711118
   },
   {
     "name": "OBI Market Meschede",
@@ -945,7 +1101,9 @@
     "email": "meschede@obi.de",
     "phone": "02903 97470",
     "url": "https://www.obi.de/markt/meschede",
-    "storeId": "403"
+    "storeId": "403",
+    "latitude": 51.3436532,
+    "longitude": 8.2859257
   },
   {
     "name": "OBI Market Bielefeld-Nord",
@@ -957,7 +1115,9 @@
     "email": "bielefeld-heepen@obi.de",
     "phone": "0521 339990",
     "url": "https://www.obi.de/markt/bielefeld-nord",
-    "storeId": "416"
+    "storeId": "416",
+    "latitude": 52.0191005,
+    "longitude": 8.531007
   },
   {
     "name": "OBI Market Porta Westfalica",
@@ -969,7 +1129,9 @@
     "email": "porta-westfalica@obi.de",
     "phone": "0571 6456590",
     "url": "https://www.obi.de/markt/porta-westfalica",
-    "storeId": "216"
+    "storeId": "216",
+    "latitude": 52.2394431,
+    "longitude": 8.924762
   },
   {
     "name": "OBI Markt Bad Oeynhausen",
@@ -981,7 +1143,9 @@
     "email": "bad-oeynhausen@obi.de",
     "phone": "05731 254080",
     "url": "https://www.obi.de/markt/bad-oeynhausen",
-    "storeId": "146"
+    "storeId": "146",
+    "latitude": 52.2014399,
+    "longitude": 8.7981244
   },
   {
     "name": "OBI Markt Würzburg-Heuchelhof",
@@ -993,7 +1157,9 @@
     "email": "wuerzburg-heuchelhof@obi.de",
     "phone": "0931 66010",
     "url": "https://www.obi.de/markt/wuerzburg-heuchelhof",
-    "storeId": "583"
+    "storeId": "583",
+    "latitude": 49.7780356,
+    "longitude": 9.9434769
   },
   {
     "name": "OBI Market Haiger",
@@ -1005,7 +1171,9 @@
     "email": "haiger@obi.de",
     "phone": "02773 74160",
     "url": "https://www.obi.de/markt/haiger",
-    "storeId": "508"
+    "storeId": "508",
+    "latitude": 50.7752801,
+    "longitude": 8.2129059
   },
   {
     "name": "OBI Markt Neustadt am Rübenberge",
@@ -1017,7 +1185,9 @@
     "email": "neustadt-arbg@obi.de",
     "phone": "05032 95460",
     "url": "https://www.obi.de/markt/neustadt-am-ruebenberge",
-    "storeId": "424"
+    "storeId": "424",
+    "latitude": 52.5045772,
+    "longitude": 9.4616921
   },
   {
     "name": "OBI Markt Offenbach",
@@ -1029,7 +1199,9 @@
     "email": "offenbach@obi.de",
     "phone": "069 83007820",
     "url": "https://www.obi.de/markt/offenbach",
-    "storeId": "549"
+    "storeId": "549",
+    "latitude": 50.1055002,
+    "longitude": 8.7610698
   },
   {
     "name": "OBI Markt Höchstadt an der Aisch",
@@ -1041,7 +1213,9 @@
     "email": "hoechstadt@obi.de",
     "phone": "09193 63650",
     "url": "https://www.obi.de/markt/hoechstadt-an-der-aisch",
-    "storeId": "393"
+    "storeId": "393",
+    "latitude": 49.7160183,
+    "longitude": 10.8199868
   },
   {
     "name": "OBI Market Celle",
@@ -1053,7 +1227,9 @@
     "email": "celle@obi.de",
     "phone": "05141 980760",
     "url": "https://www.obi.de/markt/celle",
-    "storeId": "465"
+    "storeId": "465",
+    "latitude": 52.624056,
+    "longitude": 10.081052
   },
   {
     "name": "OBI Market Forchheim",
@@ -1065,7 +1241,9 @@
     "email": "forchheim@obi.de",
     "phone": "09191 97460",
     "url": "https://www.obi.de/markt/forchheim",
-    "storeId": "593"
+    "storeId": "593",
+    "latitude": 49.7122951,
+    "longitude": 11.0664285
   },
   {
     "name": "OBI Market Wittenberg",
@@ -1077,7 +1255,9 @@
     "email": "Lutherstadt-wittenberg@obi.de",
     "phone": "03491 63290",
     "url": "https://www.obi.de/markt/wittenberg",
-    "storeId": "006"
+    "storeId": "006",
+    "latitude": 51.8666527,
+    "longitude": 12.646761
   },
   {
     "name": "OBI Markt Weilburg",
@@ -1089,7 +1269,9 @@
     "email": "weilburg@obi.de",
     "phone": "06471 93850",
     "url": "https://www.obi.de/markt/weilburg",
-    "storeId": "092"
+    "storeId": "092",
+    "latitude": 50.4847448,
+    "longitude": 8.2659245
   },
   {
     "name": "OBI Markt Arnsberg",
@@ -1101,7 +1283,9 @@
     "email": "arnsberg@obi.de",
     "phone": "02932 890120",
     "url": "https://www.obi.de/markt/arnsberg",
-    "storeId": "199"
+    "storeId": "199",
+    "latitude": 51.4002384,
+    "longitude": 8.0605908
   },
   {
     "name": "OBI Market Siegen-Weidenau",
@@ -1113,7 +1297,9 @@
     "email": "Siegen@obi.de",
     "phone": "0271 773230",
     "url": "https://www.obi.de/markt/siegen-weidenau",
-    "storeId": "115"
+    "storeId": "115",
+    "latitude": 50.8751175,
+    "longitude": 8.0256131
   },
   {
     "name": "OBI Markt Frankfurt-Sachsenhausen",
@@ -1125,7 +1311,9 @@
     "email": "frankfurt@obi.de",
     "phone": "069 6605683",
     "url": "https://www.obi.de/markt/frankfurt-sachsenhausen",
-    "storeId": "042"
+    "storeId": "042",
+    "latitude": 50.1106444,
+    "longitude": 8.6820917
   },
   {
     "name": "OBI Market Pegnitz",
@@ -1137,7 +1325,9 @@
     "email": "pegnitz@obi.de",
     "phone": "09241 489120",
     "url": "https://www.obi.de/markt/pegnitz",
-    "storeId": "495"
+    "storeId": "495",
+    "latitude": 49.75649,
+    "longitude": 11.540944
   },
   {
     "name": "OBI Market Oelde",
@@ -1149,7 +1339,9 @@
     "email": "oelde@obi.de",
     "phone": "02522 834310",
     "url": "https://www.obi.de/markt/oelde",
-    "storeId": "439"
+    "storeId": "439",
+    "latitude": 51.8260678,
+    "longitude": 8.1454954
   },
   {
     "name": "OBI Market Rödermark",
@@ -1161,7 +1353,9 @@
     "email": "roedermark@obi.de",
     "phone": "06074 696200",
     "url": "https://www.obi.de/markt/roedermark",
-    "storeId": "449"
+    "storeId": "449",
+    "latitude": 49.9798913,
+    "longitude": 8.8088274
   },
   {
     "name": "OBI Markt Schwarzenberg",
@@ -1173,7 +1367,9 @@
     "email": "Schwarzenberg@obi.de",
     "phone": "03774 13090",
     "url": "https://www.obi.de/markt/schwarzenberg",
-    "storeId": "425"
+    "storeId": "425",
+    "latitude": 51.1474263,
+    "longitude": 9.5630995
   },
   {
     "name": "OBI Market Dreieich",
@@ -1185,7 +1381,9 @@
     "email": "dreieich@obi.de",
     "phone": "06103 93310",
     "url": "https://www.obi.de/markt/dreieich",
-    "storeId": "534"
+    "storeId": "534",
+    "latitude": 50.011974,
+    "longitude": 8.7123912
   },
   {
     "name": "OBI Markt Neustadt-Aisch",
@@ -1197,7 +1395,9 @@
     "email": "neustadt@obi.de",
     "phone": "09161 89860",
     "url": "https://www.obi.de/markt/neustadt-aisch",
-    "storeId": "198"
+    "storeId": "198",
+    "latitude": 49.583431,
+    "longitude": 10.4145486
   },
   {
     "name": "OBI Market Erlangen-West",
@@ -1209,7 +1409,9 @@
     "email": "Erlangen-neumuehle@obi.de",
     "phone": "09131 120420",
     "url": "https://www.obi.de/markt/erlangen-west",
-    "storeId": "310"
+    "storeId": "310",
+    "latitude": 49.5891571,
+    "longitude": 10.9812072
   },
   {
     "name": "OBI Markt Tauberbischofsheim",
@@ -1221,7 +1423,9 @@
     "email": "tauberbischofsheim@obi.de",
     "phone": "09341 94940",
     "url": "https://www.obi.de/markt/tauberbischofsheim",
-    "storeId": "080"
+    "storeId": "080",
+    "latitude": 49.6229682,
+    "longitude": 9.6627138
   },
   {
     "name": "OBI Market Erlangen-Ost",
@@ -1233,7 +1437,9 @@
     "email": "Erlangen-ost@obi.de",
     "phone": "09131 506720",
     "url": "https://www.obi.de/markt/erlangen-ost",
-    "storeId": "434"
+    "storeId": "434",
+    "latitude": 49.5891571,
+    "longitude": 10.9812072
   },
   {
     "name": "OBI Markt Torgau",
@@ -1245,7 +1451,9 @@
     "email": "torgau@obi.de",
     "phone": "03421 73250",
     "url": "https://www.obi.de/markt/torgau",
-    "storeId": "428"
+    "storeId": "428",
+    "latitude": 51.5383243,
+    "longitude": 12.9934474
   },
   {
     "name": "OBI Market Olpe",
@@ -1257,7 +1465,9 @@
     "email": "olpe@obi.de",
     "phone": "02761 96510",
     "url": "https://www.obi.de/markt/olpe",
-    "storeId": "003"
+    "storeId": "003",
+    "latitude": 51.0450964,
+    "longitude": 7.2873649
   },
   {
     "name": "OBI Market Miltenberg",
@@ -1269,7 +1479,9 @@
     "email": "miltenberg@obi.de",
     "phone": "09371 97590",
     "url": "https://www.obi.de/markt/miltenberg",
-    "storeId": "285"
+    "storeId": "285",
+    "latitude": 49.6903244,
+    "longitude": 9.2462204
   },
   {
     "name": "OBI Market Oschatz",
@@ -1281,7 +1493,9 @@
     "email": "oschatz@obi.de",
     "phone": "03435 660600",
     "url": "https://www.obi.de/markt/oschatz",
-    "storeId": "498"
+    "storeId": "498",
+    "latitude": 51.2979627,
+    "longitude": 13.1081103
   },
   {
     "name": "OBI Market Nienburg",
@@ -1293,7 +1507,9 @@
     "email": "nienburg@obi.de",
     "phone": "05021 91990",
     "url": "https://www.obi.de/markt/nienburg",
-    "storeId": "037"
+    "storeId": "037",
+    "latitude": 52.6487771,
+    "longitude": 9.2578103
   },
   {
     "name": "OBI Markt Limburg an der Lahn",
@@ -1305,7 +1521,9 @@
     "email": "limburg@obi.de",
     "phone": "06431 2197740",
     "url": "https://www.obi.de/markt/limburg-an-der-lahn",
-    "storeId": "026"
+    "storeId": "026",
+    "latitude": 50.3880447,
+    "longitude": 8.063531
   },
   {
     "name": "OBI Market Pressath",
@@ -1317,7 +1535,9 @@
     "email": "pressath@obi.de",
     "phone": "0160 4089791",
     "url": "https://www.obi.de/markt/pressath",
-    "storeId": "270"
+    "storeId": "270",
+    "latitude": 49.7698203,
+    "longitude": 11.9343043
   },
   {
     "name": "OBI Market Idstein",
@@ -1329,7 +1549,9 @@
     "email": "idstein@obi.de",
     "phone": "06126 94420",
     "url": "https://www.obi.de/markt/idstein",
-    "storeId": "160"
+    "storeId": "160",
+    "latitude": 50.2147,
+    "longitude": 8.2902
   },
   {
     "name": "OBI Market Zschopau",
@@ -1341,7 +1563,9 @@
     "email": "zschopau@obi.de",
     "phone": "03725 36000",
     "url": "https://www.obi.de/markt/zschopau",
-    "storeId": "293"
+    "storeId": "293",
+    "latitude": 50.7469606,
+    "longitude": 13.0695613
   },
   {
     "name": "OBI Market Fürth",
@@ -1353,7 +1577,9 @@
     "email": "fuerth@obi.de",
     "phone": "0911 9734740",
     "url": "https://www.obi.de/markt/fuerth",
-    "storeId": "071"
+    "storeId": "071",
+    "latitude": 49.4885711,
+    "longitude": 10.9587203
   },
   {
     "name": "OBI Market Annaberg-Buchholz",
@@ -1365,7 +1591,9 @@
     "email": "annaberg-buchholz@obi.de",
     "phone": "03733 14050",
     "url": "https://www.obi.de/markt/annaberg-buchholz",
-    "storeId": "168"
+    "storeId": "168",
+    "latitude": 50.5788781,
+    "longitude": 13.0106108
   },
   {
     "name": "OBI Market Hamm",
@@ -1377,7 +1605,9 @@
     "email": "hamm@obi.de",
     "phone": "02381 307230",
     "url": "https://www.obi.de/markt/hamm",
-    "storeId": "207"
+    "storeId": "207",
+    "latitude": 50.0165178,
+    "longitude": 6.4184628
   },
   {
     "name": "OBI Market Run",
@@ -1389,7 +1619,9 @@
     "email": "lauf@obi.de",
     "phone": "09123 97920",
     "url": "https://www.obi.de/markt/lauf",
-    "storeId": "350"
+    "storeId": "350",
+    "latitude": 52.3575255,
+    "longitude": 14.0581742
   },
   {
     "name": "OBI Markt Nürnberg Outer Bayreuther Straße",
@@ -1401,7 +1633,9 @@
     "email": "nuernberg-nord@obi.de",
     "phone": "0911 567900",
     "url": "https://www.obi.de/markt/nuernberg-aeussere-bayreuther-strasse",
-    "storeId": "491"
+    "storeId": "491",
+    "latitude": 49.453872,
+    "longitude": 11.077298
   },
   {
     "name": "OBI Market Meinerzhagen",
@@ -1413,7 +1647,9 @@
     "email": "meinzhagen@obi.de",
     "phone": "02354 91830",
     "url": "https://www.obi.de/markt/meinerzhagen",
-    "storeId": "105"
+    "storeId": "105",
+    "latitude": 51.1063495,
+    "longitude": 7.6408956
   },
   {
     "name": "OBI Markt Lüdenscheid",
@@ -1425,7 +1661,9 @@
     "email": "luedenscheid@obi.de",
     "phone": "02351 92490",
     "url": "https://www.obi.de/markt/luedenscheid",
-    "storeId": "376"
+    "storeId": "376",
+    "latitude": 51.218137,
+    "longitude": 7.6396975
   },
   {
     "name": "OBI Markt Salzwedel",
@@ -1437,7 +1675,9 @@
     "email": "salzwedel@obi.de",
     "phone": "03901 30230",
     "url": "https://www.obi.de/markt/salzwedel",
-    "storeId": "478"
+    "storeId": "478",
+    "latitude": 52.8528456,
+    "longitude": 11.1539699
   },
   {
     "name": "OBI Markt Nürnberg Leyher Strasse",
@@ -1449,7 +1689,9 @@
     "email": "nuernberg-leyh@obi.de",
     "phone": "0911 3140300",
     "url": "https://www.obi.de/markt/nuernberg-leyher-strasse",
-    "storeId": "009"
+    "storeId": "009",
+    "latitude": 49.453872,
+    "longitude": 11.077298
   },
   {
     "name": "OBI Markt Röthenbach",
@@ -1461,7 +1703,9 @@
     "email": "roethenbach@obi.de",
     "phone": "0911 5754630",
     "url": "https://www.obi.de/markt/roethenbach",
-    "storeId": "409"
+    "storeId": "409",
+    "latitude": 47.6291892,
+    "longitude": 9.9584761
   },
   {
     "name": "OBI Markt Rüsselsheim",
@@ -1473,7 +1717,9 @@
     "email": "ruesselsheim@obi.de",
     "phone": "06142 176030",
     "url": "https://www.obi.de/markt/ruesselsheim",
-    "storeId": "548"
+    "storeId": "548",
+    "latitude": 49.991701,
+    "longitude": 8.4138251
   },
   {
     "name": "OBI Market Walsrode",
@@ -1485,7 +1731,9 @@
     "email": "walsrode@obi.de",
     "phone": "05161 48870",
     "url": "https://www.obi.de/markt/walsrode",
-    "storeId": "306"
+    "storeId": "306",
+    "latitude": 52.8625395,
+    "longitude": 9.5883023
   },
   {
     "name": "OBI Market Nuremberg Regensburger Strasse",
@@ -1497,7 +1745,9 @@
     "email": "nuernberg-regensburger-strasse@obi.de",
     "phone": "0911 424370",
     "url": "https://www.obi.de/markt/nuernberg-regensburger-strasse",
-    "storeId": "456"
+    "storeId": "456",
+    "latitude": 49.453872,
+    "longitude": 11.077298
   },
   {
     "name": "OBI Markt Pommelsbrunn",
@@ -1509,7 +1759,9 @@
     "email": "hochstadt@obi.de",
     "phone": "09154 911940",
     "url": "https://www.obi.de/markt/pommelsbrunn",
-    "storeId": "013"
+    "storeId": "013",
+    "latitude": 49.5046383,
+    "longitude": 11.5078943
   },
   {
     "name": "OBI Markt Wiesbaden",
@@ -1521,7 +1773,9 @@
     "email": "wiesbaden@obi.de",
     "phone": "0611 988660",
     "url": "https://www.obi.de/markt/wiesbaden",
-    "storeId": "458"
+    "storeId": "458",
+    "latitude": 50.0820384,
+    "longitude": 8.2416556
   },
   {
     "name": "OBI Market Montabaur",
@@ -1533,7 +1787,9 @@
     "email": "montabaur@obi.de",
     "phone": "02602 999400",
     "url": "https://www.obi.de/markt/montabaur",
-    "storeId": "083"
+    "storeId": "083",
+    "latitude": 50.4362219,
+    "longitude": 7.8302494
   },
   {
     "name": "OBI Market Uelzen",
@@ -1545,7 +1801,9 @@
     "email": "uelzen@obi.de",
     "phone": "0581 9716370",
     "url": "https://www.obi.de/markt/uelzen",
-    "storeId": "514"
+    "storeId": "514",
+    "latitude": 52.9840746,
+    "longitude": 10.5385869
   },
   {
     "name": "OBI Market Book",
@@ -1557,7 +1815,9 @@
     "email": "booking@obi.de",
     "phone": "06281 56250",
     "url": "https://www.obi.de/markt/buchen",
-    "storeId": "461"
+    "storeId": "461",
+    "latitude": 49.5219386,
+    "longitude": 9.3251309
   },
   {
     "name": "OBI Market Hoya",
@@ -1569,7 +1829,9 @@
     "email": "markt304@obi.de",
     "phone": "04251 4809610",
     "url": "https://www.obi.de/markt/hoya",
-    "storeId": "304"
+    "storeId": "304",
+    "latitude": 52.8065,
+    "longitude": 9.13957
   },
   {
     "name": "OBI Markt Freiberg-Sachsen",
@@ -1581,7 +1843,9 @@
     "email": "freiberg@obi.de",
     "phone": "03731 6763990",
     "url": "https://www.obi.de/markt/freiberg-sachsen",
-    "storeId": "324"
+    "storeId": "324",
+    "latitude": 50.9169415,
+    "longitude": 13.3428889
   },
   {
     "name": "OBI Market Rathenow",
@@ -1593,7 +1857,9 @@
     "email": "rathenow@obi.de",
     "phone": "03385 54150",
     "url": "https://www.obi.de/markt/rathenow",
-    "storeId": "235"
+    "storeId": "235",
+    "latitude": 52.6063703,
+    "longitude": 12.3382259
   },
   {
     "name": "OBI Market Soltau",
@@ -1605,7 +1871,9 @@
     "email": "soltau@obi.de",
     "phone": "05191 98180",
     "url": "https://www.obi.de/markt/soltau",
-    "storeId": "250"
+    "storeId": "250",
+    "latitude": 52.9844301,
+    "longitude": 9.8399034
   },
   {
     "name": "OBI Market Gummersbach",
@@ -1617,7 +1885,9 @@
     "email": "gummersbach@obi.de",
     "phone": "02261 79540",
     "url": "https://www.obi.de/markt/gummersbach",
-    "storeId": "121"
+    "storeId": "121",
+    "latitude": 51.0277658,
+    "longitude": 7.5630545
   },
   {
     "name": "OBI Market Weiden",
@@ -1629,7 +1899,9 @@
     "email": "weiden@obi.de",
     "phone": "0961 3917990",
     "url": "https://www.obi.de/markt/weiden",
-    "storeId": "028"
+    "storeId": "028",
+    "latitude": 49.8068258,
+    "longitude": 7.3007004
   },
   {
     "name": "OBI Market Sulzbach-Rosenberg",
@@ -1641,7 +1913,9 @@
     "email": "sulzbach-rosenberg@obi.de",
     "phone": "09661 5090",
     "url": "https://www.obi.de/markt/sulzbach-rosenberg",
-    "storeId": "086"
+    "storeId": "086",
+    "latitude": 49.4992468,
+    "longitude": 11.7470259
   },
   {
     "name": "OBI Markt Schwabach",
@@ -1653,7 +1927,9 @@
     "email": "schwabach@obi.de",
     "phone": "09122 63190",
     "url": "https://www.obi.de/markt/schwabach",
-    "storeId": "022"
+    "storeId": "022",
+    "latitude": 49.3290521,
+    "longitude": 11.0207677
   },
   {
     "name": "OBI Market Lüchow",
@@ -1665,7 +1941,9 @@
     "email": "luechow@obi.de",
     "phone": "05841 97710",
     "url": "https://www.obi.de/markt/luechow",
-    "storeId": "294"
+    "storeId": "294",
+    "latitude": 53.6893717,
+    "longitude": 10.5322354
   },
   {
     "name": "OBI Markt Ansbach",
@@ -1677,7 +1955,9 @@
     "email": "ansbach@obi.de",
     "phone": "0981 461170",
     "url": "https://www.obi.de/markt/ansbach",
-    "storeId": "202"
+    "storeId": "202",
+    "latitude": 49.2888745,
+    "longitude": 10.5597693
   },
   {
     "name": "OBI Market Schwarzenbruck",
@@ -1689,7 +1969,9 @@
     "email": "schwarzenbruck@obi.de",
     "phone": "09128 92020",
     "url": "https://www.obi.de/markt/schwarzenbruck",
-    "storeId": "142"
+    "storeId": "142",
+    "latitude": 49.349562,
+    "longitude": 11.2479628
   },
   {
     "name": "OBI Market Bensheim",
@@ -1701,7 +1983,9 @@
     "email": "bensheim@obi.de",
     "phone": "06251 10600",
     "url": "https://www.obi.de/markt/bensheim",
-    "storeId": "029"
+    "storeId": "029",
+    "latitude": 49.6810158,
+    "longitude": 8.6227577
   },
   {
     "name": "OBI Market Meissen",
@@ -1713,7 +1997,9 @@
     "email": "meissen@obi.de",
     "phone": "03521 760130",
     "url": "https://www.obi.de/markt/meissen",
-    "storeId": "354"
+    "storeId": "354",
+    "latitude": 51.1630871,
+    "longitude": 13.4704939
   },
   {
     "name": "OBI Market Verden",
@@ -1725,7 +2011,9 @@
     "email": "markt531@obi.de",
     "phone": "04231 939200",
     "url": "https://www.obi.de/markt/verden",
-    "storeId": "531"
+    "storeId": "531",
+    "latitude": 52.9759701,
+    "longitude": 9.1808391
   },
   {
     "name": "OBI Market Lindlar",
@@ -1737,7 +2025,9 @@
     "email": "lindlar@obi.de",
     "phone": "02266 463460",
     "url": "https://www.obi.de/markt/lindlar",
-    "storeId": "296"
+    "storeId": "296",
+    "latitude": 51.0186197,
+    "longitude": 7.3779933
   },
   {
     "name": "OBI Market Amberg",
@@ -1749,7 +2039,9 @@
     "email": "amberg@obi.de",
     "phone": "09621 76610",
     "url": "https://www.obi.de/markt/amberg",
-    "storeId": "266"
+    "storeId": "266",
+    "latitude": 49.4543662,
+    "longitude": 11.8474021
   },
   {
     "name": "OBI Market Roth",
@@ -1761,7 +2053,9 @@
     "email": "roth@obi.de",
     "phone": "09171 843870",
     "url": "https://www.obi.de/markt/roth",
-    "storeId": "375"
+    "storeId": "375",
+    "latitude": 49.1952934,
+    "longitude": 11.0566523
   },
   {
     "name": "OBI Market Radebeul",
@@ -1773,7 +2067,9 @@
     "email": "radebeul@obi.de",
     "phone": "0351 837210",
     "url": "https://www.obi.de/markt/radebeul",
-    "storeId": "343"
+    "storeId": "343",
+    "latitude": 51.0999765,
+    "longitude": 13.6767995
   },
   {
     "name": "OBI Market Schwelm",
@@ -1785,7 +2081,9 @@
     "email": "schwelm@obi.de",
     "phone": "02336 47970",
     "url": "https://www.obi.de/markt/schwelm",
-    "storeId": "305"
+    "storeId": "305",
+    "latitude": 51.2841166,
+    "longitude": 7.2924712
   },
   {
     "name": "OBI Market Weinheim",
@@ -1797,7 +2095,9 @@
     "email": "weinheim@obi.de",
     "phone": "06201 877960",
     "url": "https://www.obi.de/markt/weinheim",
-    "storeId": "485"
+    "storeId": "485",
+    "latitude": 49.5462349,
+    "longitude": 8.6717458
   },
   {
     "name": "OBI Market Wittenberge",
@@ -1809,7 +2109,9 @@
     "email": "wittenberge@obi.de",
     "phone": "03877 9460",
     "url": "https://www.obi.de/markt/wittenberge",
-    "storeId": "328"
+    "storeId": "328",
+    "latitude": 53.0112877,
+    "longitude": 11.7374296
   },
   {
     "name": "OBI Market Neumarkt",
@@ -1821,7 +2123,9 @@
     "email": "neumarkt@obi.de",
     "phone": "09181 900201",
     "url": "https://www.obi.de/markt/neumarkt",
-    "storeId": "367"
+    "storeId": "367",
+    "latitude": 49.2800542,
+    "longitude": 11.4585353
   },
   {
     "name": "OBI Markt Remscheid",
@@ -1833,7 +2137,9 @@
     "email": "remscheid-industriestr@obi.de",
     "phone": "02191 362570",
     "url": "https://www.obi.de/markt/remscheid",
-    "storeId": "427"
+    "storeId": "427",
+    "latitude": 51.1798706,
+    "longitude": 7.1943544
   },
   {
     "name": "OBI Market Worms",
@@ -1845,7 +2151,9 @@
     "email": "worms@obi.de",
     "phone": "06241 324520",
     "url": "https://www.obi.de/markt/worms",
-    "storeId": "575"
+    "storeId": "575",
+    "latitude": 49.6302618,
+    "longitude": 8.3620898
   },
   {
     "name": "OBI Market Crailsheim",
@@ -1857,7 +2165,9 @@
     "email": "crailsheim@obi.de",
     "phone": "07951 24091",
     "url": "https://www.obi.de/markt/crailsheim",
-    "storeId": "317"
+    "storeId": "317",
+    "latitude": 49.1365626,
+    "longitude": 10.0720195
   },
   {
     "name": "OBI Markt Wermelskirchen",
@@ -1869,7 +2179,9 @@
     "email": "wermelskirchen@obi.de",
     "phone": "02196 72180",
     "url": "https://www.obi.de/markt/wermelskirchen",
-    "storeId": "476"
+    "storeId": "476",
+    "latitude": 51.1406481,
+    "longitude": 7.2156901
   },
   {
     "name": "OBI Markt Recklinghausen",
@@ -1881,7 +2193,9 @@
     "email": "recklinghausen@obi.de",
     "phone": "02361 904310",
     "url": "https://www.obi.de/markt/recklinghausen",
-    "storeId": "540"
+    "storeId": "540",
+    "latitude": 51.6143815,
+    "longitude": 7.1978546
   },
   {
     "name": "OBI Market Gunzenhausen",
@@ -1893,7 +2207,9 @@
     "email": "gunzenhausen@obi.de",
     "phone": "09831 67380",
     "url": "https://www.obi.de/markt/gunzenhausen",
-    "storeId": "579"
+    "storeId": "579",
+    "latitude": 49.1161362,
+    "longitude": 10.7406852
   },
   {
     "name": "OBI Markt Posthausen",
@@ -1905,7 +2221,9 @@
     "email": "posthausen@obi.de",
     "phone": "04297 817880",
     "url": "https://www.obi.de/markt/posthausen",
-    "storeId": "082"
+    "storeId": "082",
+    "latitude": 53.1112051,
+    "longitude": 9.1422692
   },
   {
     "name": "OBI Markt Rotenburg-Wümme",
@@ -1917,7 +2235,9 @@
     "email": "rotenburg@obi.de",
     "phone": "04261 93970",
     "url": "https://www.obi.de/markt/rotenburg-wuemme",
-    "storeId": "174"
+    "storeId": "174",
+    "latitude": 53.1108906,
+    "longitude": 9.4049292
   },
   {
     "name": "OBI Markt Bannewitz near Dresden",
@@ -1929,7 +2249,9 @@
     "email": "bannewitz@obi.de",
     "phone": "0351 403800",
     "url": "https://www.obi.de/markt/bannewitz-bei-dresden",
-    "storeId": "286"
+    "storeId": "286",
+    "latitude": 50.9941921,
+    "longitude": 13.7225277
   },
   {
     "name": "OBI Market Hattingen",
@@ -1941,7 +2263,9 @@
     "email": "hattingen@obi.de",
     "phone": "02324 92400",
     "url": "https://www.obi.de/markt/hattingen",
-    "storeId": "081"
+    "storeId": "081",
+    "latitude": 51.4007175,
+    "longitude": 7.1862486
   },
   {
     "name": "OBI Market Vechta",
@@ -1953,7 +2277,9 @@
     "email": "vechta@obi.de",
     "phone": "04441 91440",
     "url": "https://www.obi.de/markt/vechta",
-    "storeId": "505"
+    "storeId": "505",
+    "latitude": 52.7310691,
+    "longitude": 8.2873162
   },
   {
     "name": "OBI Market Oehringen",
@@ -1965,7 +2291,9 @@
     "email": "oehringen@obi.de",
     "phone": "07941 92230",
     "url": "https://www.obi.de/markt/oehringen",
-    "storeId": "398"
+    "storeId": "398",
+    "latitude": 49.2005034,
+    "longitude": 9.5024397
   },
   {
     "name": "OBI Market Rösrath",
@@ -1977,7 +2305,9 @@
     "email": "roesrath@obi.de",
     "phone": "02205 903750",
     "url": "https://www.obi.de/markt/roesrath",
-    "storeId": "453"
+    "storeId": "453",
+    "latitude": 50.8963758,
+    "longitude": 7.1825445
   },
   {
     "name": "OBI Market Wuppertal",
@@ -1989,7 +2319,9 @@
     "email": "wuppertal@obi.de",
     "phone": "0202 37380",
     "url": "https://www.obi.de/markt/wuppertal",
-    "storeId": "380"
+    "storeId": "380",
+    "latitude": 51.264018,
+    "longitude": 7.1780374
   },
   {
     "name": "OBI Markt Burscheid",
@@ -2001,7 +2333,9 @@
     "email": "burscheid@obi.de",
     "phone": "02174 783900",
     "url": "https://www.obi.de/markt/burscheid",
-    "storeId": "319"
+    "storeId": "319",
+    "latitude": 51.0824722,
+    "longitude": 7.1212314
   },
   {
     "name": "OBI Market Siegburg",
@@ -2013,7 +2347,9 @@
     "email": "siegburg@obi.de",
     "phone": "02241 127190",
     "url": "https://www.obi.de/markt/siegburg",
-    "storeId": "472"
+    "storeId": "472",
+    "latitude": 50.7928332,
+    "longitude": 7.2070774
   },
   {
     "name": "OBI Market Bergisch Gladbach-Bensberg",
@@ -2025,7 +2361,9 @@
     "email": "servicecenter074@obi.de",
     "phone": "02204 92020",
     "url": "https://www.obi.de/markt/bergisch-gladbach-bensberg",
-    "storeId": "074"
+    "storeId": "074",
+    "latitude": 50.9929303,
+    "longitude": 7.1277379
   },
   {
     "name": "OBI Market Bergisch Gladbach",
@@ -2037,7 +2375,9 @@
     "email": "bergisch-gladbach@obi.de",
     "phone": "02202 1010",
     "url": "https://www.obi.de/markt/bergisch-gladbach",
-    "storeId": "448"
+    "storeId": "448",
+    "latitude": 50.9929303,
+    "longitude": 7.1277379
   },
   {
     "name": "OBI Market Mass Finsterwalde",
@@ -2049,7 +2389,9 @@
     "email": "finsterwalde@obi.de",
     "phone": "03531 50560",
     "url": "https://www.obi.de/markt/massen-finsterwalde",
-    "storeId": "274"
+    "storeId": "274",
+    "latitude": 51.4299139,
+    "longitude": 6.7658346
   },
   {
     "name": "OBI Market Sinzig",
@@ -2061,7 +2403,9 @@
     "email": "sinzig@obi.de",
     "phone": "02642 90620",
     "url": "https://www.obi.de/markt/sinzig",
-    "storeId": "526"
+    "storeId": "526",
+    "latitude": 50.5452042,
+    "longitude": 7.2490828
   },
   {
     "name": "OBI Markt Dresden Seidnitz",
@@ -2073,7 +2417,9 @@
     "email": "dresden@obi.de",
     "phone": "0351 2509600",
     "url": "https://www.obi.de/markt/dresden-seidnitz",
-    "storeId": "289"
+    "storeId": "289",
+    "latitude": 51.0493286,
+    "longitude": 13.7381437
   },
   {
     "name": "OBI Market Königswinter",
@@ -2085,7 +2431,9 @@
     "email": "koenigswinter@obi.de",
     "phone": "02223 92150",
     "url": "https://www.obi.de/markt/koenigswinter",
-    "storeId": "299"
+    "storeId": "299",
+    "latitude": 50.6739719,
+    "longitude": 7.1930989
   },
   {
     "name": "OBI Market Ottendorf-Okrilla",
@@ -2097,7 +2445,9 @@
     "email": "ottendorf-okrilla@obi.de",
     "phone": "035205 5650",
     "url": "https://www.obi.de/markt/ottendorf-okrilla",
-    "storeId": "213"
+    "storeId": "213",
+    "latitude": 51.182698,
+    "longitude": 13.8361238
   },
   {
     "name": "OBI Market Solingen",
@@ -2109,7 +2459,9 @@
     "email": "solingen-mitte@obi.de",
     "phone": "0212 248000",
     "url": "https://www.obi.de/markt/solingen",
-    "storeId": "419"
+    "storeId": "419",
+    "latitude": 51.1721629,
+    "longitude": 7.0845893
   },
   {
     "name": "OBI Markt Ludwigshafen",
@@ -2121,7 +2473,9 @@
     "email": "ludwigshafen-industriestr@obi.de",
     "phone": "0621 690990",
     "url": "https://www.obi.de/markt/ludwigshafen",
-    "storeId": "239"
+    "storeId": "239",
+    "latitude": 49.4704113,
+    "longitude": 8.4381568
   },
   {
     "name": "OBI Market Heidelberg",
@@ -2133,7 +2487,9 @@
     "email": "heidelberg@obi.de",
     "phone": "06221 316960",
     "url": "https://www.obi.de/markt/heidelberg",
-    "storeId": "550"
+    "storeId": "550",
+    "latitude": 49.4093582,
+    "longitude": 8.694724
   },
   {
     "name": "OBI Market Velbert",
@@ -2145,7 +2501,9 @@
     "email": "velbert@obi.de",
     "phone": "02051 95200",
     "url": "https://www.obi.de/markt/velbert",
-    "storeId": "412"
+    "storeId": "412",
+    "latitude": 51.3406713,
+    "longitude": 7.0439912
   },
   {
     "name": "OBI Market Bonn-Süd",
@@ -2157,7 +2515,9 @@
     "email": "bonn@obi.de",
     "phone": "0228 950560",
     "url": "https://www.obi.de/markt/bonn-sued",
-    "storeId": "414"
+    "storeId": "414",
+    "latitude": 50.7352621,
+    "longitude": 7.1024635
   },
   {
     "name": "OBI Markt Köln-Dellbrück",
@@ -2169,7 +2529,9 @@
     "email": "koeln-dellbrueck@obi.de",
     "phone": "0221 689020",
     "url": "https://www.obi.de/markt/koeln-dellbrueck",
-    "storeId": "172"
+    "storeId": "172",
+    "latitude": 50.938361,
+    "longitude": 6.959974
   },
   {
     "name": "OBI Markt Schwandorf",
@@ -2181,7 +2543,9 @@
     "email": "schwandorf@obi.de",
     "phone": "09431 798970",
     "url": "https://www.obi.de/markt/schwandorf",
-    "storeId": "577"
+    "storeId": "577",
+    "latitude": 49.3152832,
+    "longitude": 12.0866152
   },
   {
     "name": "OBI Markt Berlin-Steglitz",
@@ -2193,7 +2557,9 @@
     "email": "berlin-steglitz@obi.de",
     "phone": "030 847170",
     "url": "https://www.obi.de/markt/berlin-steglitz",
-    "storeId": "404"
+    "storeId": "404",
+    "latitude": 52.4574669,
+    "longitude": 13.3198893
   },
   {
     "name": "OBI Markt Dresden White",
@@ -2205,7 +2571,9 @@
     "email": "weissig@obi.de",
     "phone": "0351 806830",
     "url": "https://www.obi.de/markt/dresden-weissig",
-    "storeId": "191"
+    "storeId": "191",
+    "latitude": 51.0493286,
+    "longitude": 13.7381437
   },
   {
     "name": "OBI Markt Heilbronn Etzelstraße",
@@ -2217,7 +2585,9 @@
     "email": "heilbronn-industriegebiet@obi.de",
     "phone": "07131 155770",
     "url": "https://www.obi.de/markt/heilbronn-etzelstrasse",
-    "storeId": "422"
+    "storeId": "422",
+    "latitude": 49.142291,
+    "longitude": 9.218655
   },
   {
     "name": "OBI Market Bonn-Nord",
@@ -2229,7 +2599,9 @@
     "email": "bonn-nord@obi.de",
     "phone": "0228 7637630",
     "url": "https://www.obi.de/markt/bonn-nord",
-    "storeId": "480"
+    "storeId": "480",
+    "latitude": 50.7352621,
+    "longitude": 7.1024635
   },
   {
     "name": "OBI Market Delmenhorst",
@@ -2241,7 +2613,9 @@
     "email": "delmenhorst@obi.de",
     "phone": "04221 916070",
     "url": "https://www.obi.de/markt/delmenhorst",
-    "storeId": "008"
+    "storeId": "008",
+    "latitude": 53.048095,
+    "longitude": 8.6286066
   },
   {
     "name": "OBI Market Leverkusen",
@@ -2253,7 +2627,9 @@
     "email": "leverkusen@obi.de",
     "phone": "0214 404940",
     "url": "https://www.obi.de/markt/leverkusen",
-    "storeId": "504"
+    "storeId": "504",
+    "latitude": 51.0324743,
+    "longitude": 6.9881194
   },
   {
     "name": "OBI Market Cologne-Mülheim",
@@ -2265,7 +2641,9 @@
     "email": "koeln-buchheim@obi.de",
     "phone": "0221 969450",
     "url": "https://www.obi.de/markt/koeln-muelheim",
-    "storeId": "252"
+    "storeId": "252",
+    "latitude": 50.938361,
+    "longitude": 6.959974
   },
   {
     "name": "OBI Market Weißenburg",
@@ -2277,7 +2655,9 @@
     "email": "weissenburg@obi.de",
     "phone": "09141 85830",
     "url": "https://www.obi.de/markt/weissenburg",
-    "storeId": "011"
+    "storeId": "011",
+    "latitude": 49.0305748,
+    "longitude": 10.9718974
   },
   {
     "name": "OBI Markt Berlin-Spandau",
@@ -2289,7 +2669,9 @@
     "email": "berlin-spandau@obi.de",
     "phone": "030 30398640",
     "url": "https://www.obi.de/markt/berlin-spandau",
-    "storeId": "503"
+    "storeId": "503",
+    "latitude": 52.5347694,
+    "longitude": 13.1956287
   },
   {
     "name": "OBI Market Rheine",
@@ -2301,7 +2683,9 @@
     "email": "rheine@obi.de",
     "phone": "05971 97010",
     "url": "https://www.obi.de/markt/rheine",
-    "storeId": "156"
+    "storeId": "156",
+    "latitude": 52.2797707,
+    "longitude": 7.4373615
   },
   {
     "name": "OBI Market Winsen",
@@ -2313,7 +2697,9 @@
     "email": "winsen@obi.de",
     "phone": "04171 78420",
     "url": "https://www.obi.de/markt/winsen",
-    "storeId": "253"
+    "storeId": "253",
+    "latitude": 53.3636474,
+    "longitude": 10.2059206
   },
   {
     "name": "OBI Markt Rangsdorf",
@@ -2325,7 +2711,9 @@
     "email": "rangsdorf@obi.de",
     "phone": "033708 44080",
     "url": "https://www.obi.de/markt/rangsdorf",
-    "storeId": "254"
+    "storeId": "254",
+    "latitude": 52.2914292,
+    "longitude": 13.418888
   },
   {
     "name": "OBI Market Leingarten",
@@ -2337,7 +2725,9 @@
     "email": "leingarten@obi.de",
     "phone": "07131 399260",
     "url": "https://www.obi.de/markt/leingarten",
-    "storeId": "302"
+    "storeId": "302",
+    "latitude": 49.146955361948045,
+    "longitude": 9.118203921471952
   },
   {
     "name": "OBI Markt Heilbronn-Schwabenhof",
@@ -2349,7 +2739,9 @@
     "email": "heilbronn-schwabenhof@obi.de",
     "phone": "07131 203880",
     "url": "https://www.obi.de/markt/heilbronn-schwabenhof",
-    "storeId": "423"
+    "storeId": "423",
+    "latitude": 49.142291,
+    "longitude": 9.218655
   },
   {
     "name": "OBI Market Mayen",
@@ -2361,7 +2753,9 @@
     "email": "mayen@obi.de",
     "phone": "02651 96290",
     "url": "https://www.obi.de/markt/mayen",
-    "storeId": "379"
+    "storeId": "379",
+    "latitude": 50.3283544,
+    "longitude": 7.2215134
   },
   {
     "name": "OBI Market Pirna",
@@ -2373,7 +2767,9 @@
     "email": "pirna@obi.de",
     "phone": "03501 51260",
     "url": "https://www.obi.de/markt/pirna",
-    "storeId": "348"
+    "storeId": "348",
+    "latitude": 50.9602771,
+    "longitude": 13.9379202
   },
   {
     "name": "OBI Market Simmering",
@@ -2385,7 +2781,9 @@
     "email": "simmern@obi.de",
     "phone": "06761 85650",
     "url": "https://www.obi.de/markt/simmern",
-    "storeId": "054"
+    "storeId": "054",
+    "latitude": 49.9837274,
+    "longitude": 7.5227665
   },
   {
     "name": "OBI Markt Köln-Niehl",
@@ -2397,7 +2795,9 @@
     "email": "koeln-niehl@obi.de",
     "phone": "0221 9765250",
     "url": "https://www.obi.de/markt/koeln-niehl",
-    "storeId": "240"
+    "storeId": "240",
+    "latitude": 50.938361,
+    "longitude": 6.959974
   },
   {
     "name": "OBI Market Greding",
@@ -2409,7 +2809,9 @@
     "email": "greding@obi.de",
     "phone": "08463 64050",
     "url": "https://www.obi.de/markt/greding",
-    "storeId": "128"
+    "storeId": "128",
+    "latitude": 49.0666571,
+    "longitude": 11.3398301
   },
   {
     "name": "OBI Market Alfter",
@@ -2421,7 +2823,9 @@
     "email": "alfter@obi.de",
     "phone": "0228 92610",
     "url": "https://www.obi.de/markt/alfter",
-    "storeId": "523"
+    "storeId": "523",
+    "latitude": 50.7370665,
+    "longitude": 7.0093699
   },
   {
     "name": "OBI Markt Berlin-Siemensstadt",
@@ -2433,7 +2837,9 @@
     "email": "berlin-siemensstadt@obi.de",
     "phone": "030 38386560",
     "url": "https://www.obi.de/markt/berlin-siemensstadt",
-    "storeId": "596"
+    "storeId": "596",
+    "latitude": 52.5347694,
+    "longitude": 13.1956287
   },
   {
     "name": "OBI Markt Hockenheim",
@@ -2445,7 +2851,9 @@
     "email": "hockenheim@obi.de",
     "phone": "06205 305780",
     "url": "https://www.obi.de/markt/hockenheim",
-    "storeId": "586"
+    "storeId": "586",
+    "latitude": 49.3188892,
+    "longitude": 8.5475467
   },
   {
     "name": "OBI Market Cologne-Godorf",
@@ -2457,7 +2865,9 @@
     "email": "koeln-godorf@obi.de",
     "phone": "02236 32280",
     "url": "https://www.obi.de/markt/koeln-godorf",
-    "storeId": "539"
+    "storeId": "539",
+    "latitude": 50.938361,
+    "longitude": 6.959974
   },
   {
     "name": "OBI Market Buchholz",
@@ -2469,7 +2879,9 @@
     "email": "buchholz@obi.de",
     "phone": "04181 999660",
     "url": "https://www.obi.de/markt/buchholz",
-    "storeId": "545"
+    "storeId": "545",
+    "latitude": 53.2759502,
+    "longitude": 12.6459399
   },
   {
     "name": "OBI Market Hilden",
@@ -2481,7 +2893,9 @@
     "email": "hilden@obi.de",
     "phone": "02103 908870",
     "url": "https://www.obi.de/markt/hilden",
-    "storeId": "553"
+    "storeId": "553",
+    "latitude": 51.1674417,
+    "longitude": 6.9307271
   },
   {
     "name": "OBI Market Cloppenburg",
@@ -2493,7 +2907,9 @@
     "email": "cloppenburg@obi.de",
     "phone": "04471 88220",
     "url": "https://www.obi.de/markt/cloppenburg",
-    "storeId": "362"
+    "storeId": "362",
+    "latitude": 52.8461339,
+    "longitude": 8.0438783
   },
   {
     "name": "OBI Market Cologne-Pesch",
@@ -2505,7 +2921,9 @@
     "email": "koeln-pesch@obi.de",
     "phone": "0221 5896660",
     "url": "https://www.obi.de/markt/koeln-pesch",
-    "storeId": "141"
+    "storeId": "141",
+    "latitude": 50.938361,
+    "longitude": 6.959974
   },
   {
     "name": "OBI Markt Berlin-Neukölln",
@@ -2517,7 +2935,9 @@
     "email": "berlin-neukoelln@obi.de",
     "phone": "030 68224110",
     "url": "https://www.obi.de/markt/berlin-neukoelln",
-    "storeId": "430"
+    "storeId": "430",
+    "latitude": 52.5173885,
+    "longitude": 13.3951309
   },
   {
     "name": "OBI Markt Rheinbach",
@@ -2529,7 +2949,9 @@
     "email": "rheinbach@obi.de",
     "phone": "02226 89860",
     "url": "https://www.obi.de/markt/rheinbach",
-    "storeId": "410"
+    "storeId": "410",
+    "latitude": 50.6256808,
+    "longitude": 6.9491436
   },
   {
     "name": "OBI Markt Neuruppin",
@@ -2541,7 +2963,9 @@
     "email": "neuruppin@obi.de",
     "phone": "03391 51920",
     "url": "https://www.obi.de/markt/neuruppin",
-    "storeId": "312"
+    "storeId": "312",
+    "latitude": 52.9243859,
+    "longitude": 12.8092919
   },
   {
     "name": "OBI Market Lubben",
@@ -2553,7 +2977,9 @@
     "email": "luebben@obi.de",
     "phone": "03546 27150",
     "url": "https://www.obi.de/markt/luebben",
-    "storeId": "308"
+    "storeId": "308",
+    "latitude": 51.9418987,
+    "longitude": 13.8963805
   },
   {
     "name": "OBI Markt Düsseldorf-Lierenfeld",
@@ -2565,7 +2991,9 @@
     "email": "duesseldorf-lierenfeld@obi.de",
     "phone": "0211 984190",
     "url": "https://www.obi.de/markt/duesseldorf-lierenfeld",
-    "storeId": "127"
+    "storeId": "127",
+    "latitude": 51.2254018,
+    "longitude": 6.7763137
   },
   {
     "name": "OBI Market Cologne-Marsdorf",
@@ -2577,7 +3005,9 @@
     "email": "koeln-marsdorf@obi.de",
     "phone": "02234 659190",
     "url": "https://www.obi.de/markt/koeln-marsdorf",
-    "storeId": "413"
+    "storeId": "413",
+    "latitude": 50.938361,
+    "longitude": 6.959974
   },
   {
     "name": "OBI Markt Berlin-Wedding",
@@ -2589,7 +3019,9 @@
     "email": "wedding@obi.de",
     "phone": "030 46783960",
     "url": "https://www.obi.de/markt/berlin-wedding",
-    "storeId": "226"
+    "storeId": "226",
+    "latitude": 52.5427866,
+    "longitude": 13.3669996
   },
   {
     "name": "OBI Markt Berlin-Reinickendorf",
@@ -2601,7 +3033,9 @@
     "email": "Reinickendorf@obi.de",
     "phone": "030 403920",
     "url": "https://www.obi.de/markt/berlin-reinickendorf",
-    "storeId": "502"
+    "storeId": "502",
+    "latitude": 52.6048469,
+    "longitude": 13.2881415
   },
   {
     "name": "OBI Market Kamenz",
@@ -2613,7 +3047,9 @@
     "email": "kamenz@obi.de",
     "phone": "03578 34200",
     "url": "https://www.obi.de/markt/kamenz",
-    "storeId": "287"
+    "storeId": "287",
+    "latitude": 51.270139,
+    "longitude": 14.0948628
   },
   {
     "name": "OBI Markt Düsseldorf Rath",
@@ -2625,7 +3061,9 @@
     "email": "duesseldorf-rath@obi.de",
     "phone": "0211 437140",
     "url": "https://www.obi.de/markt/duesseldorf-rath",
-    "storeId": "411"
+    "storeId": "411",
+    "latitude": 51.2254018,
+    "longitude": 6.7763137
   },
   {
     "name": "OBI Markt Berlin-Treptow",
@@ -2637,7 +3075,9 @@
     "email": "berlin-treptow@obi.de",
     "phone": "030 67066100",
     "url": "https://www.obi.de/markt/berlin-treptow",
-    "storeId": "532"
+    "storeId": "532",
+    "latitude": 52.4329469,
+    "longitude": 13.5347308
   },
   {
     "name": "OBI Markt Hamburg-Harburg",
@@ -2649,7 +3089,9 @@
     "email": "hamburg-harburg@obi.de",
     "phone": "040 7661670",
     "url": "https://www.obi.de/markt/hamburg-harburg",
-    "storeId": "443"
+    "storeId": "443",
+    "latitude": 53.4557227,
+    "longitude": 9.9917669
   },
   {
     "name": "OBI Markt Berlin-Weißensee",
@@ -2661,7 +3103,9 @@
     "email": "berlin-ostseestrasse@obi.de",
     "phone": "030 4284640",
     "url": "https://www.obi.de/markt/berlin-weissensee",
-    "storeId": "383"
+    "storeId": "383",
+    "latitude": 52.5583417,
+    "longitude": 13.4395203
   },
   {
     "name": "OBI Market Hagenow",
@@ -2673,7 +3117,9 @@
     "email": "hagenow@obi.de",
     "phone": "03883 61150",
     "url": "https://www.obi.de/markt/hagenow",
-    "storeId": "355"
+    "storeId": "355",
+    "latitude": 53.4305796,
+    "longitude": 11.1904828
   },
   {
     "name": "OBI Markt Berlin-Lichtenberg",
@@ -2685,7 +3131,9 @@
     "email": "berlin-lichtenberg@obi.de",
     "phone": "030 57797110",
     "url": "https://www.obi.de/markt/berlin-lichtenberg",
-    "storeId": "482"
+    "storeId": "482",
+    "latitude": 52.5097832,
+    "longitude": 13.4961404
   },
   {
     "name": "OBI Markt Berlin-Pankow",
@@ -2697,7 +3145,9 @@
     "email": "berlin-pankow@obi.de",
     "phone": "030 4750950",
     "url": "https://www.obi.de/markt/berlin-pankow",
-    "storeId": "280"
+    "storeId": "280",
+    "latitude": 52.5431548,
+    "longitude": 13.4142273
   },
   {
     "name": "OBI Markt Hamburg-Bergedorf",
@@ -2709,7 +3159,9 @@
     "email": "hamburg-bergedorf@obi.de",
     "phone": "040 41626780",
     "url": "https://www.obi.de/markt/hamburg-bergedorf",
-    "storeId": "483"
+    "storeId": "483",
+    "latitude": 53.5501721,
+    "longitude": 10.0013165
   },
   {
     "name": "OBI Market Borken",
@@ -2721,7 +3173,9 @@
     "email": "borken@obi.de",
     "phone": "02861 805120",
     "url": "https://www.obi.de/markt/borken",
-    "storeId": "173"
+    "storeId": "173",
+    "latitude": 51.8444777,
+    "longitude": 6.8583277
   },
   {
     "name": "OBI Markt Hamburg-Neugraben",
@@ -2733,7 +3187,9 @@
     "email": "hamburg-neugraben@obi.de",
     "phone": "040 7020700",
     "url": "https://www.obi.de/markt/hamburg-neugraben",
-    "storeId": "377"
+    "storeId": "377",
+    "latitude": 53.4742238,
+    "longitude": 9.8516775
   },
   {
     "name": "OBI Markt Eichstätt",
@@ -2745,7 +3201,9 @@
     "email": "eichstaett@obi.de",
     "phone": "08421 97160",
     "url": "https://www.obi.de/markt/eichstaett",
-    "storeId": "064"
+    "storeId": "064",
+    "latitude": 48.8863328,
+    "longitude": 11.1989396
   },
   {
     "name": "OBI Markt Neuss",
@@ -2757,7 +3215,9 @@
     "email": "neuss@obi.de",
     "phone": "02131 178650",
     "url": "https://www.obi.de/markt/neuss",
-    "storeId": "455"
+    "storeId": "455",
+    "latitude": 51.1981778,
+    "longitude": 6.6916476
   },
   {
     "name": "OBI Markt Düsseldorf Heerdt",
@@ -2769,7 +3229,9 @@
     "email": "duesseldorf-heerdt@obi.de",
     "phone": "0211 5008030",
     "url": "https://www.obi.de/markt/duesseldorf-heerdt",
-    "storeId": "149"
+    "storeId": "149",
+    "latitude": 51.2254018,
+    "longitude": 6.7763137
   },
   {
     "name": "OBI Market Lingen",
@@ -2781,7 +3243,9 @@
     "email": "lingen@obi.de",
     "phone": "0591 916830",
     "url": "https://www.obi.de/markt/lingen",
-    "storeId": "256"
+    "storeId": "256",
+    "latitude": 52.5224659,
+    "longitude": 7.316584
   },
   {
     "name": "OBI Market Euskirchen",
@@ -2793,7 +3257,9 @@
     "email": "euskirchen@obi.de",
     "phone": "02251 94900",
     "url": "https://www.obi.de/markt/euskirchen",
-    "storeId": "262"
+    "storeId": "262",
+    "latitude": 50.6612623,
+    "longitude": 6.7871219
   },
   {
     "name": "OBI Market Bietigheim",
@@ -2805,7 +3271,9 @@
     "email": "bietigheim@obi.de",
     "phone": "07142 90160",
     "url": "https://www.obi.de/markt/bietigheim",
-    "storeId": "432"
+    "storeId": "432",
+    "latitude": 48.9126152,
+    "longitude": 8.2539859
   },
   {
     "name": "OBI Market Glinde",
@@ -2817,7 +3285,9 @@
     "email": "glinde@obi.de",
     "phone": "040 7309370",
     "url": "https://www.obi.de/markt/glinde",
-    "storeId": "040"
+    "storeId": "040",
+    "latitude": 53.5411468,
+    "longitude": 10.213583
   },
   {
     "name": "OBI Market Kerpen",
@@ -2829,7 +3299,9 @@
     "email": "kerpen@obi.de",
     "phone": "02237 97476100",
     "url": "https://www.obi.de/markt/kerpen",
-    "storeId": "589"
+    "storeId": "589",
+    "latitude": 50.3097609,
+    "longitude": 6.7293316
   },
   {
     "name": "OBI Markt Oldenburg-Werrastraße",
@@ -2841,7 +3313,9 @@
     "email": "oldenburg-werra@obi.de",
     "phone": "0441 20962250",
     "url": "https://www.obi.de/markt/oldenburg-werrastrasse",
-    "storeId": "565"
+    "storeId": "565",
+    "latitude": 53.1389753,
+    "longitude": 8.2146017
   },
   {
     "name": "OBI Market Winnenden",
@@ -2853,7 +3327,9 @@
     "email": "winnenden@obi.de",
     "phone": "07195 589270",
     "url": "https://www.obi.de/markt/winnenden",
-    "storeId": "533"
+    "storeId": "533",
+    "latitude": 48.8760958,
+    "longitude": 9.3993124
   },
   {
     "name": "OBI Markt Schwäbisch Gmünd",
@@ -2865,7 +3341,9 @@
     "email": "schwaebisch_gmuend@obi.de",
     "phone": "07171 1043630",
     "url": "https://www.obi.de/markt/schwaebisch-gmuend",
-    "storeId": "573"
+    "storeId": "573",
+    "latitude": 48.7999036,
+    "longitude": 9.7977584
   },
   {
     "name": "OBI Market Parchim",
@@ -2877,7 +3355,9 @@
     "email": "parchim@obi.de",
     "phone": "03871 62520",
     "url": "https://www.obi.de/markt/parchim",
-    "storeId": "016"
+    "storeId": "016",
+    "latitude": 53.4258455,
+    "longitude": 11.8475244
   },
   {
     "name": "OBI Market Oldenburg Ammerländer Heerstraße",
@@ -2889,7 +3369,9 @@
     "email": "oldenburg@obi.de",
     "phone": "0441 972040",
     "url": "https://www.obi.de/markt/oldenburg-ammerlaender-heerstrasse",
-    "storeId": "099"
+    "storeId": "099",
+    "latitude": 53.1389753,
+    "longitude": 8.2146017
   },
   {
     "name": "OBI Market Cham",
@@ -2901,7 +3383,9 @@
     "email": "cham@obi.de",
     "phone": "09971 8830",
     "url": "https://www.obi.de/markt/cham",
-    "storeId": "203"
+    "storeId": "203",
+    "latitude": 49.2178194,
+    "longitude": 12.6663832
   },
   {
     "name": "OBI Markt Hamburg-Altona",
@@ -2913,7 +3397,9 @@
     "email": "hamburg-altona@obi.de",
     "phone": "040 89726420",
     "url": "https://www.obi.de/markt/hamburg-altona",
-    "storeId": "497"
+    "storeId": "497",
+    "latitude": 53.5501721,
+    "longitude": 10.0013165
   },
   {
     "name": "OBI Market Mühlacker",
@@ -2925,7 +3411,9 @@
     "email": "markt106@obi.de",
     "phone": "07041 811830",
     "url": "https://www.obi.de/markt/muehlacker",
-    "storeId": "106"
+    "storeId": "106",
+    "latitude": 48.9466697,
+    "longitude": 8.8413323
   },
   {
     "name": "OBI Market Bernau",
@@ -2937,7 +3425,9 @@
     "email": "bernau@obi.de",
     "phone": "03338 750990",
     "url": "https://www.obi.de/markt/bernau",
-    "storeId": "459"
+    "storeId": "459",
+    "latitude": 52.6787254,
+    "longitude": 13.5881114
   },
   {
     "name": "OBI Markt Hamburg-Eppendorf",
@@ -2949,7 +3439,9 @@
     "email": "Hamburg-Eppendorf@obi.de",
     "phone": "040 51326380",
     "url": "https://www.obi.de/markt/hamburg-eppendorf",
-    "storeId": "281"
+    "storeId": "281",
+    "latitude": 53.5965005,
+    "longitude": 9.9758002
   },
   {
     "name": "OBI Markt Kaiserslautern",
@@ -2961,7 +3453,9 @@
     "email": "kaiserslautern@obi.de",
     "phone": "0631 351730",
     "url": "https://www.obi.de/markt/kaiserslautern",
-    "storeId": "223"
+    "storeId": "223",
+    "latitude": 49.4432174,
+    "longitude": 7.7689951
   },
   {
     "name": "OBI Market Waiblingen",
@@ -2973,7 +3467,9 @@
     "email": "waiblingen@obi.de",
     "phone": "07151 986100",
     "url": "https://www.obi.de/markt/waiblingen",
-    "storeId": "131"
+    "storeId": "131",
+    "latitude": 48.8325659,
+    "longitude": 9.3163822
   },
   {
     "name": "OBI Markt Landau",
@@ -2985,7 +3481,9 @@
     "email": "markt045@obi.de",
     "phone": "06341 972200",
     "url": "https://www.obi.de/markt/landau",
-    "storeId": "045"
+    "storeId": "045",
+    "latitude": 49.1982825,
+    "longitude": 8.1123441
   },
   {
     "name": "OBI Market Kamp Lintfort",
@@ -2997,7 +3495,9 @@
     "email": "kali@obi.de",
     "phone": "02842 911610",
     "url": "https://www.obi.de/markt/kamp-lintfort",
-    "storeId": "429"
+    "storeId": "429",
+    "latitude": 51.5017981,
+    "longitude": 6.547923
   },
   {
     "name": "OBI Market Bautzen",
@@ -3009,7 +3509,9 @@
     "email": "bautzen@obi.de",
     "phone": "03591 52960",
     "url": "https://www.obi.de/markt/bautzen",
-    "storeId": "462"
+    "storeId": "462",
+    "latitude": 51.1709332,
+    "longitude": 14.3923708
   },
   {
     "name": "OBI Market Cottbus",
@@ -3021,7 +3523,9 @@
     "email": "cottbus@obi.de",
     "phone": "0355 4864260",
     "url": "https://www.obi.de/markt/cottbus",
-    "storeId": "122"
+    "storeId": "122",
+    "latitude": 51.7567447,
+    "longitude": 14.3357307
   },
   {
     "name": "OBI Markt Neuburg an der Donau",
@@ -3033,7 +3537,10 @@
     "email": "neuburg@obi.de",
     "phone": "08431 61990",
     "url": "https://www.obi.de/markt/neuburg-an-der-donau",
-    "storeId": "584"
+    "storeId": "584",
+    "latitude": 48.72092813420825,
+
+    "longitude": 11.170900731697147
   },
   {
     "name": "OBI Markt Stuttgart-Feuerbach",
@@ -3045,7 +3552,9 @@
     "email": "stuttgart-feuerbach@obi.de",
     "phone": "0711 5408140",
     "url": "https://www.obi.de/markt/stuttgart-feuerbach",
-    "storeId": "017"
+    "storeId": "017",
+    "latitude": 48.7784485,
+    "longitude": 9.1800132
   },
   {
     "name": "OBI Market Düren",
@@ -3057,7 +3566,9 @@
     "email": "Dueren@obi.de",
     "phone": "02421 223100",
     "url": "https://www.obi.de/markt/dueren",
-    "storeId": "481"
+    "storeId": "481",
+    "latitude": 50.8031684,
+    "longitude": 6.4820806
   },
   {
     "name": "OBI Markt Uhingen",
@@ -3069,7 +3580,9 @@
     "email": "uhingen@obi.de",
     "phone": "07161 938800",
     "url": "https://www.obi.de/markt/uhingen",
-    "storeId": "315"
+    "storeId": "315",
+    "latitude": 48.7042331,
+    "longitude": 9.5856424
   },
   {
     "name": "OBI Markt Norderstedt",
@@ -3081,7 +3594,9 @@
     "email": "norderstedt@obi.de",
     "phone": "040 52300523",
     "url": "https://www.obi.de/markt/norderstedt",
-    "storeId": "420"
+    "storeId": "420",
+    "latitude": 53.7089898,
+    "longitude": 9.9891914
   },
   {
     "name": "OBI Markt Stuttgart-Wangen",
@@ -3093,7 +3608,9 @@
     "email": "stuttgart-wangen@obi.de",
     "phone": "0711 4070010",
     "url": "https://www.obi.de/markt/stuttgart-wangen",
-    "storeId": "113"
+    "storeId": "113",
+    "latitude": 48.7784485,
+    "longitude": 9.1800132
   },
   {
     "name": "OBI Markt Göppingen",
@@ -3105,7 +3622,9 @@
     "email": "goeppingen@obi.de",
     "phone": "07161 965130",
     "url": "https://www.obi.de/markt/goeppingen",
-    "storeId": "572"
+    "storeId": "572",
+    "latitude": 48.7031377,
+    "longitude": 9.6541116
   },
   {
     "name": "OBI Market Abensberg",
@@ -3117,7 +3636,9 @@
     "email": "abensberg@obi.de",
     "phone": "09443 91200",
     "url": "https://www.obi.de/markt/abensberg",
-    "storeId": "320"
+    "storeId": "320",
+    "latitude": 48.8332409,
+    "longitude": 11.8570782
   },
   {
     "name": "OBI Market Kall",
@@ -3129,7 +3650,9 @@
     "email": "kall@obi.de",
     "phone": "02441 9999222",
     "url": "https://www.obi.de/markt/kall",
-    "storeId": "036"
+    "storeId": "036",
+    "latitude": 50.5410021,
+    "longitude": 6.5555751
   },
   {
     "name": "OBI Market Kempen",
@@ -3141,7 +3664,9 @@
     "email": "kempen@obi.de",
     "phone": "02152 898710",
     "url": "https://www.obi.de/markt/kempen",
-    "storeId": "292"
+    "storeId": "292",
+    "latitude": 51.3642126,
+    "longitude": 6.4195011
   },
   {
     "name": "OBI Market Viersen",
@@ -3153,7 +3678,9 @@
     "email": "viersen@obi.de",
     "phone": "02162 530190",
     "url": "https://www.obi.de/markt/viersen",
-    "storeId": "464"
+    "storeId": "464",
+    "latitude": 51.2562118,
+    "longitude": 6.3905476
   },
   {
     "name": "OBI Market Stuttgart-Westbahnhof",
@@ -3165,7 +3692,9 @@
     "email": "Stuttgart-Westbahnhof@obi.de",
     "phone": "0711 3516400",
     "url": "https://www.obi.de/markt/stuttgart-westbahnhof",
-    "storeId": "496"
+    "storeId": "496",
+    "latitude": 48.7784485,
+    "longitude": 9.1800132
   },
   {
     "name": "OBI Market Leonberg",
@@ -3177,7 +3706,9 @@
     "email": "leonberg@obi.de",
     "phone": "07152 308160",
     "url": "https://www.obi.de/markt/leonberg",
-    "storeId": "096"
+    "storeId": "096",
+    "latitude": 48.8012983,
+    "longitude": 9.0150026
   },
   {
     "name": "OBI Market Zehdenick",
@@ -3189,7 +3720,9 @@
     "email": "zehdenick@obi.de",
     "phone": "03307 46620",
     "url": "https://www.obi.de/markt/zehdenick",
-    "storeId": "231"
+    "storeId": "231",
+    "latitude": 52.9794838,
+    "longitude": 13.3348959
   },
   {
     "name": "OBI Market Giengen-Brenz",
@@ -3201,7 +3734,9 @@
     "email": "giengen@obi.de",
     "phone": "07322 13310",
     "url": "https://www.obi.de/markt/giengen-brenz",
-    "storeId": "567"
+    "storeId": "567",
+    "latitude": 48.6208515,
+    "longitude": 10.2442196
   },
   {
     "name": "OBI Markt Strausberg",
@@ -3213,7 +3748,9 @@
     "email": "strausberg@obi.de",
     "phone": "03341 33160",
     "url": "https://www.obi.de/markt/strausberg",
-    "storeId": "110"
+    "storeId": "110",
+    "latitude": 52.5814009,
+    "longitude": 13.8833952
   },
   {
     "name": "OBI Market Ettlingen",
@@ -3225,7 +3762,9 @@
     "email": "markt019@obi.de",
     "phone": "07243 505740",
     "url": "https://www.obi.de/markt/ettlingen",
-    "storeId": "019"
+    "storeId": "019",
+    "latitude": 48.9414188,
+    "longitude": 8.4076347
   },
   {
     "name": "OBI Markt Leinfelden-Echterdingen",
@@ -3237,7 +3776,9 @@
     "email": "leinfelden-echterdingen@obi.de",
     "phone": "0711 7973110",
     "url": "https://www.obi.de/markt/leinfelden-echterdingen",
-    "storeId": "023"
+    "storeId": "023",
+    "latitude": 48.6901796,
+    "longitude": 9.1525725
   },
   {
     "name": "OBI Market Erkelenz",
@@ -3249,7 +3790,9 @@
     "email": "erkelenz@obi.de",
     "phone": "02431 945060",
     "url": "https://www.obi.de/markt/erkelenz",
-    "storeId": "230"
+    "storeId": "230",
+    "latitude": 51.080992,
+    "longitude": 6.3160684
   },
   {
     "name": "OBI Market Finowfurt",
@@ -3261,7 +3804,9 @@
     "email": "finowfurt@obi.de",
     "phone": "03335 45170",
     "url": "https://www.obi.de/markt/finowfurt",
-    "storeId": "265"
+    "storeId": "265",
+    "latitude": 52.9021805,
+    "longitude": 13.5553279
   },
   {
     "name": "OBI Market Elmshorn",
@@ -3273,7 +3818,9 @@
     "email": "elmshorn@obi.de",
     "phone": "04121 47512100",
     "url": "https://www.obi.de/markt/elmshorn",
-    "storeId": "569"
+    "storeId": "569",
+    "latitude": 53.7532486,
+    "longitude": 9.6524559
   },
   {
     "name": "OBI Market Ebersbach",
@@ -3285,7 +3832,9 @@
     "email": "ebersbach@obi.de",
     "phone": "03586 30230",
     "url": "https://www.obi.de/markt/ebersbach",
-    "storeId": "358"
+    "storeId": "358",
+    "latitude": 50.3645048,
+    "longitude": 12.1751371
   },
   {
     "name": "OBI Markt Bad Oldesloe",
@@ -3297,7 +3846,9 @@
     "email": "bad-oldesloe@obi.de",
     "phone": "04531 894380",
     "url": "https://www.obi.de/markt/bad-oldesloe",
-    "storeId": "145"
+    "storeId": "145",
+    "latitude": 53.8096562,
+    "longitude": 10.3733692
   },
   {
     "name": "OBI Market Nordenham",
@@ -3309,7 +3860,9 @@
     "email": "nordenham@obi.de",
     "phone": "04731 936910",
     "url": "https://www.obi.de/markt/nordenham",
-    "storeId": "341"
+    "storeId": "341",
+    "latitude": 53.4973636,
+    "longitude": 8.4820227
   },
   {
     "name": "OBI Market Eschweiler",
@@ -3321,7 +3874,9 @@
     "email": "eschweiler@obi.de",
     "phone": "02403 78830",
     "url": "https://www.obi.de/markt/eschweiler",
-    "storeId": "169"
+    "storeId": "169",
+    "latitude": 50.8175029,
+    "longitude": 6.2630894
   },
   {
     "name": "OBI Market Löbau",
@@ -3333,7 +3888,9 @@
     "email": "loebau@obi.de",
     "phone": "03585 47670",
     "url": "https://www.obi.de/markt/loebau",
-    "storeId": "357"
+    "storeId": "357",
+    "latitude": 51.0947288,
+    "longitude": 14.6692423
   },
   {
     "name": "OBI Market Bremerhaven",
@@ -3345,7 +3902,9 @@
     "email": "bremerhaven@obi.de",
     "phone": "0471 9412980",
     "url": "https://www.obi.de/markt/bremerhaven",
-    "storeId": "486"
+    "storeId": "486",
+    "latitude": 53.5505392,
+    "longitude": 8.5851945
   },
   {
     "name": "OBI Market Nettetal-Kaldenkirchen",
@@ -3357,7 +3916,9 @@
     "email": "nettetal-kaldenkirchen@obi.de",
     "phone": "02157 819370",
     "url": "https://www.obi.de/markt/nettetal-kaldenkirchen",
-    "storeId": "291"
+    "storeId": "291",
+    "latitude": 51.3155092,
+    "longitude": 6.2714171
   },
   {
     "name": "OBI Markt Hückelhoven",
@@ -3369,7 +3930,9 @@
     "email": "huckelhoven@obi.de",
     "phone": "02433 524680",
     "url": "https://www.obi.de/markt/hueckelhoven",
-    "storeId": "599"
+    "storeId": "599",
+    "latitude": 51.0552368,
+    "longitude": 6.2247322
   },
   {
     "name": "OBI Market Forest",
@@ -3381,7 +3944,9 @@
     "email": "forst@obi.de",
     "phone": "03562 97080",
     "url": "https://www.obi.de/markt/forst",
-    "storeId": "242"
+    "storeId": "242",
+    "latitude": 50.4186941,
+    "longitude": 12.9402445
   },
   {
     "name": "OBI Markt Papenburg",
@@ -3393,7 +3958,9 @@
     "email": "papenburg@obi.de",
     "phone": "04961 664290",
     "url": "https://www.obi.de/markt/papenburg",
-    "storeId": "547"
+    "storeId": "547",
+    "latitude": 53.0822606,
+    "longitude": 7.3928398
   },
   {
     "name": "OBI Market Emmerich",
@@ -3405,7 +3972,9 @@
     "email": "emmerich@obi.de",
     "phone": "02822 915670",
     "url": "https://www.obi.de/markt/emmerich",
-    "storeId": "541"
+    "storeId": "541",
+    "latitude": 51.8322137,
+    "longitude": 6.2428283
   },
   {
     "name": "OBI Markt Neustrelitz",
@@ -3417,7 +3986,9 @@
     "email": "neustrelitz@obi.de",
     "phone": "03981 45820",
     "url": "https://www.obi.de/markt/neustrelitz",
-    "storeId": "084"
+    "storeId": "084",
+    "latitude": 53.3617163,
+    "longitude": 13.0630004
   },
   {
     "name": "OBI Market Lübeck",
@@ -3429,7 +4000,9 @@
     "email": "luebeck@obi.de",
     "phone": "0451 610810",
     "url": "https://www.obi.de/markt/luebeck",
-    "storeId": "221"
+    "storeId": "221",
+    "latitude": 53.866444,
+    "longitude": 10.684738
   },
   {
     "name": "OBI Markt Metzingen",
@@ -3441,7 +4014,9 @@
     "email": "markt112@obi.de",
     "phone": "07123 162140",
     "url": "https://www.obi.de/markt/metzingen",
-    "storeId": "112"
+    "storeId": "112",
+    "latitude": 48.5397247,
+    "longitude": 9.2831201
   },
   {
     "name": "OBI Market Zittau",
@@ -3453,7 +4028,9 @@
     "email": "zittau@obi.de",
     "phone": "03583 540320",
     "url": "https://www.obi.de/markt/zittau",
-    "storeId": "229"
+    "storeId": "229",
+    "latitude": 50.9097785,
+    "longitude": 14.8008877
   },
   {
     "name": "OBI Market Waren-Müritz",
@@ -3465,7 +4042,9 @@
     "email": "waren@obi.de",
     "phone": "03991 18270200",
     "url": "https://www.obi.de/markt/waren-mueritz",
-    "storeId": "311"
+    "storeId": "311",
+    "latitude": 53.5156249,
+    "longitude": 12.6850606
   },
   {
     "name": "OBI Market Niesky",
@@ -3477,7 +4056,9 @@
     "email": "niesky@obi.de",
     "phone": "03588 25430",
     "url": "https://www.obi.de/markt/niesky",
-    "storeId": "374"
+    "storeId": "374",
+    "latitude": 51.3182995,
+    "longitude": 14.7925704
   },
   {
     "name": "OBI Markt Aachen Debyestraße",
@@ -3489,7 +4070,9 @@
     "email": "aachen@obi.de",
     "phone": "0241 5593270",
     "url": "https://www.obi.de/markt/aachen-debyestrasse",
-    "storeId": "527"
+    "storeId": "527",
+    "latitude": 50.776351,
+    "longitude": 6.083862
   },
   {
     "name": "OBI Market Herzogenrath",
@@ -3501,7 +4084,9 @@
     "email": "herzogenrath@obi.de",
     "phone": "02406 666790",
     "url": "https://www.obi.de/markt/herzogenrath",
-    "storeId": "570"
+    "storeId": "570",
+    "latitude": 50.8684545,
+    "longitude": 6.0950514
   },
   {
     "name": "OBI Markt Bad Freienwalde",
@@ -3513,7 +4098,9 @@
     "email": "bad-freiewalde@obi.de",
     "phone": "03344 42870",
     "url": "https://www.obi.de/markt/bad-freienwalde",
-    "storeId": "363"
+    "storeId": "363",
+    "latitude": 52.787521,
+    "longitude": 14.0300689
   },
   {
     "name": "OBI Markt Neunkirchen",
@@ -3525,7 +4112,9 @@
     "email": "ninekirchen@obi.de",
     "phone": "06821 904750",
     "url": "https://www.obi.de/markt/neunkirchen",
-    "storeId": "509"
+    "storeId": "509",
+    "latitude": 50.5456179,
+    "longitude": 8.1025344
   },
   {
     "name": "OBI Markt Jettingen-Scheppach",
@@ -3537,7 +4126,9 @@
     "email": "jettingen@obi.de",
     "phone": "08225 309050",
     "url": "https://www.obi.de/markt/jettingen-scheppach",
-    "storeId": "546"
+    "storeId": "546",
+    "latitude": 48.3954927,
+    "longitude": 10.4409763
   },
   {
     "name": "OBI Market Aichach-Ecknach",
@@ -3549,7 +4140,9 @@
     "email": "aichach-ecknach@obi.de",
     "phone": "08251 87540",
     "url": "https://www.obi.de/markt/aichach-ecknach",
-    "storeId": "373"
+    "storeId": "373",
+    "latitude": 48.4453152,
+    "longitude": 11.1305246
   },
   {
     "name": "OBI Markt Eisenhüttenstadt",
@@ -3561,7 +4154,9 @@
     "email": "MarktL171@obi.de",
     "phone": "03364 280190",
     "url": "https://www.obi.de/markt/eisenhuettenstadt",
-    "storeId": "171"
+    "storeId": "171",
+    "latitude": 52.1448863,
+    "longitude": 14.6294413
   },
   {
     "name": "OBI Markt Bad Segeberg",
@@ -3573,7 +4168,9 @@
     "email": "bad-segeberg@obi.de",
     "phone": "04551 908600",
     "url": "https://www.obi.de/markt/bad-segeberg",
-    "storeId": "555"
+    "storeId": "555",
+    "latitude": 53.9369345,
+    "longitude": 10.3044775
   },
   {
     "name": "OBI Markt Aachen Roermonder Straße",
@@ -3585,7 +4182,9 @@
     "email": "aachen-stadt@obi.de",
     "phone": "0241 84005",
     "url": "https://www.obi.de/markt/aachen-roermonder-strasse",
-    "storeId": "027"
+    "storeId": "027",
+    "latitude": 50.776351,
+    "longitude": 6.083862
   },
   {
     "name": "OBI Market Zwiesel",
@@ -3597,7 +4196,9 @@
     "email": "zwiesel@obi.de",
     "phone": "09922 500970",
     "url": "https://www.obi.de/markt/zwiesel",
-    "storeId": "163"
+    "storeId": "163",
+    "latitude": 49.0249257,
+    "longitude": 13.2176923
   },
   {
     "name": "OBI Market Tübingen",
@@ -3609,7 +4210,9 @@
     "email": "markt034@obi.de",
     "phone": "07071 796510",
     "url": "https://www.obi.de/markt/tuebingen",
-    "storeId": "034"
+    "storeId": "034",
+    "latitude": 48.5203263,
+    "longitude": 9.053596
   },
   {
     "name": "OBI Market Pfullingen",
@@ -3621,7 +4224,9 @@
     "email": "pfullingen@obi.de",
     "phone": "07121 92470",
     "url": "https://www.obi.de/markt/pfullingen",
-    "storeId": "345"
+    "storeId": "345",
+    "latitude": 48.4656748,
+    "longitude": 9.2254982
   },
   {
     "name": "OBI Markt Stadtbergen",
@@ -3633,7 +4238,9 @@
     "email": "stadtbergen@obi.de",
     "phone": "0821 486720",
     "url": "https://www.obi.de/markt/stadtbergen",
-    "storeId": "519"
+    "storeId": "519",
+    "latitude": 48.3666284,
+    "longitude": 10.8442814
   },
   {
     "name": "OBI Market Sinzheim",
@@ -3645,7 +4252,9 @@
     "email": "sinzheim@obi.de",
     "phone": "07221 996470",
     "url": "https://www.obi.de/markt/sinzheim",
-    "storeId": "452"
+    "storeId": "452",
+    "latitude": 48.7609939,
+    "longitude": 8.1654269
   },
   {
     "name": "OBI Markt Heiligenstedten",
@@ -3657,7 +4266,9 @@
     "email": "Heiligenstedten@obi.de",
     "phone": "04821 175500",
     "url": "https://www.obi.de/markt/heiligenstedten",
-    "storeId": "521"
+    "storeId": "521",
+    "latitude": 53.9313413,
+    "longitude": 9.4697982
   },
   {
     "name": "OBI Market Landshut",
@@ -3669,7 +4280,9 @@
     "email": "landshut@obi.de",
     "phone": "0871 974260",
     "url": "https://www.obi.de/markt/landshut",
-    "storeId": "178"
+    "storeId": "178",
+    "latitude": 48.536217,
+    "longitude": 12.1516551
   },
   {
     "name": "OBI Market Güstrow",
@@ -3681,7 +4294,9 @@
     "email": "guestrow@obi.de",
     "phone": "03843 23210",
     "url": "https://www.obi.de/markt/guestrow",
-    "storeId": "303"
+    "storeId": "303",
+    "latitude": 53.793587,
+    "longitude": 12.1764906
   },
   {
     "name": "OBI Markt Sankt Ingbert",
@@ -3693,7 +4308,9 @@
     "email": "sankt-ingbert@obi.de",
     "phone": "06894 921480",
     "url": "https://www.obi.de/markt/sankt-ingbert",
-    "storeId": "511"
+    "storeId": "511",
+    "latitude": 49.2788378,
+    "longitude": 7.1156707
   },
   {
     "name": "OBI Market Dingolfing",
@@ -3705,7 +4322,9 @@
     "email": "dingolfing@obi.de",
     "phone": "08731 32310",
     "url": "https://www.obi.de/markt/dingolfing",
-    "storeId": "047"
+    "storeId": "047",
+    "latitude": 48.6300801,
+    "longitude": 12.4977434
   },
   {
     "name": "OBI Market Melt",
@@ -3717,7 +4336,9 @@
     "email": "schmelz@obi.de",
     "phone": "06887 903920",
     "url": "https://www.obi.de/markt/schmelz",
-    "storeId": "518"
+    "storeId": "518",
+    "latitude": 50.9378274,
+    "longitude": 6.9416446
   },
   {
     "name": "OBI Market Jever",
@@ -3729,7 +4350,9 @@
     "email": "jever@obi.de",
     "phone": "04461 93300",
     "url": "https://www.obi.de/markt/jever",
-    "storeId": "346"
+    "storeId": "346",
+    "latitude": 53.5736426,
+    "longitude": 7.9020696
   },
   {
     "name": "OBI Markt Neumünster Boostedter Straße",
@@ -3741,7 +4364,9 @@
     "email": "markt386@obi.de",
     "phone": "04321 975111",
     "url": "https://www.obi.de/markt/neumuenster-boostedter-strasse",
-    "storeId": "386"
+    "storeId": "386",
+    "latitude": 54.0703296,
+    "longitude": 9.9884451
   },
   {
     "name": "OBI Markt Mössingen",
@@ -3753,7 +4378,9 @@
     "email": "moessingen@obi.de",
     "phone": "07473 37826100",
     "url": "https://www.obi.de/markt/moessingen",
-    "storeId": "571"
+    "storeId": "571",
+    "latitude": 48.4069119,
+    "longitude": 9.0602912
   },
   {
     "name": "OBI Markt Neubrandenburg South",
@@ -3765,7 +4392,9 @@
     "email": "neubrandenburg-sued@obi.de",
     "phone": "0395 3631010",
     "url": "https://www.obi.de/markt/neubrandenburg-sued",
-    "storeId": "295"
+    "storeId": "295",
+    "latitude": 53.5574458,
+    "longitude": 13.2602781
   },
   {
     "name": "OBI Markt Neumünster Kieler Straße",
@@ -3777,7 +4406,9 @@
     "email": "markt387@obi.de",
     "phone": "04321 975300",
     "url": "https://www.obi.de/markt/neumuenster-kieler-strasse",
-    "storeId": "387"
+    "storeId": "387",
+    "latitude": 54.0703296,
+    "longitude": 9.9884451
   },
   {
     "name": "OBI Market Eutin",
@@ -3789,7 +4420,9 @@
     "email": "markt384@obi.de",
     "phone": "04321 975500",
     "url": "https://www.obi.de/markt/eutin",
-    "storeId": "384"
+    "storeId": "384",
+    "latitude": 54.1364642,
+    "longitude": 10.6159077
   },
   {
     "name": "OBI Markt Neubrandenburg Nord",
@@ -3801,7 +4434,9 @@
     "email": "neubrandenburg@obi.de",
     "phone": "0395 43092550",
     "url": "https://www.obi.de/markt/neubrandenburg-nord",
-    "storeId": "232"
+    "storeId": "232",
+    "latitude": 53.5574458,
+    "longitude": 13.2602781
   },
   {
     "name": "OBI Market Emden",
@@ -3813,7 +4448,9 @@
     "email": "Emden@obi.de",
     "phone": "04921 582100",
     "url": "https://www.obi.de/markt/emden",
-    "storeId": "568"
+    "storeId": "568",
+    "latitude": 53.3670541,
+    "longitude": 7.2058304
   },
   {
     "name": "OBI Markt Dachau",
@@ -3825,7 +4462,9 @@
     "email": "dachau@obi.de",
     "phone": "08131 51700",
     "url": "https://www.obi.de/markt/dachau",
-    "storeId": "334"
+    "storeId": "334",
+    "latitude": 48.2595085,
+    "longitude": 11.4346724
   },
   {
     "name": "OBI Market Schwedt",
@@ -3837,7 +4476,9 @@
     "email": "schwedt@obi.de",
     "phone": "03332 58030",
     "url": "https://www.obi.de/markt/schwedt",
-    "storeId": "457"
+    "storeId": "457",
+    "latitude": 53.0586366,
+    "longitude": 14.2840858
   },
   {
     "name": "OBI Market Biberach",
@@ -3849,7 +4490,9 @@
     "email": "biberach@obi.de",
     "phone": "07351 587960",
     "url": "https://www.obi.de/markt/biberach",
-    "storeId": "520"
+    "storeId": "520",
+    "latitude": 48.0984413,
+    "longitude": 9.7899938
   },
   {
     "name": "OBI Markt München-Neuaubing",
@@ -3861,7 +4504,9 @@
     "email": "neuaubing@obi.de",
     "phone": "089 15002850",
     "url": "https://www.obi.de/markt/muenchen-neuaubing",
-    "storeId": "224"
+    "storeId": "224",
+    "latitude": 48.1371079,
+    "longitude": 11.5753822
   },
   {
     "name": "OBI Markt München-Westend",
@@ -3873,7 +4518,9 @@
     "email": "muenchen-westend@obi.de",
     "phone": "089 54727850",
     "url": "https://www.obi.de/markt/muenchen-westend",
-    "storeId": "132"
+    "storeId": "132",
+    "latitude": 48.1371079,
+    "longitude": 11.5753822
   },
   {
     "name": "OBI Markt München-Martinsried",
@@ -3885,7 +4532,9 @@
     "email": "muenchen-martinsried@obi.de",
     "phone": "089 85683770",
     "url": "https://www.obi.de/markt/muenchen-martinsried",
-    "storeId": "492"
+    "storeId": "492",
+    "latitude": 48.103742,
+    "longitude": 11.4220029
   },
   {
     "name": "OBI Markt Landsberg am Lech",
@@ -3897,7 +4546,9 @@
     "email": "marktl543@obi.de",
     "phone": "08191 973900",
     "url": "https://www.obi.de/markt/landsberg-am-lech",
-    "storeId": "543"
+    "storeId": "543",
+    "latitude": 48.0497474,
+    "longitude": 10.8768728
   },
   {
     "name": "OBI Market Munich-Daglfing",
@@ -3909,7 +4560,9 @@
     "email": "daglfing@obi.de",
     "phone": "089 20060940",
     "url": "https://www.obi.de/markt/muenchen-daglfing",
-    "storeId": "552"
+    "storeId": "552",
+    "latitude": 48.1371079,
+    "longitude": 11.5753822
   },
   {
     "name": "OBI Markt Parsdorf",
@@ -3921,7 +4574,9 @@
     "email": "parsdorf@obi.de",
     "phone": "089 92104760",
     "url": "https://www.obi.de/markt/parsdorf",
-    "storeId": "499"
+    "storeId": "499",
+    "latitude": 48.1418976,
+    "longitude": 11.787412
   },
   {
     "name": "OBI Markt Offenburg",
@@ -3933,7 +4588,9 @@
     "email": "offenburg@obi.de",
     "phone": "0781 924460",
     "url": "https://www.obi.de/markt/offenburg",
-    "storeId": "418"
+    "storeId": "418",
+    "latitude": 48.4695984,
+    "longitude": 7.9429235
   },
   {
     "name": "OBI Markt München-Trudering",
@@ -3945,7 +4602,9 @@
     "email": "trudering@obi.de",
     "phone": "089 15883370",
     "url": "https://www.obi.de/markt/muenchen-trudering",
-    "storeId": "225"
+    "storeId": "225",
+    "latitude": 48.1371079,
+    "longitude": 11.5753822
   },
   {
     "name": "OBI Markt Mühldorf",
@@ -3957,7 +4616,9 @@
     "email": "muehldorf@obi.de",
     "phone": "08631 1609100",
     "url": "https://www.obi.de/markt/muehldorf",
-    "storeId": "538"
+    "storeId": "538",
+    "latitude": 48.2405007,
+    "longitude": 12.5250991
   },
   {
     "name": "OBI Market Torgelow",
@@ -3969,7 +4630,9 @@
     "email": "torgelow@obi.de",
     "phone": "03976 23580",
     "url": "https://www.obi.de/markt/torgelow",
-    "storeId": "344"
+    "storeId": "344",
+    "latitude": 53.6304232,
+    "longitude": 14.0113284
   },
   {
     "name": "OBI Market Lahr",
@@ -3981,7 +4644,9 @@
     "email": "lahr@obi.de",
     "phone": "07821 94570",
     "url": "https://www.obi.de/markt/lahr",
-    "storeId": "444"
+    "storeId": "444",
+    "latitude": 49.9440704,
+    "longitude": 6.2909431
   },
   {
     "name": "OBI Market Pfullendorf",
@@ -3993,7 +4658,9 @@
     "email": "pfullendorf@obi.de",
     "phone": "07552 935720",
     "url": "https://www.obi.de/markt/pfullendorf",
-    "storeId": "590"
+    "storeId": "590",
+    "latitude": 47.9232677,
+    "longitude": 9.2500203
   },
   {
     "name": "OBI Market Pocking",
@@ -4005,7 +4672,9 @@
     "email": "pocking@obi.de",
     "phone": "08531 91430",
     "url": "https://www.obi.de/markt/pocking",
-    "storeId": "524"
+    "storeId": "524",
+    "latitude": 48.4015189,
+    "longitude": 13.3107683
   },
   {
     "name": "OBI Market Ravensburg",
@@ -4017,7 +4686,9 @@
     "email": "ravensburg@obi.de",
     "phone": "0751 362270",
     "url": "https://www.obi.de/markt/ravensburg",
-    "storeId": "021"
+    "storeId": "021",
+    "latitude": 47.7811014,
+    "longitude": 9.612468
   },
   {
     "name": "OBI Market Husum",
@@ -4029,7 +4700,9 @@
     "email": "husum@obi.de",
     "phone": "04841 772680",
     "url": "https://www.obi.de/markt/husum",
-    "storeId": "147"
+    "storeId": "147",
+    "latitude": 54.4854137,
+    "longitude": 9.0537941
   },
   {
     "name": "OBI Market Greifswald",
@@ -4041,7 +4714,9 @@
     "email": "griffswald@obi.de",
     "phone": "03834 889670",
     "url": "https://www.obi.de/markt/greifswald",
-    "storeId": "282"
+    "storeId": "282",
+    "latitude": 54.095791,
+    "longitude": 13.3815238
   },
   {
     "name": "OBI Market Isny",
@@ -4053,7 +4728,9 @@
     "email": "isny@obi.de",
     "phone": "07562 97560",
     "url": "https://www.obi.de/markt/isny",
-    "storeId": "515"
+    "storeId": "515",
+    "latitude": 47.6920098,
+    "longitude": 10.0395239
   },
   {
     "name": "OBI Market Emmendingen",
@@ -4065,7 +4742,9 @@
     "email": "emmendingen@obi.de",
     "phone": "07641 468860",
     "url": "https://www.obi.de/markt/emmendingen",
-    "storeId": "544"
+    "storeId": "544",
+    "latitude": 48.1206565,
+    "longitude": 7.850993
   },
   {
     "name": "OBI Markt Rosenheim-Aicherpark",
@@ -4077,7 +4756,9 @@
     "email": "rosenheim-aicherpark@obi.de",
     "phone": "08031 23960",
     "url": "https://www.obi.de/markt/rosenheim-aicherpark",
-    "storeId": "182"
+    "storeId": "182",
+    "latitude": 47.8557873,
+    "longitude": 12.1272983
   },
   {
     "name": "OBI Market Überlingen",
@@ -4089,7 +4770,9 @@
     "email": "ueberlingen@obi.de",
     "phone": "07551 918660",
     "url": "https://www.obi.de/markt/ueberlingen",
-    "storeId": "433"
+    "storeId": "433",
+    "latitude": 47.7664456,
+    "longitude": 9.1605106
   },
   {
     "name": "OBI Market Stephanskirchen",
@@ -4101,7 +4784,9 @@
     "email": "stephanskirchen@obi.de",
     "phone": "08031 700201",
     "url": "https://www.obi.de/markt/stephanskirchen",
-    "storeId": "180"
+    "storeId": "180",
+    "latitude": 47.8594257,
+    "longitude": 12.158035
   },
   {
     "name": "OBI Market Raubling",
@@ -4113,7 +4798,9 @@
     "email": "raubling-pfraundorf@obi.de",
     "phone": "08035 87770",
     "url": "https://www.obi.de/markt/raubling",
-    "storeId": "407"
+    "storeId": "407",
+    "latitude": 47.7892574,
+    "longitude": 12.1100042
   },
   {
     "name": "OBI Market Friedrichshafen",
@@ -4125,7 +4812,9 @@
     "email": "friedrichshafen@obi.de",
     "phone": "07541 385840",
     "url": "https://www.obi.de/markt/friedrichshafen",
-    "storeId": "460"
+    "storeId": "460",
+    "latitude": 47.6500279,
+    "longitude": 9.4800858
   },
   {
     "name": "OBI Market Freiburg Nord",
@@ -4137,7 +4826,9 @@
     "email": "freiburg-nord@obi.de",
     "phone": "0761 51530",
     "url": "https://www.obi.de/markt/freiburg-nord",
-    "storeId": "051"
+    "storeId": "051",
+    "latitude": 47.9960901,
+    "longitude": 7.8494005
   },
   {
     "name": "OBI Market Singing",
@@ -4149,7 +4840,9 @@
     "email": "singing@obi.de",
     "phone": "07731 789110",
     "url": "https://www.obi.de/markt/singen",
-    "storeId": "365"
+    "storeId": "365",
+    "latitude": 47.7617515,
+    "longitude": 8.8348709
   },
   {
     "name": "OBI Market Konstanz",
@@ -4161,7 +4854,9 @@
     "email": "konstanz@obi.de",
     "phone": "07531 998299",
     "url": "https://www.obi.de/markt/konstanz",
-    "storeId": "474"
+    "storeId": "474",
+    "latitude": 47.659216,
+    "longitude": 9.1750718
   },
   {
     "name": "OBI Market Freiburg South",
@@ -4173,7 +4868,9 @@
     "email": "freiburgsued@obi.de",
     "phone": "0761 400660",
     "url": "https://www.obi.de/markt/freiburg-sued",
-    "storeId": "061"
+    "storeId": "061",
+    "latitude": 47.9960901,
+    "longitude": 7.8494005
   },
   {
     "name": "OBI Market Breisach",
@@ -4185,7 +4882,9 @@
     "email": "breisach@obi.de",
     "phone": "07667 94410",
     "url": "https://www.obi.de/markt/breisach",
-    "storeId": "372"
+    "storeId": "372",
+    "latitude": 48.026872,
+    "longitude": 7.5894944
   },
   {
     "name": "OBI Market Flensburg",
@@ -4197,7 +4896,9 @@
     "email": "flensburg@obi.de",
     "phone": "0461 902030",
     "url": "https://www.obi.de/markt/flensburg",
-    "storeId": "258"
+    "storeId": "258",
+    "latitude": 54.7833021,
+    "longitude": 9.4333264
   },
   {
     "name": "OBI Markt Gelnhausen",
@@ -4209,7 +4910,9 @@
     "email": "gelnhausen@obi.de",
     "phone": "06051 48080",
     "url": "https://www.obi.de/markt/gelnhausen",
-    "storeId": "166"
+    "storeId": "166",
+    "latitude": 50.2024004,
+    "longitude": 9.1873874
   },
   {
     "name": "OBI Markt Geislingen an der Steige",
@@ -4221,7 +4924,9 @@
     "email": "geislingen@obi.de",
     "phone": "07331 7151510",
     "url": "https://www.obi.de/markt/geislingen-an-der-steige",
-    "storeId": "206"
+    "storeId": "206",
+    "latitude": 48.6230397,
+    "longitude": 9.8356703
   },
   {
     "name": "OBI Market Lindau",
@@ -4233,7 +4938,9 @@
     "email": "lindau@obi.de",
     "phone": "08382 96780",
     "url": "https://www.obi.de/markt/lindau",
-    "storeId": "107"
+    "storeId": "107",
+    "latitude": 47.5728668,
+    "longitude": 9.6961919
   },
   {
     "name": "OBI Market Sonthofen",
@@ -4245,7 +4952,9 @@
     "email": "sonthofen@obi.de",
     "phone": "08321 66700",
     "url": "https://www.obi.de/markt/sonthofen",
-    "storeId": "513"
+    "storeId": "513",
+    "latitude": 47.5056059,
+    "longitude": 10.2994096
   },
   {
     "name": "OBI Market Niebüll",
@@ -4257,7 +4966,9 @@
     "email": "niebuell@obi.de",
     "phone": "04661 90330",
     "url": "https://www.obi.de/markt/niebuell",
-    "storeId": "183"
+    "storeId": "183",
+    "latitude": 54.7869088,
+    "longitude": 8.8255846
   },
   {
     "name": "OBI Markt Waldshut-Tiengen",
@@ -4269,7 +4980,9 @@
     "email": "waldshut@obi.de",
     "phone": "07751 89610",
     "url": "https://www.obi.de/markt/waldshut-tiengen",
-    "storeId": "557"
+    "storeId": "557",
+    "latitude": 47.6281754,
+    "longitude": 8.2408579
   },
   {
     "name": "OBI Markt Laufenburg",
@@ -4281,6 +4994,8 @@
     "email": "service@obi.de",
     "phone": "07763 803840",
     "url": "https://www.obi.de/markt/laufenburg",
-    "storeId": "025"
+    "storeId": "025",
+    "latitude": 47.5671976,
+    "longitude": 8.0599414
   }
 ]

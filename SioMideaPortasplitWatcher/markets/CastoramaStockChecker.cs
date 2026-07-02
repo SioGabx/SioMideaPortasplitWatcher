@@ -426,34 +426,5 @@ de jardin motorisés", "Service après-vente (hors dimanche)"],
             return 0;
         }
 
-        private List<Store> LoadStoresFromResources()
-        {
-            try
-            {
-                var assembly = Assembly.GetExecutingAssembly();
-                string resourceName = "SioMideaPortasplitWatcher.res.castorama_stores.json";
-
-                using var stream = assembly.GetManifestResourceStream(resourceName);
-
-                if (stream == null)
-                {
-                    Console.WriteLine($"[Error] Missing resource {resourceName}");
-                    return new List<Store>();
-                }
-
-                using var reader = new StreamReader(stream);
-                string json = reader.ReadToEnd();
-
-                var stores = JsonSerializer.Deserialize<List<Store>>(json);
-
-                return stores?.Where(s => !string.IsNullOrWhiteSpace(s.StoreId)).ToList()
-                       ?? new List<Store>();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"[LoadStores Error] {ex.Message}");
-                return new List<Store>();
-            }
-        }
     }
 }
