@@ -87,7 +87,7 @@ namespace SioMideaPortasplitWatcher
             BauhausInfoMP.NewStockDetected += async (sender, e) =>
             {
                 string url = $"https://www.bauhaus.info/p/31934233";
-                PrintNewStockDetected(e.Store.Name, BauhausInfoMP.ProductName, ConsoleColor.Red, e.NewQuantity, url);
+                PrintNewStockDetected( $"{e.Store.Name} - {e.Store.Address.City} - ({e.Store.Address.ZipCode})", BauhausInfoMP.ProductName, ConsoleColor.Red, e.NewQuantity, url);
                 var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.Name, e.Store.Latitude, e.Store.Longitude);
                 ShowBallon(e.Store.Name, obiCheckerMP.ProductName, Duration, DistanceKm, e.NewQuantity, url);
             };
@@ -101,7 +101,7 @@ namespace SioMideaPortasplitWatcher
             BauhausInfoMPC.NewStockDetected += async (sender, e) =>
             {
                 string url = $"https://www.bauhaus.info/p/33946696";
-                PrintNewStockDetected(e.Store.Name, BauhausInfoMPC.ProductName, ConsoleColor.Blue, e.NewQuantity, url);
+                PrintNewStockDetected($"{e.Store.Name} - {e.Store.Address.City} - ({e.Store.Address.ZipCode})", BauhausInfoMP.ProductName, ConsoleColor.Red, e.NewQuantity, url);
                 var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.Name, e.Store.Latitude, e.Store.Longitude);
                 ShowBallon(e.Store.Name, obiCheckerMP.ProductName, Duration, DistanceKm, e.NewQuantity, url);
             };
