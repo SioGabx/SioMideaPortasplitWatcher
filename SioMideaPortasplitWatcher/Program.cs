@@ -172,21 +172,31 @@ namespace SioMideaPortasplitWatcher
                 PrintStockOutDetected(CastoramaCheckerMP.ProductName, e.Store.Name);
             };
 
+            var TechnomatCheckerMP = new TechnomatStockChecker("Midea Portasplit 12000 BTU", 48.693100359086536, 6.173689718165843, "25088072");
+
+            TechnomatCheckerMP.NewStockDetected += async (sender, e) =>
+            {
+                var url = $"https://www.tecnomat.fr/produits/climatiseur-mobile-reversible-portasplit-midea-25088072.html";
+                PrintNewStockDetected(e.Store.Name, TechnomatCheckerMP.ProductName, ConsoleColor.Red, e.Quantity, url);
+                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.City, e.Store.Name);
+                ShowBallon(e.Store.Name, TechnomatCheckerMP.ProductName, Duration, DistanceKm, e.Quantity, url);
+            };
 
             List<IStockChecker> stockCheckersMP =
             [
-                obiCheckerMP,
-                BauhausInfoMP,
-                ToomDeCheckerMP,
+                //obiCheckerMP,
+                //BauhausInfoMP,
+                //ToomDeCheckerMP,
+                TechnomatCheckerMP,
                 LeroyMerlinCheckerMP,
                 CastoramaCheckerMP
             ];
 
             List<IStockChecker> stockCheckersMPC =
             [
-                 obiCheckerMPC,
-                BauhausInfoMPC,
-                ToomDeCheckerMPC
+                // obiCheckerMPC,
+                //BauhausInfoMPC,
+                //ToomDeCheckerMPC
             ];
 
             while (true)
