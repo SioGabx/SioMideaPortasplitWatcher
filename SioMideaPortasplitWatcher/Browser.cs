@@ -36,13 +36,13 @@ namespace SioMideaPortasplitWatcher
         public static readonly PageGotoOptions GotoOptions = new()
         {
             WaitUntil = WaitUntilState.DOMContentLoaded,
-            Timeout = 150000
+            Timeout = 60000
         };
 
         public static readonly PageReloadOptions ReloadOptions = new()
         {
             WaitUntil = WaitUntilState.DOMContentLoaded,
-            Timeout = 150000
+            Timeout = 30000
         };
 
         public static async Task<IPage> CreatePage()

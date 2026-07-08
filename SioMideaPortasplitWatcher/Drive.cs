@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json;
 
@@ -20,7 +21,20 @@ namespace SioMideaPortasplitWatcher
             public double DistanceKm { get; set; }
         }
 
-        public static async Task<(TimeSpan Duration, double DistanceKm)> DisplayTravelTimeWithCacheAsync(string destinationAddress, string storeName, string acceptlanguage = "en")
+        public static async Task DisplayTravelTimeWithCacheAsync(string destinationAddress, string storeName, string acceptlanguage = "en")
+        {
+            if (_routeCache.TryGetValue(storeName, out var cachedRoute))
+            {
+                PrintRouteInfo(storeName, cachedRoute.Duration, cachedRoute.DistanceKm, isFromCache: true);
+            }
+            else
+            {
+                var t = await ComputeTravelTimeWithCacheAsync(destinationAddress, storeName, acceptlanguage);
+                PrintRouteInfo(storeName, t.Duration, t.DistanceKm, isFromCache: false);
+            }
+        }
+
+        public static async Task<(TimeSpan Duration, double DistanceKm)> ComputeTravelTimeWithCacheAsync(string destinationAddress, string storeName, string acceptlanguage = "en")
         {
             if (string.IsNullOrWhiteSpace(destinationAddress))
             {
@@ -31,7 +45,6 @@ namespace SioMideaPortasplitWatcher
             // 1. Vérification du cache de route
             if (_routeCache.TryGetValue(storeName, out var cachedRoute))
             {
-                PrintRouteInfo(storeName, cachedRoute.Duration, cachedRoute.DistanceKm, isFromCache: true);
                 return (cachedRoute.Duration, cachedRoute.DistanceKm);
             }
 
@@ -45,7 +58,7 @@ namespace SioMideaPortasplitWatcher
                     return (TimeSpan.FromMinutes(0), 0);
                 }
 
-                await DisplayTravelTimeWithCacheAsync(storeName, destLat, destLon);
+               return await ComputeTravelTimeWithCacheAsync(storeName, destLat, destLon);
             }
             catch (Exception ex)
             {
@@ -57,13 +70,26 @@ namespace SioMideaPortasplitWatcher
         }
 
 
-        public static async Task<(TimeSpan Duration, double DistanceKm)> DisplayTravelTimeWithCacheAsync(string StoreName, double DestLat, double DestLong)
+        public static async Task DisplayTravelTimeWithCacheAsync(string StoreName, double DestLat, double DestLong)
+        {
+            if (_routeCache.TryGetValue(StoreName, out var cachedRoute))
+            {
+                PrintRouteInfo(StoreName, cachedRoute.Duration, cachedRoute.DistanceKm, isFromCache: true);
+            }
+            else
+            {
+                var t = await ComputeTravelTimeWithCacheAsync(StoreName, DestLat, DestLong);
+                PrintRouteInfo(StoreName, t.Duration, t.DistanceKm, isFromCache: false);
+            }
+        }
+
+
+        public static async Task<(TimeSpan Duration, double DistanceKm)> ComputeTravelTimeWithCacheAsync(string StoreName, double DestLat, double DestLong)
         {
 
             // 1. Vérification du cache de route
             if (_routeCache.TryGetValue(StoreName, out var cachedRoute))
             {
-                PrintRouteInfo(StoreName, cachedRoute.Duration, cachedRoute.DistanceKm, isFromCache: true);
                 return (cachedRoute.Duration, cachedRoute.DistanceKm);
             }
 
@@ -98,7 +124,6 @@ namespace SioMideaPortasplitWatcher
                                 double distanceKm = distanceMeters / 1000.0;
 
                                 _routeCache[StoreName] = new RouteCacheItem { Duration = duration, DistanceKm = distanceKm };
-                                PrintRouteInfo(StoreName, duration, distanceKm, isFromCache: false);
                                 return (duration, distanceKm);
                             }
                         }
@@ -159,7 +184,7 @@ namespace SioMideaPortasplitWatcher
             return (0, 0);
         }
 
-        private static void PrintRouteInfo(string storeName, TimeSpan duration, double distanceKm, bool isFromCache)
+        public static void PrintRouteInfo(string storeName, TimeSpan duration, double distanceKm, bool isFromCache)
         {
             Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine($"\tTemps de route estimé : {Math.Floor(duration.TotalHours)}h {duration.Minutes}min pour {distanceKm:F0} km");

@@ -18,7 +18,7 @@ namespace SioMideaPortasplitWatcher
             await WatchLoopAsync();
         }
 
-        private static void PrintNewStockDetected(string StoreName, string ProductName, ConsoleColor ProductNameColor, object Stock, string Url)
+        private static void PrintNewStockDetected(string StoreName, string ProductName, ConsoleColor ProductNameColor, object Stock, string Url, TimeSpan? Duration, double DistanceKm)
         {
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.Write($"[{DateTime.Now:HH:mm:ss}] [STOCK] ");
@@ -28,6 +28,10 @@ namespace SioMideaPortasplitWatcher
             Console.WriteLine($" chez {StoreName} | Stock: {Stock}");
             Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine($"\tLien : {Url}");
+            if (Duration is TimeSpan dur)
+            {
+                Drive.PrintRouteInfo(StoreName, dur, DistanceKm, false);
+            }
             Console.ResetColor();
         }
         private static void PrintStockOutDetected(string StoreName, string ProductName)
@@ -36,9 +40,21 @@ namespace SioMideaPortasplitWatcher
             Console.WriteLine($"[RUPTURE DE STOCK] Article {ProductName} à {StoreName}.");
             Console.ResetColor();
         }
-        private static void ShowBallon(string StoreName, string ProductName, TimeSpan Duration, double DistanceKm, object Stock, string Url)
+
+        private static void ShowBallon(string StoreName, string ProductName, TimeSpan? Duration, double DistanceKm, object Stock, string Url)
         {
-            var t = new BalloonNotifier("🚨 Midea disponible !", $"{ProductName}\n{StoreName}\n{Math.Floor(Duration.TotalHours)}h {Duration.Minutes}min pour {DistanceKm:F0} km \nStock: {Stock}", Url, StoreName);
+            string Travel;
+
+            if (Duration is null)
+            {
+                Travel = "";
+            }
+            else
+            {
+                Travel = $"{Math.Floor(((TimeSpan)Duration).TotalHours)}h {((TimeSpan)Duration).Minutes}min pour {DistanceKm:F0} km \n";
+            }
+
+            var t = new BalloonNotifier("🚨 Midea disponible !", $"{ProductName}\n{StoreName}\n{Travel}Stock: {Stock}", Url, StoreName);
             t.Show();
         }
 
@@ -51,15 +67,17 @@ namespace SioMideaPortasplitWatcher
             Console.WriteLine("    WATCHER : Log uniquement sur changement");
             Console.WriteLine("=================================================");
             Console.ResetColor();
-
+            ShowBallon("TEST", "TEST", null, 0, 0, "");
             // Instance spécifique pour s'abonner aux événements
             var obiCheckerMP = new ObiDeStockChecker("Midea Portasplit 12000 BTU", "8620890", 48.693100359086536, 6.173689718165843, 200); //https://www.obi.de/p/8620890/midea-mobile-split-klimaanlage-portasplit
 
             obiCheckerMP.NewStockDetected += async (sender, e) =>
             {
                 var url = $"https://www.obi.de/api/disc/store/change?storeNumber={e.Store.StoreId}&redirectUrl={Uri.EscapeDataString($"https://www.obi.de/p/{obiCheckerMP.ProductId}")}";
-                PrintNewStockDetected(e.Store.Name, obiCheckerMP.ProductName, ConsoleColor.Red, e.NewQuantity, url);
-                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync($"{e.Store.City} {e.Store.PostalCode}, Deutschland", e.Store.Name, "de");
+
+                var (Duration, DistanceKm) = await Drive.ComputeTravelTimeWithCacheAsync($"{e.Store.City} {e.Store.PostalCode}, Deutschland", e.Store.Name, "de");
+                PrintNewStockDetected(e.Store.Name, obiCheckerMP.ProductName, ConsoleColor.Red, e.NewQuantity, url, Duration, DistanceKm);
+                Drive.PrintRouteInfo(e.Store.Name, Duration, DistanceKm, false);
                 ShowBallon(e.Store.Name, obiCheckerMP.ProductName, Duration, DistanceKm, e.NewQuantity, url);
             };
 
@@ -72,8 +90,8 @@ namespace SioMideaPortasplitWatcher
             obiCheckerMPC.NewStockDetected += async (sender, e) =>
             {
                 var url = $"https://www.obi.de/api/disc/store/change?storeNumber={e.Store.StoreId}&redirectUrl={Uri.EscapeDataString($"https://www.obi.de/p/{obiCheckerMPC.ProductId}")}";
-                PrintNewStockDetected(e.Store.Name, obiCheckerMPC.ProductName, ConsoleColor.Blue, e.NewQuantity, url);
-                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync($"{e.Store.City} {e.Store.PostalCode}, Deutschland", e.Store.Name, "de");
+                var (Duration, DistanceKm) = await Drive.ComputeTravelTimeWithCacheAsync($"{e.Store.City} {e.Store.PostalCode}, Deutschland", e.Store.Name, "de");
+                PrintNewStockDetected(e.Store.Name, obiCheckerMPC.ProductName, ConsoleColor.Blue, e.NewQuantity, url, Duration, DistanceKm);
                 ShowBallon(e.Store.Name, obiCheckerMPC.ProductName, Duration, DistanceKm, e.NewQuantity, url);
             };
 
@@ -87,8 +105,8 @@ namespace SioMideaPortasplitWatcher
             BauhausInfoMP.NewStockDetected += async (sender, e) =>
             {
                 string url = $"https://www.bauhaus.info/p/31934233";
-                PrintNewStockDetected( $"{e.Store.Name} - {e.Store.Address.City} - ({e.Store.Address.ZipCode})", BauhausInfoMP.ProductName, ConsoleColor.Red, e.NewQuantity, url);
-                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.Name, e.Store.Latitude, e.Store.Longitude);
+                var (Duration, DistanceKm) = await Drive.ComputeTravelTimeWithCacheAsync(e.Store.Name, e.Store.Latitude, e.Store.Longitude);
+                PrintNewStockDetected($"{e.Store.Name} - {e.Store.Address.City} - ({e.Store.Address.ZipCode})", BauhausInfoMP.ProductName, ConsoleColor.Red, e.NewQuantity, url, Duration, DistanceKm);
                 ShowBallon(e.Store.Name, obiCheckerMP.ProductName, Duration, DistanceKm, e.NewQuantity, url);
             };
 
@@ -101,8 +119,8 @@ namespace SioMideaPortasplitWatcher
             BauhausInfoMPC.NewStockDetected += async (sender, e) =>
             {
                 string url = $"https://www.bauhaus.info/p/33946696";
-                PrintNewStockDetected($"{e.Store.Name} - {e.Store.Address.City} - ({e.Store.Address.ZipCode})", BauhausInfoMP.ProductName, ConsoleColor.Red, e.NewQuantity, url);
-                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.Name, e.Store.Latitude, e.Store.Longitude);
+                var (Duration, DistanceKm) = await Drive.ComputeTravelTimeWithCacheAsync(e.Store.Name, e.Store.Latitude, e.Store.Longitude);
+                PrintNewStockDetected($"{e.Store.Name} - {e.Store.Address.City} - ({e.Store.Address.ZipCode})", BauhausInfoMP.ProductName, ConsoleColor.Red, e.NewQuantity, url, Duration, DistanceKm);
                 ShowBallon(e.Store.Name, obiCheckerMP.ProductName, Duration, DistanceKm, e.NewQuantity, url);
             };
 
@@ -117,8 +135,8 @@ namespace SioMideaPortasplitWatcher
             ToomDeCheckerMP.NewStockDetected += async (sender, e) =>
             {
                 var url = $"https://toom.de/p/mobiles-klimageraet-portasplit-12000-btuh/9350668";
-                PrintNewStockDetected(e.Store.Name, ToomDeCheckerMP.ProductName, ConsoleColor.Red, e.Status, url);
-                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.Name, e.Store.Address.Latitude, e.Store.Address.Longitude);
+                var (Duration, DistanceKm) = await Drive.ComputeTravelTimeWithCacheAsync(e.Store.Name, e.Store.Address.Latitude, e.Store.Address.Longitude);
+                PrintNewStockDetected(e.Store.Name, ToomDeCheckerMP.ProductName, ConsoleColor.Red, e.Status, url, Duration, DistanceKm);
                 ShowBallon(e.Store.Name, ToomDeCheckerMP.ProductName, Duration, DistanceKm, e.Status, url);
             };
 
@@ -132,8 +150,8 @@ namespace SioMideaPortasplitWatcher
             ToomDeCheckerMPC.NewStockDetected += async (sender, e) =>
             {
                 var url = $"https://toom.de/p/split-klimaanlage-portasplit-cool-8000btuh/10515238";
-                PrintNewStockDetected(e.Store.Name, ToomDeCheckerMPC.ProductName, ConsoleColor.Blue, e.Status, url);
-                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.Name, e.Store.Address.Latitude, e.Store.Address.Longitude);
+                var (Duration, DistanceKm) = await Drive.ComputeTravelTimeWithCacheAsync(e.Store.Name, e.Store.Address.Latitude, e.Store.Address.Longitude);
+                PrintNewStockDetected(e.Store.Name, ToomDeCheckerMPC.ProductName, ConsoleColor.Blue, e.Status, url, Duration, DistanceKm);
                 ShowBallon(e.Store.Name, ToomDeCheckerMPC.ProductName, Duration, DistanceKm, e.Status, url);
             };
 
@@ -147,8 +165,8 @@ namespace SioMideaPortasplitWatcher
             LeroyMerlinCheckerMP.NewStockDetected += async (sender, e) =>
             {
                 var url = $"https://www.leroymerlin.fr/produits/climatiseur-split-mobile-reversible-portasplit-midea-par-optimea-93857579.html";
-                PrintNewStockDetected(e.Store.Name, LeroyMerlinCheckerMP.ProductName, ConsoleColor.Red, e.Quantity, url);
-                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.City, e.Store.Name);
+                var (Duration, DistanceKm) = await Drive.ComputeTravelTimeWithCacheAsync(e.Store.City, e.Store.Name);
+                PrintNewStockDetected(e.Store.Name, LeroyMerlinCheckerMP.ProductName, ConsoleColor.Red, e.Quantity, url, Duration, DistanceKm);
                 ShowBallon(e.Store.Name, LeroyMerlinCheckerMP.ProductName, Duration, DistanceKm, e.Quantity, url);
             };
 
@@ -162,8 +180,8 @@ namespace SioMideaPortasplitWatcher
             CastoramaCheckerMP.NewStockDetected += async (sender, e) =>
             {
                 var url = $"https://www.castorama.fr/climatiseur-portasplit-midea-reversible-3500w/8431312260509_CAFR.prd";
-                PrintNewStockDetected(e.Store.Name, CastoramaCheckerMP.ProductName, ConsoleColor.Red, e.NewQuantity, url);
-                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.Name, e.Store.Latitude, e.Store.Longitude);
+                var (Duration, DistanceKm) = await Drive.ComputeTravelTimeWithCacheAsync(e.Store.Name, e.Store.Latitude, e.Store.Longitude);
+                PrintNewStockDetected(e.Store.Name, CastoramaCheckerMP.ProductName, ConsoleColor.Red, e.NewQuantity, url, Duration, DistanceKm);
                 ShowBallon(e.Store.Name, CastoramaCheckerMP.ProductName, Duration, DistanceKm, e.NewQuantity, url);
             };
 
@@ -177,10 +195,23 @@ namespace SioMideaPortasplitWatcher
             TechnomatCheckerMP.NewStockDetected += async (sender, e) =>
             {
                 var url = $"https://www.tecnomat.fr/produits/climatiseur-mobile-reversible-portasplit-midea-25088072.html";
-                PrintNewStockDetected(e.Store.Name, TechnomatCheckerMP.ProductName, ConsoleColor.Red, e.Quantity, url);
-                var (Duration, DistanceKm) = await Drive.DisplayTravelTimeWithCacheAsync(e.Store.City, e.Store.Name);
+                var (Duration, DistanceKm) = await Drive.ComputeTravelTimeWithCacheAsync(e.Store.City, e.Store.Name);
+                PrintNewStockDetected(e.Store.Name, TechnomatCheckerMP.ProductName, ConsoleColor.Red, e.Quantity, url, Duration, DistanceKm);
                 ShowBallon(e.Store.Name, TechnomatCheckerMP.ProductName, Duration, DistanceKm, e.Quantity, url);
             };
+
+            var optimeaCheckerMP = new OptimeaStockChecker("Climatiseur Midea", 5959, "https://www.optimea.fr/product/climatiseur-split-mobile-midea/");
+            optimeaCheckerMP.NewStockDetected += (s, e) =>
+            {
+                PrintNewStockDetected("Optimea", optimeaCheckerMP.ProductName, ConsoleColor.Red, 1, optimeaCheckerMP.ProductUrl, null, 0);
+                ShowBallon("Optimea", optimeaCheckerMP.ProductName, null, 0, 1, optimeaCheckerMP.ProductUrl);
+            };
+
+            optimeaCheckerMP.StockOutDetected += (s, e) =>
+            {
+                PrintStockOutDetected(optimeaCheckerMP.ProductName, "Optimea");
+            };
+
 
             List<IStockChecker> stockCheckersMP =
             [
@@ -189,7 +220,8 @@ namespace SioMideaPortasplitWatcher
                 //ToomDeCheckerMP,
                 TechnomatCheckerMP,
                 LeroyMerlinCheckerMP,
-                CastoramaCheckerMP
+                CastoramaCheckerMP,
+                optimeaCheckerMP
             ];
 
             List<IStockChecker> stockCheckersMPC =
