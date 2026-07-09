@@ -207,7 +207,9 @@ namespace SioMideaPortasplitWatcher.markets
                     JsonSerializer.Deserialize<List<StockResponse>>(json);
 
                 if (apiResponse == null)
+                {
                     return;
+                }
 
                 foreach (var stock in apiResponse)
                 {
@@ -216,7 +218,9 @@ namespace SioMideaPortasplitWatcher.markets
                     var store = _stores.FirstOrDefault(s => s.Id == stock.MarketId);
 
                     if (store == null)
+                    {
                         continue;
+                    }
 
                     store.Available = available;
 
@@ -264,7 +268,9 @@ namespace SioMideaPortasplitWatcher.markets
                     assembly.GetManifestResourceStream(resourceName);
 
                 if (stream == null)
+                {
                     return new();
+                }
 
                 using StreamReader reader =
                     new(stream);

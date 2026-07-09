@@ -179,18 +179,24 @@ namespace SioMideaPortasplitWatcher.markets
                 var response = JsonSerializer.Deserialize<AvailabilityResponse>(json);
 
                 if (response == null)
+                {
                     return;
+                }
 
                 foreach (var stock in response.Data)
                 {
                     if (!int.TryParse(stock.LocationId, out int storeId))
+                    {
                         continue;
+                    }
 
                     var store =
                         _cachedStores.FirstOrDefault(s => s.Id == storeId);
 
                     if (store == null)
+                    {
                         continue;
+                    }
 
                     int currentQty = stock.AvailableQuantity;
 
@@ -235,7 +241,10 @@ namespace SioMideaPortasplitWatcher.markets
 
             using Stream? stream = assembly.GetManifestResourceStream(resourceName);
 
-            if (stream == null) return [];
+            if (stream == null)
+            {
+                return [];
+            }
 
             using StreamReader reader = new(stream);
 

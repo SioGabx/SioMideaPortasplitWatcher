@@ -333,7 +333,9 @@ de jardin motorisés", "Service après-vente (hors dimanche)"],
                 using var doc = JsonDocument.Parse(json);
 
                 if (!doc.RootElement.TryGetProperty("data", out var stores))
+                {
                     return;
+                }
 
                 foreach (var storeItem in stores.EnumerateArray())
                 {
@@ -362,15 +364,20 @@ de jardin motorisés", "Service après-vente (hors dimanche)"],
                     if (hasPrev)
                     {
                         if (prev == 0 && qty > 0)
+                        {
                             NewStockDetected?.Invoke(this, new StockEventArgs(store, qty));
-
+                        }
                         else if (prev > 0 && qty == 0)
+                        {
                             StockOutDetected?.Invoke(this, new StockEventArgs(store, qty));
+                        }
                     }
                     else
                     {
                         if (qty > 0)
+                        {
                             NewStockDetected?.Invoke(this, new StockEventArgs(store, qty));
+                        }
                     }
 
                     _previousStockState[storeId] = qty;

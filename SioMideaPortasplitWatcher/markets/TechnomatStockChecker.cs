@@ -95,11 +95,14 @@ namespace SioMideaPortasplitWatcher.markets
             }
 
             if (text.Contains("Bientôt disponible", StringComparison.OrdinalIgnoreCase))
+            {
                 return 0;
+            }
 
             if (text.Contains("Actuellement indisponible", StringComparison.OrdinalIgnoreCase))
+            {
                 return 0;
-
+            }
 
             return 0;
         }
@@ -117,8 +120,9 @@ namespace SioMideaPortasplitWatcher.markets
                     var idAttr = await button?.GetAttributeAsync("data-store-id");
 
                     if (!int.TryParse(idAttr, out int storeId))
+                    {
                         continue;
-
+                    }
 
                     var name = await card.QuerySelectorAsync(".m-store-info-header--title");
                     var city = await card.GetAttributeAsync("data-store-city") ?? "";

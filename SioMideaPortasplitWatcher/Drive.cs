@@ -156,7 +156,10 @@ namespace SioMideaPortasplitWatcher
 
                     using (HttpResponseMessage response = await client.SendAsync(request))
                     {
-                        if (!response.IsSuccessStatusCode) return (0, 0);
+                        if (!response.IsSuccessStatusCode)
+                        {
+                            return (0, 0);
+                        }
 
                         string responseBody = await response.Content.ReadAsStringAsync();
                         using (JsonDocument doc = JsonDocument.Parse(responseBody))

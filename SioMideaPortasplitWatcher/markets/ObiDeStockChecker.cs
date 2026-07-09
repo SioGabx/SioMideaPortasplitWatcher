@@ -140,13 +140,19 @@ namespace SioMideaPortasplitWatcher.markets
             {
                 // Désérialisation de la réponse API (ex: [{"storeId":"511","availableQuantity":0}, ...])
                 var apiStocks = JsonSerializer.Deserialize<List<ObiStore>>(jsonResponse);
-                if (apiStocks == null) return;
+                if (apiStocks == null)
+                {
+                    return;
+                }
 
                 foreach (var apiData in apiStocks)
                 {
                     // 1. Réassociation complète grâce à notre cache local
                     var fullStoreInfo = _cachedStores.FirstOrDefault(s => s.StoreId == apiData.StoreId);
-                    if (fullStoreInfo == null) continue; // Magasin non référencé localement, on ignore
+                    if (fullStoreInfo == null)
+                    {
+                        continue; // Magasin non référencé localement, on ignore
+                    }
 
                     int currentQty = apiData.AvailableQuantity;
                     bool hasPreviousState = _previousStockState.TryGetValue(apiData.StoreId, out int previousQty);
@@ -196,10 +202,14 @@ namespace SioMideaPortasplitWatcher.markets
             var response = await _page!.GotoAsync(url, Browser.GotoOptions);
 
             if (response == null)
+            {
                 return null;
+            }
 
             if (response.Ok)
+            {
                 return await response.TextAsync();
+            }
 
             if (response.Status != 502 && response.Status != 504 && response.Status != 503 && response.Status != 429 && response.Status != 400)
             {

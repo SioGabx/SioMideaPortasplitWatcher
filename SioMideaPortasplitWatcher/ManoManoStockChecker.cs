@@ -28,7 +28,9 @@ public class ManoManoStockChecker : IStockChecker
     public async Task CheckStockAsync()
     {
         if (_page?.IsClosed != false)
+        {
             await CreatePage();
+        }
 
         await _page!.GotoAsync(ProductUrl, Browser.GotoOptions);
 
@@ -51,16 +53,22 @@ public class ManoManoStockChecker : IStockChecker
         if (_previousState.HasValue)
         {
             if (!_previousState.Value && available)
+            {
                 NewStockDetected?.Invoke(this, EventArgs.Empty);
+            }
 
             if (_previousState.Value && !available)
+            {
                 StockOutDetected?.Invoke(this, EventArgs.Empty);
+            }
         }
         else
         {
             // Premier lancement : si déjà en stock on notifie
             if (available)
+            {
                 NewStockDetected?.Invoke(this, EventArgs.Empty);
+            }
         }
 
         _previousState = available;
