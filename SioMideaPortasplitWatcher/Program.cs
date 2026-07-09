@@ -197,7 +197,7 @@ namespace SioMideaPortasplitWatcher
                 ShowBallon(e.Store.Name, TechnomatCheckerMP.ProductName, Duration, DistanceKm, e.Quantity, TechnomatCheckerMP.ProductUrl);
             };
 
-            var optimeaCheckerMP = new OptimeaStockChecker("Climatiseur Midea", 5959, "https://www.optimea.fr/product/climatiseur-split-mobile-midea/");
+            var optimeaCheckerMP = new OptimeaStockChecker("Midea Portasplit 12000 BTU", 5959, "https://www.optimea.fr/product/climatiseur-split-mobile-midea/");
             optimeaCheckerMP.NewStockDetected += (s, e) =>
             {
                 PrintNewStockDetected("Optimea", optimeaCheckerMP.ProductName, ConsoleColor.Red, "En stock", optimeaCheckerMP.ProductUrl, null, 0);
@@ -208,7 +208,7 @@ namespace SioMideaPortasplitWatcher
             {
                 PrintStockOutDetected(optimeaCheckerMP.ProductName, "Optimea");
             };
-            var manomanoCheckerMP = new ManoManoStockChecker("Climatiseur Midea", "https://www.manomano.fr/p/midea-climatiseur-split-mobile-reversible-froid-chaud-3500w12000btu-wifi-deshumidificateur-ventilateur-jusqua-40m2-kit-fenetre-inclus-83810402");
+            var manomanoCheckerMP = new ManoManoStockChecker("Midea Portasplit 12000 BTU", "https://www.manomano.fr/p/midea-climatiseur-split-mobile-reversible-froid-chaud-3500w12000btu-wifi-deshumidificateur-ventilateur-jusqua-40m2-kit-fenetre-inclus-83810402");
             manomanoCheckerMP.NewStockDetected += (s, e) =>
             {
                 PrintNewStockDetected("ManoMano", manomanoCheckerMP.ProductName, ConsoleColor.Red, "En stock", manomanoCheckerMP.ProductUrl, null, 0);
@@ -285,7 +285,7 @@ namespace SioMideaPortasplitWatcher
                 }
                 catch (Exception ex)
                 {
-                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.ForegroundColor = ConsoleColor.Gray;
                     Console.WriteLine($"[ERROR {checker}] {ex.Message}");
                     Console.ResetColor();
                 }
