@@ -40,10 +40,12 @@ namespace SioMideaPortasplitWatcher.markets
         private readonly string _url;
         private readonly Dictionary<int, int> _previousStockState = new();
         public readonly string ProductName;
+        public readonly string ProductUrl;
 
-        public LeroyMerlinStockChecker(string productName, double latitude, double longitude, string productRef)
+        public LeroyMerlinStockChecker(string productName, double latitude, double longitude, string productRef, string productUrl)
         {
             ProductName = productName;
+            ProductUrl = productUrl;
             _url =
                 $"https://www.leroymerlin.fr/store-header-module/services/contextlayer/store-search-result" +
                 $"?latitude={latitude}&longitude={longitude}&productRef={productRef}&storeSearchType=STOCK";

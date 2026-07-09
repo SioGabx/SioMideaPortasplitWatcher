@@ -160,14 +160,13 @@ namespace SioMideaPortasplitWatcher
                 PrintStockOutDetected(ToomDeCheckerMPC.ProductName, e.Store.Name);
             };
 
-            var LeroyMerlinCheckerMP = new LeroyMerlinStockChecker("Midea Portasplit 12000 BTU", 48.693100359086536, 6.173689718165843, "93857579");
+            var LeroyMerlinCheckerMP = new LeroyMerlinStockChecker("Midea Portasplit 12000 BTU", 48.693100359086536, 6.173689718165843, "93857579", "https://www.leroymerlin.fr/produits/climatiseur-split-mobile-reversible-portasplit-midea-par-optimea-93857579.html");
 
             LeroyMerlinCheckerMP.NewStockDetected += async (sender, e) =>
             {
-                var url = $"https://www.leroymerlin.fr/produits/climatiseur-split-mobile-reversible-portasplit-midea-par-optimea-93857579.html";
                 var (Duration, DistanceKm) = await Drive.ComputeTravelTimeWithCacheAsync(e.Store.City, e.Store.Name);
-                PrintNewStockDetected(e.Store.Name, LeroyMerlinCheckerMP.ProductName, ConsoleColor.Red, e.Quantity, url, Duration, DistanceKm);
-                ShowBallon(e.Store.Name, LeroyMerlinCheckerMP.ProductName, Duration, DistanceKm, e.Quantity, url);
+                PrintNewStockDetected(e.Store.Name, LeroyMerlinCheckerMP.ProductName, ConsoleColor.Red, e.Quantity, LeroyMerlinCheckerMP.ProductUrl, Duration, DistanceKm);
+                ShowBallon(e.Store.Name, LeroyMerlinCheckerMP.ProductName, Duration, DistanceKm, e.Quantity, LeroyMerlinCheckerMP.ProductUrl);
             };
 
             LeroyMerlinCheckerMP.StockOutDetected += (sender, e) =>
@@ -175,14 +174,13 @@ namespace SioMideaPortasplitWatcher
                 PrintStockOutDetected(LeroyMerlinCheckerMP.ProductName, e.Store.Name);
             };
 
-            var CastoramaCheckerMP = new CastoramaStockChecker("Midea Portasplit 12000 BTU", 48.693100359086536, 6.173689718165843, "8431312260509");
+            var CastoramaCheckerMP = new CastoramaStockChecker("Midea Portasplit 12000 BTU", 48.693100359086536, 6.173689718165843, "8431312260509", "https://www.castorama.fr/climatiseur-portasplit-midea-reversible-3500w/8431312260509_CAFR.prd");
 
             CastoramaCheckerMP.NewStockDetected += async (sender, e) =>
             {
-                var url = $"https://www.castorama.fr/climatiseur-portasplit-midea-reversible-3500w/8431312260509_CAFR.prd";
                 var (Duration, DistanceKm) = await Drive.ComputeTravelTimeWithCacheAsync(e.Store.Name, e.Store.Latitude, e.Store.Longitude);
-                PrintNewStockDetected(e.Store.Name, CastoramaCheckerMP.ProductName, ConsoleColor.Red, e.NewQuantity, url, Duration, DistanceKm);
-                ShowBallon(e.Store.Name, CastoramaCheckerMP.ProductName, Duration, DistanceKm, e.NewQuantity, url);
+                PrintNewStockDetected(e.Store.Name, CastoramaCheckerMP.ProductName, ConsoleColor.Red, e.NewQuantity, CastoramaCheckerMP.ProductUrl, Duration, DistanceKm);
+                ShowBallon(e.Store.Name, CastoramaCheckerMP.ProductName, Duration, DistanceKm, e.NewQuantity, CastoramaCheckerMP.ProductUrl);
             };
 
             CastoramaCheckerMP.StockOutDetected += (sender, e) =>
@@ -190,26 +188,36 @@ namespace SioMideaPortasplitWatcher
                 PrintStockOutDetected(CastoramaCheckerMP.ProductName, e.Store.Name);
             };
 
-            var TechnomatCheckerMP = new TechnomatStockChecker("Midea Portasplit 12000 BTU", 48.693100359086536, 6.173689718165843, "25088072");
+            var TechnomatCheckerMP = new TechnomatStockChecker("Midea Portasplit 12000 BTU", 48.693100359086536, 6.173689718165843, "25088072", "https://www.tecnomat.fr/produits/climatiseur-mobile-reversible-portasplit-midea-25088072.html");
 
             TechnomatCheckerMP.NewStockDetected += async (sender, e) =>
             {
-                var url = $"https://www.tecnomat.fr/produits/climatiseur-mobile-reversible-portasplit-midea-25088072.html";
                 var (Duration, DistanceKm) = await Drive.ComputeTravelTimeWithCacheAsync(e.Store.City, e.Store.Name);
-                PrintNewStockDetected(e.Store.Name, TechnomatCheckerMP.ProductName, ConsoleColor.Red, e.Quantity, url, Duration, DistanceKm);
-                ShowBallon(e.Store.Name, TechnomatCheckerMP.ProductName, Duration, DistanceKm, e.Quantity, url);
+                PrintNewStockDetected("Leroy Merlin à " + e.Store.Name, TechnomatCheckerMP.ProductName, ConsoleColor.Red, e.Quantity, TechnomatCheckerMP.ProductUrl, Duration, DistanceKm);
+                ShowBallon(e.Store.Name, TechnomatCheckerMP.ProductName, Duration, DistanceKm, e.Quantity, TechnomatCheckerMP.ProductUrl);
             };
 
             var optimeaCheckerMP = new OptimeaStockChecker("Climatiseur Midea", 5959, "https://www.optimea.fr/product/climatiseur-split-mobile-midea/");
             optimeaCheckerMP.NewStockDetected += (s, e) =>
             {
-                PrintNewStockDetected("Optimea", optimeaCheckerMP.ProductName, ConsoleColor.Red, 1, optimeaCheckerMP.ProductUrl, null, 0);
-                ShowBallon("Optimea", optimeaCheckerMP.ProductName, null, 0, 1, optimeaCheckerMP.ProductUrl);
+                PrintNewStockDetected("Optimea", optimeaCheckerMP.ProductName, ConsoleColor.Red, "En stock", optimeaCheckerMP.ProductUrl, null, 0);
+                ShowBallon("Optimea", optimeaCheckerMP.ProductName, null, 0, "En stock", optimeaCheckerMP.ProductUrl);
             };
 
             optimeaCheckerMP.StockOutDetected += (s, e) =>
             {
                 PrintStockOutDetected(optimeaCheckerMP.ProductName, "Optimea");
+            };
+            var manomanoCheckerMP = new ManoManoStockChecker("Climatiseur Midea", "https://www.manomano.fr/p/midea-climatiseur-split-mobile-reversible-froid-chaud-3500w12000btu-wifi-deshumidificateur-ventilateur-jusqua-40m2-kit-fenetre-inclus-83810402");
+            manomanoCheckerMP.NewStockDetected += (s, e) =>
+            {
+                PrintNewStockDetected("ManoMano", manomanoCheckerMP.ProductName, ConsoleColor.Red, "En stock", manomanoCheckerMP.ProductUrl, null, 0);
+                ShowBallon("ManoMano", manomanoCheckerMP.ProductName, null, 0, "En stock", manomanoCheckerMP.ProductUrl);
+            };
+
+            manomanoCheckerMP.StockOutDetected += (s, e) =>
+            {
+                PrintStockOutDetected(manomanoCheckerMP.ProductName, "ManoMano");
             };
 
 
@@ -218,6 +226,7 @@ namespace SioMideaPortasplitWatcher
                 //obiCheckerMP,
                 //BauhausInfoMP,
                 //ToomDeCheckerMP,
+                manomanoCheckerMP,
                 TechnomatCheckerMP,
                 LeroyMerlinCheckerMP,
                 CastoramaCheckerMP,

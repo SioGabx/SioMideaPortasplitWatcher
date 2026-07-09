@@ -264,14 +264,16 @@ de jardin motorisés", "Service après-vente (hors dimanche)"],
 
         public readonly string ProductId;
         public readonly string ProductName;
+        public readonly string ProductUrl;
         public readonly double Latitude;
         public readonly double Longitude;
 
         private readonly Dictionary<string, int> _previousStockState = new();
 
-        public CastoramaStockChecker(string productName, double latitude, double longitude, string productId)
+        public CastoramaStockChecker(string productName, double latitude, double longitude, string productId, string productUrl)
         {
             ProductName = productName;
+            ProductUrl = productUrl;
             ProductId = productId;
             Latitude = latitude;
             Longitude = longitude;
@@ -288,7 +290,7 @@ de jardin motorisés", "Service après-vente (hors dimanche)"],
             if (_page?.IsClosed != false)
             {
                 await CreatePage();
-                await _page.GotoAsync("https://www.castorama.fr", Browser.GotoOptions);
+                await _page.GotoAsync(ProductUrl, Browser.GotoOptions);
             }
             //await Test();
             string url = GetUrl(ProductId);

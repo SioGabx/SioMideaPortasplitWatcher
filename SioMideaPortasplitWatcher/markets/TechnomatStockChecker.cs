@@ -40,10 +40,12 @@ namespace SioMideaPortasplitWatcher.markets
         private readonly string _url;
         private readonly Dictionary<int, int> _previousStockState = new();
         public readonly string ProductName;
+        public readonly string ProductUrl;
 
-        public TechnomatStockChecker(string productName, double latitude, double longitude, string productRef)
+        public TechnomatStockChecker(string productName, double latitude, double longitude, string productRef, string productUrl)
         {
             ProductName = productName;
+            ProductUrl = productUrl;
             _url =
                 $"https://www.tecnomat.fr/store-header-module/services/contextlayer/store-search-result" +
                 $"?latitude={latitude}&longitude={longitude}&productRef={productRef}&storeSearchType=STOCK";
@@ -60,7 +62,7 @@ namespace SioMideaPortasplitWatcher.markets
             if (_page?.IsClosed != false)
             {
                 await CreatePage();
-                await _page.GotoAsync("https://www.tecnomat.fr/", Browser.GotoOptions);
+                await _page.GotoAsync(ProductUrl, Browser.GotoOptions);
             }
 
             await _page!.GotoAsync(_url, Browser.GotoOptions);
